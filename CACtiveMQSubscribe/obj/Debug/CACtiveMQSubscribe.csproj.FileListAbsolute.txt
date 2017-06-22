@@ -1,0 +1,25 @@
+C:\Users\luisma\AppData\Local\Temporary Projects\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe.config
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe.config
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.pdb
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.dll
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.dll
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.pdb
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.xml
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.pdb
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.xml
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csprojResolveAssemblyReference.cache
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe
+C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe.config
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.xml
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.xml
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csprojResolveAssemblyReference.cache
