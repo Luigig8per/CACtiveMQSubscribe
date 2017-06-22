@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DonBestModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DonBestEntities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="getAllLines" ReturnType="Collection(DonBestModel1.getAllLines_Result)" />
+  </EntityContainer>
+  <ComplexType Name="getAllLines_Result">
+    <Property Type="Int32" Name="rot" Nullable="true" />
+    <Property Type="DateTime" Name="timestamp" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="period_id" Nullable="true" />
+    <Property Type="String" Name="period" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="event_id" Nullable="true" />
+    <Property Type="Int16" Name="sportsbook" Nullable="true" />
+    <Property Type="String" Name="description" Nullable="true" />
+    <Property Type="Int32" Name="league_id" Nullable="true" />
+    <Property Type="Int32" Name="sport_id" Nullable="true" />
+    <Property Type="Int32" Name="away_team_id" Nullable="true" />
+    <Property Type="Int32" Name="home_team_id" Nullable="true" />
+    <Property Type="Single" Name="away_spread" Nullable="true" />
+    <Property Type="Int32" Name="away_price" Nullable="true" />
+    <Property Type="Single" Name="home_spread" Nullable="true" />
+    <Property Type="Int32" Name="home_price" Nullable="true" />
+    <Property Type="Int32" Name="idFeedLine" Nullable="false" />
+    <Property Type="Int32" Name="draw_price" Nullable="true" />
+    <Property Type="DateTime" Name="date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="home_rot" Nullable="true" />
+    <Property Type="Single" Name="total_total" Nullable="true" />
+    <Property Type="Int32" Name="over_price" Nullable="true" />
+    <Property Type="Int32" Name="under_price" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,6 +1,7 @@
 ﻿using Apache.NMS;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,7 @@ namespace CACtiveMQSubscribe
 
         static bool ReadNextMessage()
         {
+           
             string topic = "com.donbest.message.public.xmleddie";
             const string userName = "xmleddie";
             const string password = "xmlfootball";
@@ -43,6 +45,10 @@ namespace CACtiveMQSubscribe
                     IMessage msg = consumer.Receive();
                     if (msg is ITextMessage)
                     {
+                        int cont = 0;
+                        string query = "insert into ";
+                        string query2 = "values ";
+
                         ITextMessage txtMsg = msg as ITextMessage;
                         string body = txtMsg.Text;
 
@@ -52,17 +58,61 @@ namespace CACtiveMQSubscribe
 
                         foreach (var el in xdoc.Descendants())
 
-                        { 
+                        {
+                            cont += 1;
                             Console.WriteLine("Nodo " +  el.Name + ":" + el.Value + " " + el.Name);
 
-                        foreach (var attr in el.Attributes())
+                            if (cont==1)
+                            { 
+                            query += el.Name + " (";
+                            query2 += "(";
+                            }
+                            foreach (var attr in el.Attributes())
                             {
+                                query += attr.Name + ",";
+                                query2 += "'" + attr.Value + "',";
                                 //var itemValue = new ListViewItem(new[] { el.TagName, attr.Name, attr.Value });
                                 Console.WriteLine(attr.Name + ":" + attr.Value + " " + el.Name);
                                
                             }
 
                         }
+
+                        query += ") ";
+                        query2 += ")";
+
+                        query=query.Replace(",)", ")");
+                        query2=query2.Replace(",)", ")");
+
+
+                        Console.WriteLine(query + query2);
+
+
+                        string connetionString = null;
+
+                        SqlConnection connection2;
+                        SqlCommand command;
+                        string sql = null;
+
+                        connetionString = "Data Source=10.10.10.46;Initial Catalog=DonBest;User ID=luisma;Password=12345678";
+                        sql = query + query2;
+                        connection2 = new SqlConnection(connetionString);
+
+                        try
+                        {
+                            connection2.Open();
+                            Console.WriteLine(" Connection Opened ");
+                            command = new SqlCommand(sql, connection2);
+                            SqlDataReader dr1 = command.ExecuteReader();
+
+                            connection.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+
                         var col = from dummy in xdoc.DescendantNodes() select dummy;
 
 
@@ -75,6 +125,7 @@ namespace CACtiveMQSubscribe
                             if (node.NodeType == XmlNodeType.Text)
                             {
                                 Console.WriteLine("Type = [" + node.NodeType + "] Value = " + node.ToString());
+
                             }
                             else
                             {

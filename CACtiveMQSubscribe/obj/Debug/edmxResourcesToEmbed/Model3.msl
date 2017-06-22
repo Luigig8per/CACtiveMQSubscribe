@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DonBestModel2StoreContainer" CdmEntityContainer="DonBestEntities2">
+    <EntitySetMapping Name="lines">
+      <EntityTypeMapping TypeName="DonBestModel2.line">
+        <MappingFragment StoreEntitySet="line">
+          <ScalarProperty Name="rot" ColumnName="rot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="period_id" ColumnName="period_id" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="sportsbook" ColumnName="sportsbook" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="league_id" ColumnName="league_id" />
+          <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+          <ScalarProperty Name="away_team_id" ColumnName="away_team_id" />
+          <ScalarProperty Name="home_team_id" ColumnName="home_team_id" />
+          <ScalarProperty Name="away_spread" ColumnName="away_spread" />
+          <ScalarProperty Name="away_price" ColumnName="away_price" />
+          <ScalarProperty Name="home_spread" ColumnName="home_spread" />
+          <ScalarProperty Name="home_price" ColumnName="home_price" />
+          <ScalarProperty Name="idFeedLine" ColumnName="idFeedLine" />
+          <ScalarProperty Name="draw_price" ColumnName="draw_price" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="home_rot" ColumnName="home_rot" />
+          <ScalarProperty Name="total_total" ColumnName="total_total" />
+          <ScalarProperty Name="over_price" ColumnName="over_price" />
+          <ScalarProperty Name="under_price" ColumnName="under_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="matchup_score_event_id">
+      <EntityTypeMapping TypeName="DonBestModel2.matchup_score_event_id">
+        <MappingFragment StoreEntitySet="matchup_score event_id">
+          <ScalarProperty Name="id_feed_matchup_score" ColumnName="id_feed_matchup_score" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="away_rot" ColumnName="away_rot" />
+          <ScalarProperty Name="away_score" ColumnName="away_score" />
+          <ScalarProperty Name="home_rot" ColumnName="home_rot" />
+          <ScalarProperty Name="home_score" ColumnName="home_score" />
+          <ScalarProperty Name="sequence" ColumnName="sequence" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="final" ColumnName="final" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="message_timestamp" ColumnName="message_timestamp" />
+          <ScalarProperty Name="league_id" ColumnName="league_id" />
+          <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_all_line">
+      <EntityTypeMapping TypeName="DonBestModel2.view_all_line">
+        <MappingFragment StoreEntitySet="view_all_line">
+          <ScalarProperty Name="rot" ColumnName="rot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="period_id" ColumnName="period_id" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="sportsbook" ColumnName="sportsbook" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="league_id" ColumnName="league_id" />
+          <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+          <ScalarProperty Name="away_team_id" ColumnName="away_team_id" />
+          <ScalarProperty Name="home_team_id" ColumnName="home_team_id" />
+          <ScalarProperty Name="away_spread" ColumnName="away_spread" />
+          <ScalarProperty Name="away_price" ColumnName="away_price" />
+          <ScalarProperty Name="home_spread" ColumnName="home_spread" />
+          <ScalarProperty Name="home_price" ColumnName="home_price" />
+          <ScalarProperty Name="idFeedLine" ColumnName="idFeedLine" />
+          <ScalarProperty Name="draw_price" ColumnName="draw_price" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="home_rot" ColumnName="home_rot" />
+          <ScalarProperty Name="total_total" ColumnName="total_total" />
+          <ScalarProperty Name="over_price" ColumnName="over_price" />
+          <ScalarProperty Name="under_price" ColumnName="under_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getAllLines" FunctionName="DonBestModel2.Store.getAllLines">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonBestModel2.getAllLines_Result">
+          <ScalarProperty Name="rot" ColumnName="rot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="period_id" ColumnName="period_id" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="sportsbook" ColumnName="sportsbook" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="league_id" ColumnName="league_id" />
+          <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+          <ScalarProperty Name="away_team_id" ColumnName="away_team_id" />
+          <ScalarProperty Name="home_team_id" ColumnName="home_team_id" />
+          <ScalarProperty Name="away_spread" ColumnName="away_spread" />
+          <ScalarProperty Name="away_price" ColumnName="away_price" />
+          <ScalarProperty Name="home_spread" ColumnName="home_spread" />
+          <ScalarProperty Name="home_price" ColumnName="home_price" />
+          <ScalarProperty Name="idFeedLine" ColumnName="idFeedLine" />
+          <ScalarProperty Name="draw_price" ColumnName="draw_price" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="home_rot" ColumnName="home_rot" />
+          <ScalarProperty Name="total_total" ColumnName="total_total" />
+          <ScalarProperty Name="over_price" ColumnName="over_price" />
+          <ScalarProperty Name="under_price" ColumnName="under_price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NewInsertCommand" FunctionName="DonBestModel2.Store.NewInsertCommand" />
+    <FunctionImportMapping FunctionImportName="NewSelectCommand" FunctionName="DonBestModel2.Store.NewSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonBestModel2.NewSelectCommand_Result">
+          <ScalarProperty Name="rot" ColumnName="rot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="period_id" ColumnName="period_id" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="sportsbook" ColumnName="sportsbook" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="league_id" ColumnName="league_id" />
+          <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+          <ScalarProperty Name="away_team_id" ColumnName="away_team_id" />
+          <ScalarProperty Name="home_team_id" ColumnName="home_team_id" />
+          <ScalarProperty Name="away_spread" ColumnName="away_spread" />
+          <ScalarProperty Name="away_price" ColumnName="away_price" />
+          <ScalarProperty Name="home_spread" ColumnName="home_spread" />
+          <ScalarProperty Name="home_price" ColumnName="home_price" />
+          <ScalarProperty Name="idFeedLine" ColumnName="idFeedLine" />
+          <ScalarProperty Name="draw_price" ColumnName="draw_price" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="home_rot" ColumnName="home_rot" />
+          <ScalarProperty Name="total_total" ColumnName="total_total" />
+          <ScalarProperty Name="over_price" ColumnName="over_price" />
+          <ScalarProperty Name="under_price" ColumnName="under_price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -23,3 +23,7 @@ C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtive
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.pdb
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.xml
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csprojResolveAssemblyReference.cache
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.xml
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.xml

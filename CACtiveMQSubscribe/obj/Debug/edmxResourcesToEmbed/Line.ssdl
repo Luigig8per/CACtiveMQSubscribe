@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DonBestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="line">
+    <Key>
+      <PropertyRef Name="idFeedLine" />
+    </Key>
+    <Property Name="rot" Type="int" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="period_id" Type="int" />
+    <Property Name="period" Type="nchar" MaxLength="4" />
+    <Property Name="event_id" Type="int" />
+    <Property Name="sportsbook" Type="smallint" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="league_id" Type="int" />
+    <Property Name="sport_id" Type="int" />
+    <Property Name="away_team_id" Type="int" />
+    <Property Name="home_team_id" Type="int" />
+    <Property Name="away_spread" Type="real" />
+    <Property Name="away_price" Type="int" />
+    <Property Name="home_spread" Type="real" />
+    <Property Name="home_price" Type="int" />
+    <Property Name="idFeedLine" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="draw_price" Type="int" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="home_rot" Type="int" />
+    <Property Name="total_total" Type="real" />
+    <Property Name="over_price" Type="int" />
+    <Property Name="under_price" Type="int" />
+  </EntityType>
+  <EntityType Name="matchup_score event_id">
+    <Key>
+      <PropertyRef Name="id_feed_matchup_score" />
+    </Key>
+    <Property Name="id_feed_matchup_score" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="event_id" Type="int" />
+    <Property Name="away_rot" Type="int" />
+    <Property Name="away_score" Type="int" />
+    <Property Name="home_rot" Type="int" />
+    <Property Name="home_score" Type="int" />
+    <Property Name="sequence" Type="int" />
+    <Property Name="period" Type="nchar" MaxLength="10" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" />
+    <Property Name="final" Type="bit" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="message_timestamp" Type="datetime" />
+    <Property Name="league_id" Type="int" />
+    <Property Name="sport_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DonBest.dbo.view_all_line' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_all_line">
+    <Key>
+      <PropertyRef Name="idFeedLine" />
+    </Key>
+    <Property Name="rot" Type="int" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="period_id" Type="int" />
+    <Property Name="period" Type="nchar" MaxLength="4" />
+    <Property Name="event_id" Type="int" />
+    <Property Name="sportsbook" Type="smallint" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="league_id" Type="int" />
+    <Property Name="sport_id" Type="int" />
+    <Property Name="away_team_id" Type="int" />
+    <Property Name="home_team_id" Type="int" />
+    <Property Name="away_spread" Type="real" />
+    <Property Name="away_price" Type="int" />
+    <Property Name="home_spread" Type="real" />
+    <Property Name="home_price" Type="int" />
+    <Property Name="idFeedLine" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="draw_price" Type="int" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="home_rot" Type="int" />
+    <Property Name="total_total" Type="real" />
+    <Property Name="over_price" Type="int" />
+    <Property Name="under_price" Type="int" />
+  </EntityType>
+  <Function Name="getAllLines" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NewInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rot" Type="int" Mode="In" />
+    <Parameter Name="timestamp" Type="datetime" Mode="In" />
+    <Parameter Name="period_id" Type="int" Mode="In" />
+    <Parameter Name="period" Type="nchar" Mode="In" />
+    <Parameter Name="event_id" Type="int" Mode="In" />
+    <Parameter Name="sportsbook" Type="smallint" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+    <Parameter Name="league_id" Type="int" Mode="In" />
+    <Parameter Name="sport_id" Type="int" Mode="In" />
+    <Parameter Name="away_team_id" Type="int" Mode="In" />
+    <Parameter Name="home_team_id" Type="int" Mode="In" />
+    <Parameter Name="away_spread" Type="real" Mode="In" />
+    <Parameter Name="away_price" Type="int" Mode="In" />
+    <Parameter Name="home_spread" Type="real" Mode="In" />
+    <Parameter Name="home_price" Type="int" Mode="In" />
+    <Parameter Name="draw_price" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="home_rot" Type="int" Mode="In" />
+    <Parameter Name="total_total" Type="real" Mode="In" />
+    <Parameter Name="over_price" Type="int" Mode="In" />
+    <Parameter Name="under_price" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NewSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DonBestModelStoreContainer">
+    <EntitySet Name="line" EntityType="Self.line" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="matchup_score event_id" EntityType="Self.matchup_score event_id" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="view_all_line" EntityType="Self.view_all_line" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [view_all_line].[rot] AS [rot], 
+    [view_all_line].[timestamp] AS [timestamp], 
+    [view_all_line].[period_id] AS [period_id], 
+    [view_all_line].[period] AS [period], 
+    [view_all_line].[event_id] AS [event_id], 
+    [view_all_line].[sportsbook] AS [sportsbook], 
+    [view_all_line].[description] AS [description], 
+    [view_all_line].[league_id] AS [league_id], 
+    [view_all_line].[sport_id] AS [sport_id], 
+    [view_all_line].[away_team_id] AS [away_team_id], 
+    [view_all_line].[home_team_id] AS [home_team_id], 
+    [view_all_line].[away_spread] AS [away_spread], 
+    [view_all_line].[away_price] AS [away_price], 
+    [view_all_line].[home_spread] AS [home_spread], 
+    [view_all_line].[home_price] AS [home_price], 
+    [view_all_line].[idFeedLine] AS [idFeedLine], 
+    [view_all_line].[draw_price] AS [draw_price], 
+    [view_all_line].[date] AS [date], 
+    [view_all_line].[home_rot] AS [home_rot], 
+    [view_all_line].[total_total] AS [total_total], 
+    [view_all_line].[over_price] AS [over_price], 
+    [view_all_line].[under_price] AS [under_price]
+    FROM [dbo].[view_all_line] AS [view_all_line]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
