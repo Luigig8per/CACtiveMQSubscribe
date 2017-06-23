@@ -46,7 +46,15 @@ namespace CACtiveMQSubscribe
 
             using (IConnection connection = factory.CreateConnection(userName,password))
             {
+                try
+                { 
                 connection.Start();
+                }
+                catch ( Exception ex)
+                {
+                    Console.WriteLine(" Errror: " + ex);
+                }
+
                 using (ISession session = connection.CreateSession(AcknowledgementMode.AutoAcknowledge))
                 using (IDestination dest = session.GetTopic(topic))
                 using (IMessageConsumer consumer = session.CreateConsumer(dest))
@@ -90,11 +98,16 @@ namespace CACtiveMQSubscribe
                                    
 
                                     DateTime dt = DateTime.ParseExact(attr.Value, "yy-MM-dd'T'HH:mm:ssK",
-                                  CultureInfo.InvariantCulture,
-                                  DateTimeStyles.AdjustToUniversal);
+                                   CultureInfo.InvariantCulture,
+                                   DateTimeStyles.AdjustToUniversal);
 
+                                    TimeZoneInfo easternTimeZone = TimeZoneInfo.FindSystemTimeZoneById(
+                                                         "Eastern Standard Time");
 
-                                    attrValue = dt.ToString();
+                                    DateTime easternDateTime = TimeZoneInfo.ConvertTimeFromUtc(dt,
+                                                                                               easternTimeZone);
+
+                                    attrValue = easternDateTime.ToString();
 
                                    
 
