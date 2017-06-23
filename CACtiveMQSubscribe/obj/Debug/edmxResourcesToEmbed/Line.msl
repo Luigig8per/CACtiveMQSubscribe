@@ -4,6 +4,8 @@
     <EntitySetMapping Name="lines">
       <EntityTypeMapping TypeName="DonBestModel.line">
         <MappingFragment StoreEntitySet="line">
+          <ScalarProperty Name="timeReceived" ColumnName="timeReceived" />
+          <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="rot" ColumnName="rot" />
           <ScalarProperty Name="timestamp" ColumnName="timestamp" />
           <ScalarProperty Name="period_id" ColumnName="period_id" />

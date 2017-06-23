@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,15 @@ namespace CACtiveMQSubscribe
             const string userName = "xmleddie";
             const string password = "xmlfootball";
             string brokerUri = "tcp://amq.donbest.com:61616";  // Default port
+            TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("Central America Standard Time");
+
+
             NMSConnectionFactory factory = new NMSConnectionFactory(brokerUri);
+
+
+            string  query, query2;
+            string attrValue;
+            
 
             using (IConnection connection = factory.CreateConnection(userName,password))
             {
@@ -46,8 +55,9 @@ namespace CACtiveMQSubscribe
                     if (msg is ITextMessage)
                     {
                         int cont = 0;
-                        string query = "insert into ";
-                        string query2 = "values ";
+                        query = "insert into ";
+                        query2 = "values ";
+                        
 
                         ITextMessage txtMsg = msg as ITextMessage;
                         string body = txtMsg.Text;
@@ -67,19 +77,44 @@ namespace CACtiveMQSubscribe
                             query += el.Name + " (";
                             query2 += "(";
                             }
+
                             foreach (var attr in el.Attributes())
                             {
                                 query += attr.Name + ",";
-                                query2 += "'" + attr.Value + "',";
+
+                                if (attr.Name=="timestamp")
+                                {
+                                    var now = DateTime.Now; // Current date/time
+                                    var utcNow = now.ToUniversalTime(); //
+
+                                   
+
+                                    DateTime dt = DateTime.ParseExact(attr.Value, "yy-MM-dd'T'HH:mm:ssK",
+                                  CultureInfo.InvariantCulture,
+                                  DateTimeStyles.AdjustToUniversal);
+
+
+                                    attrValue = dt.ToString();
+
+                                   
+
+
+                                }
+                                else
+                                {
+                                    attrValue = attr.Value;
+                                }
+
+                                query2 += "'" + attrValue + "',";
                                 //var itemValue = new ListViewItem(new[] { el.TagName, attr.Name, attr.Value });
-                                Console.WriteLine(attr.Name + ":" + attr.Value + " " + el.Name);
+                                Console.WriteLine(attr.Name + ":" + attrValue + " " + el.Name);
                                
                             }
 
                         }
 
-                        query += ") ";
-                        query2 += ")";
+                        query += "timeReceived) ";
+                        query2 += "getDate())";
 
                         query=query.Replace(",)", ")");
                         query2=query2.Replace(",)", ")");

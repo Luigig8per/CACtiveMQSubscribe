@@ -10,7 +10,6 @@
             <PropertyRef Name="idFeedLine" />
           </Key>
           <Property Name="rot" Type="int" />
-          <Property Name="timestamp" Type="datetime" />
           <Property Name="period_id" Type="int" />
           <Property Name="period" Type="nchar" MaxLength="4" />
           <Property Name="event_id" Type="int" />
@@ -31,6 +30,9 @@
           <Property Name="total_total" Type="real" />
           <Property Name="over_price" Type="int" />
           <Property Name="under_price" Type="int" />
+          <Property Name="total" Type="real" />
+          <Property Name="timeReceived" Type="datetime" />
+          <Property Name="timestamp" Type="datetime" />
         </EntityType>
         <EntityType Name="matchup_score event_id">
           <Key>
@@ -165,6 +167,8 @@ warning 6002: The table/view 'DonBest.dbo.view_all_line' does not have a primary
           <Property Name="total_total" Type="Single" />
           <Property Name="over_price" Type="Int32" />
           <Property Name="under_price" Type="Int32" />
+          <Property Name="total" Type="Single" />
+          <Property Name="timeReceived" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="DonBestEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="lines" EntityType="Self.line" />
@@ -299,6 +303,8 @@ warning 6002: The table/view 'DonBest.dbo.view_all_line' does not have a primary
           <EntitySetMapping Name="lines">
             <EntityTypeMapping TypeName="DonBestModel.line">
               <MappingFragment StoreEntitySet="line">
+                <ScalarProperty Name="timeReceived" ColumnName="timeReceived" />
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="rot" ColumnName="rot" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="period_id" ColumnName="period_id" />

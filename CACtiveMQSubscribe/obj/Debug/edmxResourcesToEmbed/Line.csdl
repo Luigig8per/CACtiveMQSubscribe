@@ -26,6 +26,8 @@
     <Property Name="total_total" Type="Single" />
     <Property Name="over_price" Type="Int32" />
     <Property Name="under_price" Type="Int32" />
+    <Property Name="total" Type="Single" />
+    <Property Name="timeReceived" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityContainer Name="DonBestEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="lines" EntityType="Self.line" />

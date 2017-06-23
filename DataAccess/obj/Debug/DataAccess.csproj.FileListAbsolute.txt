@@ -1,0 +1,4 @@
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\DataAccess\bin\Debug\DataAccess.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\DataAccess\bin\Debug\DataAccess.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\DataAccess\obj\Debug\DataAccess.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\DataAccess\obj\Debug\DataAccess.pdb

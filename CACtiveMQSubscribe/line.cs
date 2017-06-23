@@ -36,5 +36,7 @@ namespace CACtiveMQSubscribe
         public Nullable<float> total_total { get; set; }
         public Nullable<int> over_price { get; set; }
         public Nullable<int> under_price { get; set; }
+        public Nullable<float> total { get; set; }
+        public Nullable<System.DateTime> timeReceived { get; set; }
     }
 }

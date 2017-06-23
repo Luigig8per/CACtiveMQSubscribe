@@ -5,7 +5,6 @@
       <PropertyRef Name="idFeedLine" />
     </Key>
     <Property Name="rot" Type="int" />
-    <Property Name="timestamp" Type="datetime" />
     <Property Name="period_id" Type="int" />
     <Property Name="period" Type="nchar" MaxLength="4" />
     <Property Name="event_id" Type="int" />
@@ -26,6 +25,9 @@
     <Property Name="total_total" Type="real" />
     <Property Name="over_price" Type="int" />
     <Property Name="under_price" Type="int" />
+    <Property Name="total" Type="real" />
+    <Property Name="timeReceived" Type="datetime" />
+    <Property Name="timestamp" Type="datetime" />
   </EntityType>
   <EntityType Name="matchup_score event_id">
     <Key>

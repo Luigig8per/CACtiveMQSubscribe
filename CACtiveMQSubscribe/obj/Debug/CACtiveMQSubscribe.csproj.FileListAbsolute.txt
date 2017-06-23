@@ -27,3 +27,7 @@ C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtive
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.dll
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.xml
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.xml
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.exe.manifest
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.application
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe.manifest
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.application
