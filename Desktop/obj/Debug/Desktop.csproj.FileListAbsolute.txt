@@ -1,0 +1,4 @@
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\Desktop\obj\Debug\Desktop.csprojResolveAssemblyReference.cache
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\Desktop\obj\Debug\Desktop.LineDk.resources
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\Desktop\obj\Debug\Desktop.csproj.GenerateResource.Cache
