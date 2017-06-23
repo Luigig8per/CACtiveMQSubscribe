@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CACtiveMQSubscribe.exe" size="55808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CACtiveMQSubscribe.exe" size="56832">
       <assemblyIdentity name="CACtiveMQSubscribe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3JBUZT2hexeyUwmI5/iAf145jiFnh1lGBsJPth3owKk=</dsig:DigestValue>
+        <dsig:DigestValue>ao+4p860mIKotxJL4vvphyuJwO7PKw/G4kzTXrbQU1Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

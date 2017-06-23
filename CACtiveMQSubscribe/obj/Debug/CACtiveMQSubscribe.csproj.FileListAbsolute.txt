@@ -31,3 +31,5 @@ C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtive
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.application
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.pdb
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.Form1.resources
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csproj.GenerateResource.Cache
