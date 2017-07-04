@@ -119,8 +119,7 @@ namespace CACtiveMQSubscribe
                                 }
 
                                 query2 += "'" + attrValue + "',";
-                                //var itemValue = new ListViewItem(new[] { el.TagName, attr.Name, attr.Value });
-                                //Console.WriteLine(attr.Name + ":" + attrValue + " " + el.Name);
+                                
                                
                             }
 
@@ -160,31 +159,6 @@ namespace CACtiveMQSubscribe
                             Console.WriteLine(ex.Message);
                             Console.WriteLine(query + query2);
                         }
-
-
-                        var col = from dummy in xdoc.DescendantNodes() select dummy;
-
-
-
-
-                        foreach (var myvar in col)
-
-                        {
-                            XNode node = (XNode)myvar;
-                            if (node.NodeType == XmlNodeType.Text)
-                            {
-                                //Console.WriteLine("Type = [" + node.NodeType + "] Value = " + node.ToString());
-
-                            }
-                            else
-                            {
-                                XElement xdoc2 = new XElement((node as XElement).Name, (node as XElement).Value);
-                                //Console.WriteLine("Type = [" + xdoc2.NodeType + "] Name = " + xdoc2.Name);
-                            }
-                        }
-                        
-
-
 
                         return true;
                     }
