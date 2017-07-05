@@ -1,0 +1,15 @@
+Download feeds from DonBest datasource.
+
+DonBest keeps pushing different information, attached a sample
+
+
+Saving fields:
+
+
+Line
+
+Evet State
+
+Take down
+
+PITCHERcHANGED

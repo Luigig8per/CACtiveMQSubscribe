@@ -1,0 +1,874 @@
+Waiting for messages
+Received message: <?xml version="1.0"?>
+<line rot="9973" timestamp="17-07-04T20:00:29+0000" period_id="1" period="FG" event_id="693416" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="4963" home_team_id="4975">
+<ml away_price="-2672" home_price="1243" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9973','7/4/2017 4:00:29 PM','1','FG','693416','37','CURRENT','5','3','4963','4975','-2672','1243','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="975" timestamp="17-07-04T20:00:32+0000" period_id="1" period="FG" event_id="647224" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1277" home_team_id="1298">
+<ml away_price="168" home_price="-178" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('975','7/4/2017 4:00:32 PM','1','FG','647224','39','CURRENT','5','3','1277','1298','168','-178','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="224581" timestamp="17-07-04T20:00:34+0000" period_id="1" period="FG" event_id="692755" sportsbook="117" description="CURRENT" league_id="9" sport_id="5" away_team_id="14751" home_team_id="5850">
+<ml away_price="365" home_price="-135" draw_price="265"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('224581','7/4/2017 4:00:34 PM','1','FG','692755','117','CURRENT','9','5','14751','5850','365','-135','265',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:00:34+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:34 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:34 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:00:37+0000" period_id="1" period="FG" event_id="647213" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-142" home_price="128" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:00:37 PM','1','FG','647213','2','CURRENT','5','3','1296','1290','-142','128','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:00:39+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:39 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:39 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9973" timestamp="17-07-04T20:00:40+0000" period_id="1" period="FG" event_id="693416" sportsbook="92" description="CURRENT" league_id="5" sport_id="3" away_team_id="4963" home_team_id="4975">
+<ps away_spread="-4.50" away_price="-110" home_spread="4.50" home_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9973','7/4/2017 4:00:40 PM','1','FG','693416','92','CURRENT','5','3','4963','4975','-4.50','-110','4.50','-110',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:00:45+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:45 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:45 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9973" timestamp="17-07-04T20:00:46+0000" period_id="1" period="FG" event_id="693416" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="4963" home_team_id="4975">
+<ps away_spread="0.00" away_price="0" home_spread="0.00" home_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9973','7/4/2017 4:00:46 PM','1','FG','693416','2','CURRENT','5','3','4963','4975','0.00','0','0.00','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:00:49+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:49 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:49 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="45"  home_rot="710" home_score="43" sequence="3" period="3rd Q" description="08:53" final="false" time="17-07-04T20:00:53+0000" message_timestamp="17-07-04T20:00:53+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','45','710','43','3','3rd Q','08:53','false','7/4/2017 4:00:53 PM','7/4/2017 4:00:53 PM','50','2',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:00:54+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:54 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:00:54 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8159" timestamp="17-07-04T20:00:56+0000" period_id="1" period="FG" event_id="691783" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="2887" home_team_id="4143">
+<total total="34.50" over_price="-109" under_price="-103"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8159','7/4/2017 4:00:56 PM','1','FG','691783','37','CURRENT','12','8','2887','4143','34.50','-109','-103',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="975" timestamp="17-07-04T20:00:59+0000" period_id="1" period="FG" event_id="647224" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1277" home_team_id="1298">
+<ml away_price="157" home_price="-175" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('975','7/4/2017 4:00:59 PM','1','FG','647224','2','CURRENT','5','3','1277','1298','157','-175','0',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="45"  home_rot="710" home_score="44" sequence="3" period="3rd Q" description="08:53" final="false" time="17-07-04T20:01:03+0000" message_timestamp="17-07-04T20:01:03+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','45','710','44','3','3rd Q','08:53','false','7/4/2017 4:01:03 PM','7/4/2017 4:01:03 PM','50','2',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:05+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:05 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:05 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:01:07+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-134" home_spread="-1.50" home_price="121"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:01:07 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','1.50','-134','-1.50','121',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:09+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:09 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:09 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8155" timestamp="17-07-04T20:01:11+0000" period_id="1" period="FG" event_id="691781" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="5020" home_team_id="4695">
+<total total="37.00" over_price="102" under_price="-115"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8155','7/4/2017 4:01:11 PM','1','FG','691781','37','CURRENT','12','8','5020','4695','37.00','102','-115',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:01:13+0000" period_id="1" period="FG" event_id="647219" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="140" home_price="-155" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:01:13 PM','1','FG','647219','2','CURRENT','5','3','1280','1284','140','-155','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:01:14+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-131" home_spread="-1.50" home_price="119"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:01:14 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','1.50','-131','-1.50','119',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:19+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:19 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:19 PM',getDate())
+Received message: <?xml version="1.0"?>
+<event_state event_id="691515" rot="224239" event_state_type_id="2" event_state="IN-PROGRESS" time="17-07-04T20:01:20+0000" league_id="9" sport_id="5"/>
+insert into event_state (event_id,rot,event_state_type_id,event_state,time,league_id,sport_id,timeReceived) values ('691515','224239','2','IN-PROGRESS','7/4/2017 4:01:20 PM','9','5',getDate())
+Invalid object name 'event_state'.
+insert into event_state (event_id,rot,event_state_type_id,event_state,time,league_id,sport_id,timeReceived) values ('691515','224239','2','IN-PROGRESS','7/4/2017 4:01:20 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:01:21+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-130" home_spread="-1.50" home_price="118"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:01:21 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','1.50','-130','-1.50','118',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:01:22+0000" period_id="1" period="FG" event_id="647213" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-140" home_price="126" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:01:22 PM','1','FG','647213','2','CURRENT','5','3','1296','1290','-140','126','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:25+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:25 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:25 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8153" timestamp="17-07-04T20:01:26+0000" period_id="1" period="FG" event_id="691780" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="4811" home_team_id="4214">
+<total total="36.00" over_price="102" under_price="-115"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8153','7/4/2017 4:01:26 PM','1','FG','691780','37','CURRENT','12','8','4811','4214','36.00','102','-115',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:01:28+0000" period_id="40" period="01" event_id="647213" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<total total="0.50" over_price="-114" under_price="-102"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('955','7/4/2017 4:01:28 PM','40','01','647213','37','CURRENT','5','3','1296','1290','0.50','-114','-102',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:29+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:29 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:29 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:01:31+0000" period_id="1" period="FG" event_id="691401" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ps away_spread="-0.25" away_price="-111" home_spread="0.25" home_price="-104"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('209997','7/4/2017 4:01:31 PM','1','FG','691401','52','CURRENT','9','5','3550','14073','-0.25','-111','0.25','-104',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:34+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:34 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:34 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:01:36+0000" period_id="1" period="FG" event_id="647213" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-140" home_price="130" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:01:36 PM','1','FG','647213','39','CURRENT','5','3','1296','1290','-140','130','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="304597" timestamp="17-07-04T20:01:39+0000" period_id="1" period="FG" event_id="692573" sportsbook="52" description="CURRENT" league_id="34" sport_id="3" away_team_id="8399" home_team_id="14305">
+<total total="13.00" over_price="105" under_price="-125"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('304597','7/4/2017 4:01:39 PM','1','FG','692573','52','CURRENT','34','3','8399','14305','13.00','105','-125',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="304599" timestamp="17-07-04T20:01:40+0000" period_id="1" period="FG" event_id="692574" sportsbook="52" description="CURRENT" league_id="34" sport_id="3" away_team_id="8410" home_team_id="8412">
+<ml away_price="105" home_price="-125" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('304599','7/4/2017 4:01:40 PM','1','FG','692574','52','CURRENT','34','3','8410','8412','105','-125','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="7029" timestamp="17-07-04T20:01:43+0000" period_id="1" period="FG" event_id="693459" sportsbook="92" description="CURRENT" league_id="11" sport_id="7" away_team_id="0" home_team_id="0">
+<ps away_spread="1.50" away_price="100" home_spread="-1.50" home_price="-130"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('7029','7/4/2017 4:01:43 PM','1','FG','693459','92','CURRENT','11','7','0','0','1.50','100','-1.50','-130',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:44+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:44 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:44 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8151" timestamp="17-07-04T20:01:46+0000" period_id="1" period="FG" event_id="691779" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="4655" home_team_id="3936">
+<total total="37.00" over_price="109" under_price="-123"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8151','7/4/2017 4:01:46 PM','1','FG','691779','37','CURRENT','12','8','4655','3936','37.00','109','-123',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:49+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:49 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:49 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="7451" timestamp="17-07-04T20:01:53+0000" period_id="1" period="FG" event_id="693530" sportsbook="92" description="CURRENT" league_id="11" sport_id="7" away_team_id="0" home_team_id="0">
+<ml away_price="-150" home_price="130" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('7451','7/4/2017 4:01:53 PM','1','FG','693530','92','CURRENT','11','7','0','0','-150','130','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:55+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:55 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:55 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="7451" timestamp="17-07-04T20:01:56+0000" period_id="1" period="FG" event_id="693530" sportsbook="92" description="CURRENT" league_id="11" sport_id="7" away_team_id="0" home_team_id="0">
+<ps away_spread="-1.50" away_price="-130" home_spread="1.50" home_price="100"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('7451','7/4/2017 4:01:56 PM','1','FG','693530','92','CURRENT','11','7','0','0','-1.50','-130','1.50','100',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:01:59+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:59 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:01:59 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:01+0000" period_id="1" period="FG" event_id="691401" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="118" home_price="228" draw_price="269"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:02:01 PM','1','FG','691401','2','CURRENT','9','5','3550','14073','118','228','269',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8149" timestamp="17-07-04T20:02:02+0000" period_id="1" period="FG" event_id="691778" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="5973" home_team_id="7507">
+<total total="36.50" over_price="-110" under_price="-102"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8149','7/4/2017 4:02:02 PM','1','FG','691778','37','CURRENT','12','8','5973','7507','36.50','-110','-102',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:03+0000" period_id="1" period="FG" event_id="691401" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="118" home_price="213" draw_price="269"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:02:03 PM','1','FG','691401','2','CURRENT','9','5','3550','14073','118','213','269',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:04+0000" period_id="1" period="FG" event_id="691401" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="118" home_price="220" draw_price="268"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:02:04 PM','1','FG','691401','2','CURRENT','9','5','3550','14073','118','220','268',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:05+0000" period_id="1" period="FG" event_id="691401" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="120" home_price="220" draw_price="268"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:02:05 PM','1','FG','691401','2','CURRENT','9','5','3550','14073','120','220','268',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:06+0000" period_id="1" period="FG" event_id="691401" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ps away_spread="-0.50" away_price="119" home_spread="0.50" home_price="-139"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('209997','7/4/2017 4:02:06 PM','1','FG','691401','2','CURRENT','9','5','3550','14073','-0.50','119','0.50','-139',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="45"  home_rot="710" home_score="45" sequence="3" period="3rd Q" description="08:27" final="false" time="17-07-04T20:02:08+0000" message_timestamp="17-07-04T20:02:08+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','45','710','45','3','3rd Q','08:27','false','7/4/2017 4:02:08 PM','7/4/2017 4:02:08 PM','50','2',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:09+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:09 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:09 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8161" timestamp="17-07-04T20:02:12+0000" period_id="1" period="FG" event_id="691784" sportsbook="117" description="OPENER" league_id="12" sport_id="8" away_team_id="0" home_team_id="3389">
+<ps away_spread="-7.50" away_price="-115" home_spread="7.50" home_price="-105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('8161','7/4/2017 4:02:12 PM','1','FG','691784','117','OPENER','12','8','0','3389','-7.50','-115','7.50','-105',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:14+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:14 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:14 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="975" timestamp="17-07-04T20:02:16+0000" period_id="1" period="FG" event_id="647224" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1277" home_team_id="1298">
+<ml away_price="170" home_price="-180" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('975','7/4/2017 4:02:16 PM','1','FG','647224','39','CURRENT','5','3','1277','1298','170','-180','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8173" timestamp="17-07-04T20:02:17+0000" period_id="1" period="FG" event_id="691790" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="4086" home_team_id="4588">
+<total total="35.50" over_price="120" under_price="-135"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8173','7/4/2017 4:02:17 PM','1','FG','691790','37','CURRENT','12','8','4086','4588','35.50','120','-135',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:02:18+0000" period_id="40" period="01" event_id="647213" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<total total="0.50" over_price="-124" under_price="106"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('955','7/4/2017 4:02:18 PM','40','01','647213','37','CURRENT','5','3','1296','1290','0.50','-124','106',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:19+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:19 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:19 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691519" away_rot="224229" away_score="1"  home_rot="224230" home_score="1" sequence="2" period="2nd H" description="74:00" final="false" time="17-07-04T20:02:21+0000" message_timestamp="17-07-04T20:02:21+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691519','224229','1','224230','1','2','2nd H','74:00','false','7/4/2017 4:02:21 PM','7/4/2017 4:02:21 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:02:23+0000" period_id="1" period="FG" event_id="691401" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="122" home_price="226" draw_price="273"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:02:23 PM','1','FG','691401','37','CURRENT','9','5','3550','14073','122','226','273',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:24+0000" period_id="1" period="FG" event_id="693410" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<ps away_spread="-3.00" away_price="100" home_spread="3.00" home_price="-117"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9961','7/4/2017 4:02:24 PM','1','FG','693410','37','CURRENT','5','3','4961','4604','-3.00','100','3.00','-117',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:24+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:24 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:24 PM',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:29+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:29 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:29 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:31+0000" period_id="1" period="FG" event_id="693410" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<total total="5.50" over_price="-102" under_price="-114"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9961','7/4/2017 4:02:31 PM','1','FG','693410','37','CURRENT','5','3','4961','4604','5.50','-102','-114',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:02:32+0000" period_id="1" period="FG" event_id="647219" sportsbook="452" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="140" home_price="-155" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:02:32 PM','1','FG','647219','452','CURRENT','5','3','1280','1284','140','-155','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:02:32+0000" period_id="2" period="1H" event_id="647219" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<total total="5.50" over_price="100" under_price="-120"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('965','7/4/2017 4:02:32 PM','2','1H','647219','2','CURRENT','5','3','1280','1284','5.50','100','-120',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:02:34+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ml away_price="190" home_price="-275" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9963','7/4/2017 4:02:34 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','190','-275','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:34+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:34 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:34 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:38+0000" period_id="1" period="FG" event_id="693410" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<total total="5.50" over_price="-110" under_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9961','7/4/2017 4:02:38 PM','1','FG','693410','52','CURRENT','5','3','4961','4604','5.50','-110','-110',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:39+0000" period_id="1" period="FG" event_id="693410" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<total total="5.50" over_price="105" under_price="-135"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9961','7/4/2017 4:02:39 PM','1','FG','693410','52','CURRENT','5','3','4961','4604','5.50','105','-135',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="213069" timestamp="17-07-04T20:02:40+0000" period_id="1" period="FG" event_id="692813" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="10562" home_team_id="12045">
+<ps away_spread="1.00" away_price="-120" home_spread="-1.00" home_price="105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('213069','7/4/2017 4:02:40 PM','1','FG','692813','37','CURRENT','9','5','10562','12045','1.00','-120','-1.00','105',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:02:42+0000" period_id="1" period="FG" event_id="647219" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="129" home_price="-139" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:02:42 PM','1','FG','647219','39','CURRENT','5','3','1280','1284','129','-139','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:44+0000" period_id="1" period="FG" event_id="693410" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<ps away_spread="-3.00" away_price="-110" home_spread="3.00" home_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9961','7/4/2017 4:02:44 PM','1','FG','693410','52','CURRENT','5','3','4961','4604','-3.00','-110','3.00','-110',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="224655" timestamp="17-07-04T20:02:45+0000" period_id="1" period="FG" event_id="691495" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="4838" home_team_id="8284">
+<total total="2.25" over_price="-106" under_price="-109"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('224655','7/4/2017 4:02:45 PM','1','FG','691495','52','CURRENT','9','5','4838','8284','2.25','-106','-109',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:02:46+0000" period_id="1" period="FG" event_id="693410" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<ps away_spread="-3.00" away_price="-125" home_spread="3.00" home_price="-105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9961','7/4/2017 4:02:46 PM','1','FG','693410','52','CURRENT','5','3','4961','4604','-3.00','-125','3.00','-105',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8189" timestamp="17-07-04T20:02:48+0000" period_id="1" period="FG" event_id="691798" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="3934" home_team_id="3848">
+<total total="36.00" over_price="113" under_price="-127"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8189','7/4/2017 4:02:48 PM','1','FG','691798','37','CURRENT','12','8','3934','3848','36.00','113','-127',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:02:50+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:50 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:02:50 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="7029" timestamp="17-07-04T20:02:50+0000" period_id="1" period="FG" event_id="693459" sportsbook="117" description="CURRENT" league_id="11" sport_id="7" away_team_id="0" home_team_id="0">
+<ml away_price="130" home_price="-150" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('7029','7/4/2017 4:02:50 PM','1','FG','693459','117','CURRENT','11','7','0','0','130','-150','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="967" timestamp="17-07-04T20:02:52+0000" period_id="2" period="1H" event_id="647216" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="1282" home_team_id="1286">
+<ml away_price="113" home_price="-133" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('967','7/4/2017 4:02:52 PM','2','1H','647216','117','CURRENT','5','3','1282','1286','113','-133','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:02:54+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-134" home_spread="-1.50" home_price="121"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:02:54 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','1.50','-134','-1.50','121',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="967" timestamp="17-07-04T20:02:56+0000" period_id="2" period="1H" event_id="647216" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="1282" home_team_id="1286">
+<ps away_spread="0.50" away_price="-125" home_spread="-0.50" home_price="105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('967','7/4/2017 4:02:56 PM','2','1H','647216','117','CURRENT','5','3','1282','1286','0.50','-125','-0.50','105',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="46" sequence="3" period="3rd Q" description="07:57" final="false" time="17-07-04T20:02:57+0000" message_timestamp="17-07-04T20:02:57+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','46','3','3rd Q','07:57','false','7/4/2017 4:02:57 PM','7/4/2017 4:02:57 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="48" sequence="3" period="3rd Q" description="07:54" final="false" time="17-07-04T20:03:02+0000" message_timestamp="17-07-04T20:03:02+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','48','3','3rd Q','07:54','false','7/4/2017 4:03:02 PM','7/4/2017 4:03:02 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:03:01+0000" period_id="2" period="1H" event_id="647213" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<team_total total="2.50" over_price="-104" under_price="-116"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('955','7/4/2017 4:03:01 PM','2','1H','647213','37','CURRENT','5','3','1296','1290','2.50','-104','-116',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:03:04+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:04 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:04 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:03:06+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<total total="8.50" over_price="-145" under_price="105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9963','7/4/2017 4:03:06 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','8.50','-145','105',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:03:09+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:09 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:09 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:12+0000" period_id="1" period="FG" event_id="647219" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="134" home_price="-144" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:03:12 PM','1','FG','647219','39','CURRENT','5','3','1280','1284','134','-144','0',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691519" away_rot="224229" away_score="1"  home_rot="224230" home_score="1" sequence="2" period="2nd H" description="75:00" final="false" time="17-07-04T20:03:13+0000" message_timestamp="17-07-04T20:03:13+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691519','224229','1','224230','1','2','2nd H','75:00','false','7/4/2017 4:03:13 PM','7/4/2017 4:03:13 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="48" sequence="3" period="3rd Q" description="07:40" final="false" time="17-07-04T20:03:14+0000" message_timestamp="17-07-04T20:03:14+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','48','3','3rd Q','07:40','false','7/4/2017 4:03:14 PM','7/4/2017 4:03:14 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:03:16+0000" period_id="1" period="FG" event_id="691411" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="3.00" over_price="-114" under_price="-104"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:03:16 PM','1','FG','691411','37','CURRENT','9','5','8830','9788','3.00','-114','-104',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:03:17+0000" period_id="1" period="FG" event_id="691411" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="2.75" over_price="-124" under_price="104"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:03:17 PM','1','FG','691411','52','CURRENT','9','5','8830','9788','2.75','-124','104',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8157" timestamp="17-07-04T20:03:18+0000" period_id="1" period="FG" event_id="691782" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="5171" home_team_id="7495">
+<total total="35.00" over_price="-129" under_price="115"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8157','7/4/2017 4:03:18 PM','1','FG','691782','37','CURRENT','12','8','5171','7495','35.00','-129','115',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="48" sequence="3" period="3rd Q" description="07:35" final="false" time="17-07-04T20:03:19+0000" message_timestamp="17-07-04T20:03:19+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','48','3','3rd Q','07:35','false','7/4/2017 4:03:19 PM','7/4/2017 4:03:19 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:21+0000" period_id="1" period="FG" event_id="647219" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="135" home_price="-145" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:03:21 PM','1','FG','647219','39','CURRENT','5','3','1280','1284','135','-145','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:22+0000" period_id="1" period="FG" event_id="647219" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="135" home_price="-150" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:03:22 PM','1','FG','647219','2','CURRENT','5','3','1280','1284','135','-150','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:03:24+0000" period_id="1" period="FG" event_id="647213" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-148" home_price="133" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:03:24 PM','1','FG','647213','117','CURRENT','5','3','1296','1290','-148','133','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:28+0000" period_id="1" period="FG" event_id="647219" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-150" home_spread="-1.50" home_price="130"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:03:28 PM','1','FG','647219','2','CURRENT','5','3','1280','1284','1.50','-150','-1.50','130',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="956" timestamp="17-07-04T20:03:28+0000" period_id="1" period="FG" event_id="647213" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="1290" home_team_id="1295">
+<team_total total="0.00" over_price="0" under_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('956','7/4/2017 4:03:28 PM','1','FG','647213','117','CURRENT','5','3','1290','1295','0.00','0','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:03:29+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:29 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:29 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8157" timestamp="17-07-04T20:03:33+0000" period_id="1" period="FG" event_id="691782" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="5171" home_team_id="7495">
+<total total="35.00" over_price="-125" under_price="111"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8157','7/4/2017 4:03:33 PM','1','FG','691782','37','CURRENT','12','8','5171','7495','35.00','-125','111',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:03:33+0000" period_id="2" period="1H" event_id="691411" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<ps away_spread="0.50" away_price="104" home_spread="-0.50" home_price="-122"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('209633','7/4/2017 4:03:33 PM','2','1H','691411','37','CURRENT','9','5','8830','9788','0.50','104','-0.50','-122',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:03:35+0000" period_id="1" period="FG" event_id="691411" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<ml away_price="778" home_price="-326" draw_price="426"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209633','7/4/2017 4:03:35 PM','1','FG','691411','52','CURRENT','9','5','8830','9788','778','-326','426',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="969" timestamp="17-07-04T20:03:37+0000" period_id="1" period="FG" event_id="647215" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1275" home_team_id="1287">
+<ml away_price="121" home_price="-134" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('969','7/4/2017 4:03:37 PM','1','FG','647215','2','CURRENT','5','3','1275','1287','121','-134','0',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691521" away_rot="224233" away_score="0"  home_rot="224234" home_score="0" sequence="2" period="2nd H" description="77:00" final="false" time="17-07-04T20:03:39+0000" message_timestamp="17-07-04T20:03:39+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691521','224233','0','224234','0','2','2nd H','77:00','false','7/4/2017 4:03:39 PM','7/4/2017 4:03:39 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="969" timestamp="17-07-04T20:03:42+0000" period_id="1" period="FG" event_id="647215" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1275" home_team_id="1287">
+<ml away_price="122" home_price="-135" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('969','7/4/2017 4:03:42 PM','1','FG','647215','2','CURRENT','5','3','1275','1287','122','-135','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:43+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="141" home_price="-153" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:03:43 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','141','-153','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:03:45+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:45 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:45 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8671" timestamp="17-07-04T20:03:46+0000" period_id="1" period="FG" event_id="691821" sportsbook="10" description="CURRENT" league_id="12" sport_id="8" away_team_id="5664" home_team_id="5473">
+<ml away_price="155" home_price="-175" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('8671','7/4/2017 4:03:46 PM','1','FG','691821','10','CURRENT','12','8','5664','5473','155','-175','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:03:48+0000" period_id="1" period="FG" event_id="691411" sportsbook="92" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="2.75" over_price="-137" under_price="117"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:03:48 PM','1','FG','691411','92','CURRENT','9','5','8830','9788','2.75','-137','117',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="224679" timestamp="17-07-04T20:03:49+0000" period_id="1" period="FG" event_id="691507" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="13882" home_team_id="6868">
+<total total="2.25" over_price="111" under_price="-131"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('224679','7/4/2017 4:03:49 PM','1','FG','691507','52','CURRENT','9','5','13882','6868','2.25','111','-131',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:51+0000" period_id="2" period="1H" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<team_total total="2.00" over_price="-130" under_price="107"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('965','7/4/2017 4:03:51 PM','2','1H','647219','37','CURRENT','5','3','1280','1284','2.00','-130','107',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8163" timestamp="17-07-04T20:03:54+0000" period_id="1" period="FG" event_id="691785" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="8060" home_team_id="4999">
+<total total="39.00" over_price="116" under_price="-131"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8163','7/4/2017 4:03:54 PM','1','FG','691785','37','CURRENT','12','8','8060','4999','39.00','116','-131',getDate())
+Received message: <?xml version="1.0"?>
+<event_state event_id="691515" rot="224239" event_state_type_id="5" event_state="FINAL" time="17-07-04T20:03:55+0000" league_id="9" sport_id="5"/>
+insert into event_state (event_id,rot,event_state_type_id,event_state,time,league_id,sport_id,timeReceived) values ('691515','224239','5','FINAL','7/4/2017 4:03:55 PM','9','5',getDate())
+Invalid object name 'event_state'.
+insert into event_state (event_id,rot,event_state_type_id,event_state,time,league_id,sport_id,timeReceived) values ('691515','224239','5','FINAL','7/4/2017 4:03:55 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:03:58+0000" period_id="1" period="FG" event_id="647219" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ps away_spread="1.50" away_price="-138" home_spread="-1.50" home_price="125"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('965','7/4/2017 4:03:58 PM','1','FG','647219','37','CURRENT','5','3','1280','1284','1.50','-138','-1.50','125',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:03:59+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:59 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:03:59 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:04:02+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ml away_price="210" home_price="-325" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9963','7/4/2017 4:04:02 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','210','-325','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8671" timestamp="17-07-04T20:04:02+0000" period_id="1" period="FG" event_id="691821" sportsbook="52" description="CURRENT" league_id="12" sport_id="8" away_team_id="5664" home_team_id="5473">
+<ml away_price="145" home_price="-180" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('8671','7/4/2017 4:04:02 PM','1','FG','691821','52','CURRENT','12','8','5664','5473','145','-180','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:04:04+0000" period_id="1" period="FG" event_id="691411" sportsbook="92" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="2.75" over_price="-138" under_price="118"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:04:04 PM','1','FG','691411','92','CURRENT','9','5','8830','9788','2.75','-138','118',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691519" away_rot="224229" away_score="1"  home_rot="224230" home_score="1" sequence="2" period="2nd H" description="76:00" final="false" time="17-07-04T20:04:05+0000" message_timestamp="17-07-04T20:04:05+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691519','224229','1','224230','1','2','2nd H','76:00','false','7/4/2017 4:04:05 PM','7/4/2017 4:04:05 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="51" sequence="3" period="3rd Q" description="07:02" final="false" time="17-07-04T20:04:06+0000" message_timestamp="17-07-04T20:04:06+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','51','3','3rd Q','07:02','false','7/4/2017 4:04:06 PM','7/4/2017 4:04:06 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="205977" timestamp="17-07-04T20:04:07+0000" period_id="1" period="FG" event_id="691435" sportsbook="92" description="CURRENT" league_id="9" sport_id="5" away_team_id="9755" home_team_id="9751">
+<ps away_spread="-0.00" away_price="-138" home_spread="0.00" home_price="123"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('205977','7/4/2017 4:04:07 PM','1','FG','691435','92','CURRENT','9','5','9755','9751','-0.00','-138','0.00','123',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8163" timestamp="17-07-04T20:04:09+0000" period_id="1" period="FG" event_id="691785" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="8060" home_team_id="4999">
+<total total="39.00" over_price="114" under_price="-128"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8163','7/4/2017 4:04:09 PM','1','FG','691785','37','CURRENT','12','8','8060','4999','39.00','114','-128',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8173" timestamp="17-07-04T20:04:13+0000" period_id="1" period="FG" event_id="691790" sportsbook="117" description="OPENER" league_id="12" sport_id="8" away_team_id="4086" home_team_id="4588">
+<ps away_spread="-6.50" away_price="-110" home_spread="6.50" home_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('8173','7/4/2017 4:04:13 PM','1','FG','691790','117','OPENER','12','8','4086','4588','-6.50','-110','6.50','-110',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:14+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:14 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:14 PM',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:19+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:19 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:19 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="224679" timestamp="17-07-04T20:04:22+0000" period_id="1" period="FG" event_id="691507" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="13882" home_team_id="6868">
+<total total="2.00" over_price="-129" under_price="109"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('224679','7/4/2017 4:04:22 PM','1','FG','691507','52','CURRENT','9','5','13882','6868','2.00','-129','109',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:04:23+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ps away_spread="1.50" away_price="-170" home_spread="-1.50" home_price="130"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9963','7/4/2017 4:04:23 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','1.50','-170','-1.50','130',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:26+0000" period_id="2" period="1H" event_id="647213" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ps away_spread="-0.50" away_price="-106" home_spread="0.50" home_price="-105"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('955','7/4/2017 4:04:26 PM','2','1H','647213','37','CURRENT','5','3','1296','1290','-0.50','-106','0.50','-105',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209997" timestamp="17-07-04T20:04:26+0000" period_id="1" period="FG" event_id="691401" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="3550" home_team_id="14073">
+<ml away_price="119" home_price="233" draw_price="274"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209997','7/4/2017 4:04:26 PM','1','FG','691401','37','CURRENT','9','5','3550','14073','119','233','274',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="647212" away_rot="953" away_score="3"  home_rot="954" home_score="2" sequence="11" period="TOP 6th" description="TOP" final="false" time="17-07-04T20:04:28+0000" message_timestamp="17-07-04T20:04:28+0000" league_id="5" sport_id="3"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('647212','953','3','954','2','11','TOP 6th','TOP','false','7/4/2017 4:04:28 PM','7/4/2017 4:04:28 PM','5','3',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:30+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:30 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:30 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:33+0000" period_id="40" period="01" event_id="647213" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<total total="0.50" over_price="-121" under_price="104"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('955','7/4/2017 4:04:33 PM','40','01','647213','37','CURRENT','5','3','1296','1290','0.50','-121','104',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:35+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:35 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:35 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9965" timestamp="17-07-04T20:04:37+0000" period_id="1" period="FG" event_id="693412" sportsbook="37" description="OPENER" league_id="5" sport_id="3" away_team_id="4964" home_team_id="4968">
+<ps away_spread="1.50" away_price="-138" home_spread="-1.50" home_price="118"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9965','7/4/2017 4:04:37 PM','1','FG','693412','37','OPENER','5','3','4964','4968','1.50','-138','-1.50','118',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:39+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:39 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:39 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:41+0000" period_id="1" period="FG" event_id="647213" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ps away_spread="-1.50" away_price="115" home_spread="1.50" home_price="-135"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('955','7/4/2017 4:04:41 PM','1','FG','647213','52','CURRENT','5','3','1296','1290','-1.50','115','1.50','-135',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="51" sequence="3" period="3rd Q" description="06:41" final="false" time="17-07-04T20:04:43+0000" message_timestamp="17-07-04T20:04:43+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','51','3','3rd Q','06:41','false','7/4/2017 4:04:43 PM','7/4/2017 4:04:43 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:44+0000" period_id="1" period="FG" event_id="647213" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-142" home_price="128" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:04:44 PM','1','FG','647213','2','CURRENT','5','3','1296','1290','-142','128','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:04:49+0000" period_id="1" period="FG" event_id="691411" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="2.75" over_price="-129" under_price="109"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:04:49 PM','1','FG','691411','52','CURRENT','9','5','8830','9788','2.75','-129','109',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:50+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:50 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:50 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691521" away_rot="224233" away_score="0"  home_rot="224234" home_score="0" sequence="2" period="2nd H" description="78:00" final="false" time="17-07-04T20:04:50+0000" message_timestamp="17-07-04T20:04:51+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691521','224233','0','224234','0','2','2nd H','78:00','false','7/4/2017 4:04:50 PM','7/4/2017 4:04:51 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:52+0000" period_id="1" period="FG" event_id="647213" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-142" home_price="127" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:04:52 PM','1','FG','647213','117','CURRENT','5','3','1296','1290','-142','127','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:54+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:54 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:54 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8181" timestamp="17-07-04T20:04:56+0000" period_id="1" period="FG" event_id="691794" sportsbook="117" description="OPENER" league_id="12" sport_id="8" away_team_id="3127" home_team_id="4238">
+<ps away_spread="-4.50" away_price="-120" home_spread="4.50" home_price="100"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('8181','7/4/2017 4:04:56 PM','1','FG','691794','117','OPENER','12','8','3127','4238','-4.50','-120','4.50','100',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:04:59+0000" period_id="1" period="FG" event_id="647213" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ps away_spread="-1.50" away_price="110" home_spread="1.50" home_price="-130"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('955','7/4/2017 4:04:59 PM','1','FG','647213','52','CURRENT','5','3','1296','1290','-1.50','110','1.50','-130',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:04:59+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:59 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:04:59 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="957" timestamp="17-07-04T20:05:03+0000" period_id="1" period="FG" event_id="647214" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1295" home_team_id="1302">
+<ps away_spread="1.50" away_price="-140" home_spread="-1.50" home_price="120"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('957','7/4/2017 4:05:03 PM','1','FG','647214','2','CURRENT','5','3','1295','1302','1.50','-140','-1.50','120',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="957" timestamp="17-07-04T20:05:04+0000" period_id="1" period="FG" event_id="647214" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="1295" home_team_id="1302">
+<ps away_spread="1.50" away_price="-145" home_spread="-1.50" home_price="125"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('957','7/4/2017 4:05:04 PM','1','FG','647214','52','CURRENT','5','3','1295','1302','1.50','-145','-1.50','125',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:05:07+0000" period_id="1" period="FG" event_id="647213" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-145" home_price="135" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:05:07 PM','1','FG','647213','39','CURRENT','5','3','1296','1290','-145','135','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="969" timestamp="17-07-04T20:05:09+0000" period_id="1" period="FG" event_id="647215" sportsbook="10" description="CURRENT" league_id="5" sport_id="3" away_team_id="1275" home_team_id="1287">
+<ml away_price="117" home_price="-127" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('969','7/4/2017 4:05:09 PM','1','FG','647215','10','CURRENT','5','3','1275','1287','117','-127','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8163" timestamp="17-07-04T20:05:10+0000" period_id="1" period="FG" event_id="691785" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="8060" home_team_id="4999">
+<total total="39.00" over_price="104" under_price="-117"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8163','7/4/2017 4:05:10 PM','1','FG','691785','37','CURRENT','12','8','8060','4999','39.00','104','-117',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:05:12+0000" period_id="1" period="FG" event_id="693410" sportsbook="52" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<total total="0.00" over_price="0" under_price="-135"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9961','7/4/2017 4:05:12 PM','1','FG','693410','52','CURRENT','5','3','4961','4604','0.00','0','-135',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:14+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:14 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:14 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209633" timestamp="17-07-04T20:05:17+0000" period_id="1" period="FG" event_id="691411" sportsbook="2" description="CURRENT" league_id="9" sport_id="5" away_team_id="8830" home_team_id="9788">
+<total total="3.00" over_price="-107" under_price="-122"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('209633','7/4/2017 4:05:17 PM','1','FG','691411','2','CURRENT','9','5','8830','9788','3.00','-107','-122',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:05:18+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ml away_price="235" home_price="-375" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9963','7/4/2017 4:05:18 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','235','-375','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:19+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:19 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:19 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:05:20+0000" period_id="1" period="FG" event_id="693410" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<total total="5.50" over_price="-107" under_price="-109"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('9961','7/4/2017 4:05:20 PM','1','FG','693410','37','CURRENT','5','3','4961','4604','5.50','-107','-109',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9961" timestamp="17-07-04T20:05:22+0000" period_id="1" period="FG" event_id="693410" sportsbook="37" description="CURRENT" league_id="5" sport_id="3" away_team_id="4961" home_team_id="4604">
+<ps away_spread="-3.00" away_price="-119" home_spread="3.00" home_price="102"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('9961','7/4/2017 4:05:22 PM','1','FG','693410','37','CURRENT','5','3','4961','4604','-3.00','-119','3.00','102',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="957" timestamp="17-07-04T20:05:24+0000" period_id="1" period="FG" event_id="647214" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1295" home_team_id="1302">
+<ml away_price="133" home_price="-147" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('957','7/4/2017 4:05:24 PM','1','FG','647214','2','CURRENT','5','3','1295','1302','133','-147','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8157" timestamp="17-07-04T20:05:25+0000" period_id="1" period="FG" event_id="691782" sportsbook="37" description="CURRENT" league_id="12" sport_id="8" away_team_id="5171" home_team_id="7495">
+<total total="35.00" over_price="-121" under_price="108"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,total,over_price,under_price,timeReceived) values ('8157','7/4/2017 4:05:25 PM','1','FG','691782','37','CURRENT','12','8','5171','7495','35.00','-121','108',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="304597" timestamp="17-07-04T20:05:29+0000" period_id="1" period="FG" event_id="692573" sportsbook="37" description="CURRENT" league_id="34" sport_id="3" away_team_id="8399" home_team_id="14305">
+<ps away_spread="-1.50" away_price="109" home_spread="1.50" home_price="-127"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('304597','7/4/2017 4:05:29 PM','1','FG','692573','37','CURRENT','34','3','8399','14305','-1.50','109','1.50','-127',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="959" timestamp="17-07-04T20:05:33+0000" period_id="1" period="FG" event_id="647210" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1299" home_team_id="1301">
+<ml away_price="251" home_price="-285" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('959','7/4/2017 4:05:33 PM','1','FG','647210','2','CURRENT','5','3','1299','1301','251','-285','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:34+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:34 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:34 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691521" away_rot="224233" away_score="0"  home_rot="224234" home_score="0" sequence="2" period="2nd H" description="79:00" final="false" time="17-07-04T20:05:38+0000" message_timestamp="17-07-04T20:05:39+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691521','224233','0','224234','0','2','2nd H','79:00','false','7/4/2017 4:05:38 PM','7/4/2017 4:05:39 PM','9','5',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:39+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:39 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:39 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="965" timestamp="17-07-04T20:05:41+0000" period_id="1" period="FG" event_id="647219" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1280" home_team_id="1284">
+<ml away_price="136" home_price="-151" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('965','7/4/2017 4:05:41 PM','1','FG','647219','2','CURRENT','5','3','1280','1284','136','-151','0',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="47"  home_rot="710" home_score="51" sequence="3" period="3rd Q" description="06:38" final="false" time="17-07-04T20:05:43+0000" message_timestamp="17-07-04T20:05:43+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','47','710','51','3','3rd Q','06:38','false','7/4/2017 4:05:43 PM','7/4/2017 4:05:43 PM','50','2',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:44+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:44 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:44 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="955" timestamp="17-07-04T20:05:49+0000" period_id="1" period="FG" event_id="647213" sportsbook="2" description="CURRENT" league_id="5" sport_id="3" away_team_id="1296" home_team_id="1290">
+<ml away_price="-143" home_price="129" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('955','7/4/2017 4:05:49 PM','1','FG','647213','2','CURRENT','5','3','1296','1290','-143','129','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9965" timestamp="17-07-04T20:05:50+0000" period_id="1" period="FG" event_id="693412" sportsbook="117" description="OPENER" league_id="5" sport_id="3" away_team_id="4964" home_team_id="4968">
+<ml away_price="130" home_price="-170" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9965','7/4/2017 4:05:50 PM','1','FG','693412','117','OPENER','5','3','4964','4968','130','-170','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:54+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:54 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:54 PM',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:05:59+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:59 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:05:59 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:06:01+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ml away_price="235" home_price="-375" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9963','7/4/2017 4:06:01 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','235','-375','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="210221" timestamp="17-07-04T20:06:04+0000" period_id="1" period="FG" event_id="691417" sportsbook="52" description="CURRENT" league_id="9" sport_id="5" away_team_id="9874" home_team_id="9876">
+<ml away_price="343" home_price="-128" draw_price="240"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('210221','7/4/2017 4:06:04 PM','1','FG','691417','52','CURRENT','9','5','9874','9876','343','-128','240',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691519" away_rot="224229" away_score="1"  home_rot="224230" home_score="1" sequence="2" period="2nd H" description="78:00" final="false" time="17-07-04T20:06:08+0000" message_timestamp="17-07-04T20:06:08+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691519','224229','1','224230','1','2','2nd H','78:00','false','7/4/2017 4:06:08 PM','7/4/2017 4:06:08 PM','9','5',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="209813" timestamp="17-07-04T20:06:09+0000" period_id="1" period="FG" event_id="691409" sportsbook="92" description="CURRENT" league_id="9" sport_id="5" away_team_id="3561" home_team_id="3560">
+<ml away_price="318" home_price="-105" draw_price="267"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('209813','7/4/2017 4:06:09 PM','1','FG','691409','92','CURRENT','9','5','3561','3560','318','-105','267',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:14+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:14 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:14 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="208269" timestamp="17-07-04T20:06:17+0000" period_id="1" period="FG" event_id="692791" sportsbook="92" description="CURRENT" league_id="9" sport_id="5" away_team_id="4851" home_team_id="4847">
+<ml away_price="687" home_price="-194" draw_price="311"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('208269','7/4/2017 4:06:17 PM','1','FG','692791','92','CURRENT','9','5','4851','4847','687','-194','311',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:19+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:19 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:19 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8141" timestamp="17-07-04T20:06:21+0000" period_id="1" period="FG" event_id="691774" sportsbook="2" description="CURRENT" league_id="12" sport_id="8" away_team_id="4660" home_team_id="4139">
+<ps away_spread="-1.50" away_price="-110" home_spread="1.50" home_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('8141','7/4/2017 4:06:21 PM','1','FG','691774','2','CURRENT','12','8','4660','4139','-1.50','-110','1.50','-110',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="8141" timestamp="17-07-04T20:06:22+0000" period_id="1" period="FG" event_id="691774" sportsbook="52" description="CURRENT" league_id="12" sport_id="8" away_team_id="4660" home_team_id="4139">
+<ps away_spread="-1.50" away_price="-110" home_spread="1.50" home_price="-110"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('8141','7/4/2017 4:06:22 PM','1','FG','691774','52','CURRENT','12','8','4660','4139','-1.50','-110','1.50','-110',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:24+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:24 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:24 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="692125" away_rot="709" away_score="50"  home_rot="710" home_score="51" sequence="3" period="3rd Q" description="06:08" final="false" time="17-07-04T20:06:25+0000" message_timestamp="17-07-04T20:06:25+0000" league_id="50" sport_id="2"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('692125','709','50','710','51','3','3rd Q','06:08','false','7/4/2017 4:06:25 PM','7/4/2017 4:06:25 PM','50','2',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="975" timestamp="17-07-04T20:06:27+0000" period_id="1" period="FG" event_id="647224" sportsbook="39" description="CURRENT" league_id="5" sport_id="3" away_team_id="1277" home_team_id="1298">
+<ml away_price="172" home_price="-182" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('975','7/4/2017 4:06:27 PM','1','FG','647224','39','CURRENT','5','3','1277','1298','172','-182','0',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="224517" timestamp="17-07-04T20:06:29+0000" period_id="1" period="FG" event_id="692723" sportsbook="37" description="CURRENT" league_id="9" sport_id="5" away_team_id="14753" home_team_id="14752">
+<ps away_spread="-1.75" away_price="-156" home_spread="1.75" home_price="125"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_spread,away_price,home_spread,home_price,timeReceived) values ('224517','7/4/2017 4:06:29 PM','1','FG','692723','37','CURRENT','9','5','14753','14752','-1.75','-156','1.75','125',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:34+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:34 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:34 PM',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691691" away_rot="8103" away_score="1"  home_rot="8104" home_score="1" sequence="4" period="Set 4" description="Set 4" final="false" time="17-07-04T20:06:39+0000" message_timestamp="17-07-04T20:06:39+0000" league_id="12" sport_id="8"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691691','8103','1','8104','1','4','Set 4','Set 4','false','7/4/2017 4:06:39 PM','7/4/2017 4:06:39 PM','12','8',getDate())
+Received message: <?xml version="1.0"?>
+<matchup_score event_id="691521" away_rot="224233" away_score="0"  home_rot="224234" home_score="0" sequence="2" period="2nd H" description="80:00" final="false" time="17-07-04T20:06:42+0000" message_timestamp="17-07-04T20:06:42+0000" league_id="9" sport_id="5"/>
+insert into matchup_score (event_id,away_rot,away_score,home_rot,home_score,sequence,period,description,final,time,message_timestamp,league_id,sport_id,timeReceived) values ('691521','224233','0','224234','0','2','2nd H','80:00','false','7/4/2017 4:06:42 PM','7/4/2017 4:06:42 PM','9','5',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:45+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:45 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:45 PM',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:50+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:50 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:50 PM',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:54+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:54 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:54 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9963" timestamp="17-07-04T20:06:55+0000" period_id="1" period="FG" event_id="693411" sportsbook="117" description="CURRENT" league_id="5" sport_id="3" away_team_id="4606" home_team_id="4603">
+<ml away_price="210" home_price="-325" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9963','7/4/2017 4:06:55 PM','1','FG','693411','117','CURRENT','5','3','4606','4603','210','-325','0',getDate())
+Received message: <?xml version="1.0"?><heart_beat timestamp="17-07-04T20:06:59+0000"/>
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:59 PM',getDate())
+Invalid object name 'heart_beat'.
+insert into heart_beat (timestamp,timeReceived) values ('7/4/2017 4:06:59 PM',getDate())
+Received message: <?xml version="1.0"?>
+<line rot="9953" timestamp="17-07-04T20:07:01+0000" period_id="1" period="FG" event_id="693406" sportsbook="92" description="CURRENT" league_id="5" sport_id="3" away_team_id="4972" home_team_id="4601">
+<ml away_price="-190" home_price="165" draw_price="0"/>
+</line>
+insert into line (rot,timestamp,period_id,period,event_id,sportsbook,description,league_id,sport_id,away_team_id,home_team_id,away_price,home_price,draw_price,timeReceived) values ('9953','7/4/2017 4:07:01 PM','1','FG','693406','92','CURRENT','5','3','4972','4601','-190','165','0',getDate())

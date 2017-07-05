@@ -13,23 +13,41 @@ namespace CACtiveMQSubscribe
 {
     class Program
     {
+        DateTime lastUpdateToCustomer = DateTime.Now;
+
         static void Main(string[] args)
         {
+
+            
+            Program p = new Program();
+
+            p.lastUpdateToCustomer = DateTime.Now;
+            p.readLines(p.lastUpdateToCustomer);
+
+
+        }
+
+        public void readLines(DateTime lastUpdateToCustomer)
+        {
+           
+
             Console.WriteLine("Waiting for messages");
 
+
             // Read all messages off the queue
-            while (ReadNextMessage())
+            while (ReadNextMessage(lastUpdateToCustomer))
             {
                 //Console.WriteLine("Successfully read message");
             }
 
             Console.WriteLine("Finished");
+
+
         }
-
-
-        static bool ReadNextMessage()
+        static bool ReadNextMessage(DateTime lastUpdateToC)
         {
-           
+
+
             string topic = "com.donbest.message.public.xmleddie";
             const string userName = "xmleddie";
             const string password = "xmlfootball";
@@ -52,7 +70,7 @@ namespace CACtiveMQSubscribe
                 }
                 catch ( Exception ex)
                 {
-                    Console.WriteLine(" Errror: " + ex);
+                    Console.WriteLine(" Errror: " + ex.Message);
                 }
 
                 using (ISession session = connection.CreateSession(AcknowledgementMode.AutoAcknowledge))
@@ -70,7 +88,7 @@ namespace CACtiveMQSubscribe
                         ITextMessage txtMsg = msg as ITextMessage;
                         string body = txtMsg.Text;
 
-                        //Console.WriteLine($"Received message: {txtMsg.Text}");
+                       
 
                         var xdoc = XDocument.Parse(body);
 
@@ -131,24 +149,26 @@ namespace CACtiveMQSubscribe
                         query=query.Replace(",)", ")");
                         query2=query2.Replace(",)", ")");
 
-
-                       
-
-
-                        string connetionString = null;
+                        string connectionString = null;
 
                         SqlConnection connection2;
                         SqlCommand command;
                         string sql = null;
 
-                        connetionString = "Data Source=10.10.10.46;Initial Catalog=DonBest;User ID=luisma;Password=12345678";
+                        connectionString = "Data Source=10.10.10.46;Initial Catalog=DonBest;User ID=luisma;Password=12345678";
                         sql = query + query2;
-                        connection2 = new SqlConnection(connetionString);
+                        connection2 = new SqlConnection(connectionString);
 
+                    
                         try
                         {
                             connection2.Open();
                             //Console.WriteLine(" Connection Opened ");
+                            //if (p.lastUpdateToCustomer.AddMinutes(5)<DateTime.Now) 
+                            //{
+                            //    Console.WriteLine("Hour notification, Connection Alive : " + sql);
+                            //    //lastUpdateToCustomer = DateTime.Now;
+                            //}
                             command = new SqlCommand(sql, connection2);
                             SqlDataReader dr1 = command.ExecuteReader();
 
@@ -156,10 +176,10 @@ namespace CACtiveMQSubscribe
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine(ex.Message);
+                            Console.WriteLine("Connection Error:" + ex.Message);
                             Console.WriteLine(query + query2);
                         }
-
+                        
                         return true;
                     }
                     else
