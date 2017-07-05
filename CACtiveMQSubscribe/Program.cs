@@ -22,29 +22,36 @@ namespace CACtiveMQSubscribe
             Program p = new Program();
 
             p.lastUpdateToCustomer = DateTime.Now;
-            p.readLines(p.lastUpdateToCustomer);
+            p.readLines(p.lastUpdateToCustomer,0);
 
 
         }
 
-        public void readLines(DateTime lastUpdateToCustomer)
+        public void readLines(DateTime lastUpdateToCustomer, int linesCount)
         {
-           
+
+            int initialLinesCount;
 
             Console.WriteLine("Waiting for messages");
 
-
-            // Read all messages off the queue
-            while (ReadNextMessage(lastUpdateToCustomer))
+            do
             {
-                //Console.WriteLine("Successfully read message");
-            }
+                initialLinesCount = linesCount;
+                linesCount = ReadNextMessage(lastUpdateToCustomer, linesCount);
+
+                if (linesCount != 0 && linesCount % 100 == 0)
+                    Console.WriteLine(linesCount + "  readed lines" + DateTime.Now );
+               
+            } while (linesCount == (initialLinesCount + 1));
+            // Read all messages off the queue
+
+         
 
             Console.WriteLine("Finished");
 
 
         }
-        static bool ReadNextMessage(DateTime lastUpdateToC)
+        static int ReadNextMessage(DateTime lastUpdateToC, int linesCount)
         {
 
 
@@ -108,12 +115,11 @@ namespace CACtiveMQSubscribe
                             {
                                 query += attr.Name + ",";
 
-                                if (attr.Name=="timestamp" || attr.Name == "time" ||  attr.Name == "message_timestamp")
+                                if (attr.Name=="timestamp" || attr.Name == "time" ||  attr.Name == "message_timestamp" || attr.Name ==  "open_time")
                                 {
                                     var now = DateTime.Now; // Current date/time
                                     var utcNow = now.ToUniversalTime(); //
 
-                                   
 
                                     DateTime dt = DateTime.ParseExact(attr.Value, "yy-MM-dd'T'HH:mm:ssK",
                                    CultureInfo.InvariantCulture,
@@ -126,10 +132,6 @@ namespace CACtiveMQSubscribe
                                                                                                easternTimeZone);
 
                                     attrValue = easternDateTime.ToString();
-
-                                   
-
-
                                 }
                                 else
                                 {
@@ -164,11 +166,7 @@ namespace CACtiveMQSubscribe
                         {
                             connection2.Open();
                             //Console.WriteLine(" Connection Opened ");
-                            //if (p.lastUpdateToCustomer.AddMinutes(5)<DateTime.Now) 
-                            //{
-                            //    Console.WriteLine("Hour notification, Connection Alive : " + sql);
-                            //    //lastUpdateToCustomer = DateTime.Now;
-                            //}
+                         
                             command = new SqlCommand(sql, connection2);
                             SqlDataReader dr1 = command.ExecuteReader();
 
@@ -179,8 +177,9 @@ namespace CACtiveMQSubscribe
                             Console.WriteLine("Connection Error:" + ex.Message);
                             Console.WriteLine(query + query2);
                         }
-                        
-                        return true;
+
+
+                        return linesCount+1;
                     }
                     else
                     {
@@ -189,7 +188,7 @@ namespace CACtiveMQSubscribe
                 }
             }
 
-            return false;
+            return linesCount;
         }
     }
 }
