@@ -4,3 +4,8 @@
 *.application
 *.exe
 *.pdb
+*.exe
+*.application
+*.manifest
+*.pdb
+*.cache

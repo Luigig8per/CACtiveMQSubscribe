@@ -1,4 +1,5 @@
 ﻿using Apache.NMS;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -27,6 +28,16 @@ namespace CACtiveMQSubscribe
 
         }
 
+        public object doQuery(string query)
+        {
+            Dbconnection dbCon = new Dbconnection();
+
+
+            return dbCon.ExeScalar(query);
+
+
+
+        }
         public void readLines(DateTime lastUpdateToCustomer, int linesCount)
         {
 
@@ -51,7 +62,7 @@ namespace CACtiveMQSubscribe
 
 
         }
-        static int ReadNextMessage(DateTime lastUpdateToC, int linesCount)
+        public int ReadNextMessage(DateTime lastUpdateToC, int linesCount)
         {
 
 
@@ -151,33 +162,8 @@ namespace CACtiveMQSubscribe
                         query=query.Replace(",)", ")");
                         query2=query2.Replace(",)", ")");
 
-                        string connectionString = null;
 
-                        SqlConnection connection2;
-                        SqlCommand command;
-                        string sql = null;
-
-                        connectionString = "Data Source=10.10.10.46;Initial Catalog=DonBest;User ID=luisma;Password=12345678";
-                        sql = query + query2;
-                        connection2 = new SqlConnection(connectionString);
-
-                    
-                        try
-                        {
-                            connection2.Open();
-                            //Console.WriteLine(" Connection Opened ");
-                         
-                            command = new SqlCommand(sql, connection2);
-                            SqlDataReader dr1 = command.ExecuteReader();
-
-                            connection.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Connection Error:" + ex.Message);
-                            Console.WriteLine(query + query2);
-                        }
-
+                        doQuery(query + query2);
 
                         return linesCount+1;
                     }
