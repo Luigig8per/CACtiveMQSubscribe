@@ -62,6 +62,21 @@ namespace CACtiveMQSubscribe
 
 
         }
+
+        DateTime convertToEastern(string originalDate)
+        {
+            DateTime dt = DateTime.ParseExact(originalDate, "yy-MM-dd'T'HH:mm:ssK",
+                                CultureInfo.InvariantCulture,
+                                DateTimeStyles.AdjustToUniversal);
+
+            TimeZoneInfo easternTimeZone = TimeZoneInfo.FindSystemTimeZoneById(
+                                 "Eastern Standard Time");
+
+            DateTime easternDateTime = TimeZoneInfo.ConvertTimeFromUtc(dt,
+                                                                       easternTimeZone);
+
+            return easternDateTime;
+        }
         public int ReadNextMessage(DateTime lastUpdateToC, int linesCount)
         {
 
@@ -128,21 +143,8 @@ namespace CACtiveMQSubscribe
 
                                 if (attr.Name=="timestamp" || attr.Name == "time" ||  attr.Name == "message_timestamp" || attr.Name ==  "open_time")
                                 {
-                                    var now = DateTime.Now; // Current date/time
-                                    var utcNow = now.ToUniversalTime(); //
 
-
-                                    DateTime dt = DateTime.ParseExact(attr.Value, "yy-MM-dd'T'HH:mm:ssK",
-                                   CultureInfo.InvariantCulture,
-                                   DateTimeStyles.AdjustToUniversal);
-
-                                    TimeZoneInfo easternTimeZone = TimeZoneInfo.FindSystemTimeZoneById(
-                                                         "Eastern Standard Time");
-
-                                    DateTime easternDateTime = TimeZoneInfo.ConvertTimeFromUtc(dt,
-                                                                                               easternTimeZone);
-
-                                    attrValue = easternDateTime.ToString();
+                                    attrValue = convertToEastern(attr.Value).ToString();
                                 }
                                 else
                                 {
