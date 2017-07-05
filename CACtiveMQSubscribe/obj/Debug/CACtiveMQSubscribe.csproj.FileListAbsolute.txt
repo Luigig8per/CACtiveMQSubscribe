@@ -18,8 +18,10 @@ C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtive
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\CACtiveMQSubscribe.pdb
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.dll
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\DataAccess.dll
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.dll
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.dll
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\DataAccess.pdb
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.pdb
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.xml
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\Apache.NMS.ActiveMQ.pdb
@@ -27,11 +29,9 @@ C:\Users\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtive
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.xml
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\EntityFramework.SqlServer.xml
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csprojResolveAssemblyReference.cache
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.Form1.resources
+\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csproj.GenerateResource.Cache
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe.manifest
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.application
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.exe
 \\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.pdb
-\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.Form1.resources
-\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\obj\Debug\CACtiveMQSubscribe.csproj.GenerateResource.Cache
-\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\DataAccess.dll
-\\rtc-domain\FolderRedirection\luisma\Documents\Visual Studio 2015\Projects\CACtiveMQSubscribe\CACtiveMQSubscribe\bin\Debug\DataAccess.pdb

@@ -13,3 +13,8 @@
 *.manifest
 *.application
 *.exe
+*.exe
+.vs/CACtiveMQSubscribe/v14/.suo
+*.application
+*.manifest
+*.pdb

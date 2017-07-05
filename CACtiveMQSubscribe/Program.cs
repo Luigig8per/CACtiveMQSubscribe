@@ -30,6 +30,7 @@ namespace CACtiveMQSubscribe
 
         public object doQuery(string query)
         {
+            
             Dbconnection dbCon = new Dbconnection();
 
 
@@ -164,8 +165,17 @@ namespace CACtiveMQSubscribe
                         query=query.Replace(",)", ")");
                         query2=query2.Replace(",)", ")");
 
+                        try
+                        {
+
+                        
 
                         doQuery(query + query2);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("DB exception: " + ex.Message + "(" + query + query2 + ")");
+                        }
 
                         return linesCount+1;
                     }

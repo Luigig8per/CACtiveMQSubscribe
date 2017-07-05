@@ -19,7 +19,6 @@ namespace DataLayer
                 con.Open();
             }
             return con;
-
         }
 
         public int ExeNonQuery(SqlCommand cmd)
@@ -55,8 +54,6 @@ namespace DataLayer
             dt.Load(sdr);
             con.Close();
             return dt;
-
-
 
         }
 

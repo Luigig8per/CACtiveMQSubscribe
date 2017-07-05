@@ -21,4 +21,9 @@ time_change
 schedule_change
 
 
+All fields with next values are converted to UTC:    if (attr.Name=="timestamp" || attr.Name == "time" ||  attr.Name == "message_timestamp" || attr.Name ==  "open_time")
+
+
+
+
 

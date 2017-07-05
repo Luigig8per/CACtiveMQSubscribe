@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess
+namespace Entities
 {
-    public class Class1
+    class Queries
     {
+        public string query1;
+        public string query2;
+
+
     }
 }
