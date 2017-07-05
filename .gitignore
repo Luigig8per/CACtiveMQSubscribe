@@ -1,0 +1,6 @@
+
+*.deploy
+*.manifest
+*.application
+*.exe
+*.pdb
