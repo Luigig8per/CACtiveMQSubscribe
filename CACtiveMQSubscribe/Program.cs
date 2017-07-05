@@ -39,6 +39,23 @@ namespace CACtiveMQSubscribe
 
 
         }
+
+        public object doQuery(string table, string column, string text)
+        {
+
+            string query, query2;
+         
+
+            query = "insert into " + table + "(" + column + ") values ('" + text + "')";; 
+           
+
+            Dbconnection dbCon = new Dbconnection();
+
+
+            return dbCon.ExeScalar(query);
+
+
+        }
         public void readLines(DateTime lastUpdateToCustomer, int linesCount)
         {
 
@@ -122,7 +139,7 @@ namespace CACtiveMQSubscribe
                         ITextMessage txtMsg = msg as ITextMessage;
                         string body = txtMsg.Text;
 
-                       
+                        doQuery("message_received", "message_received", body);
 
                         var xdoc = XDocument.Parse(body);
 
