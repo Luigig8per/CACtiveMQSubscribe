@@ -31,7 +31,10 @@ namespace DesktopC
         private void button1_Click(object sender, EventArgs e)
         {
             tunel claseNegocio = new tunel();
-            claseNegocio.ExeStoredProcedure("Report_Game_Statistic", cmbUserId.SelectedIndex, dateTimePicker1.Value, dateTimePicker2.Value);
+           
+
+           
+            dataGridView1.DataSource = claseNegocio.ExeStoredProcedure("Report_Game_Statistic", cmbUserId.SelectedIndex, dateTimePicker1.Value, dateTimePicker2.Value);
 
         }
     }

@@ -58,7 +58,7 @@ namespace Business
 
      
 
-        public object ExeStoredProcedure(string storedProcedureName, int logIdUser,DateTime prmStartDate, DateTime prmEndDate)
+        public DataTable ExeStoredProcedure(string storedProcedureName, int logIdUser,DateTime prmStartDate, DateTime prmEndDate)
         {
             Dbconnection dbCon = new Dbconnection();
 

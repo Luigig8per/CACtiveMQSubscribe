@@ -33,6 +33,8 @@
             this.cmbUserId = new System.Windows.Forms.ComboBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -86,11 +88,20 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(77, 164);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(400, 237);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 133);
+            this.ClientSize = new System.Drawing.Size(578, 482);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.cmbUserId);
@@ -99,6 +110,7 @@
             this.Name = "mainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +123,7 @@
         private System.Windows.Forms.ComboBox cmbUserId;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
