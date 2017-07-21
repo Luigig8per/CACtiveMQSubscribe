@@ -25,16 +25,16 @@ namespace DesktopC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbUserId.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeagues]");
+            cmbLeagueId.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeagues]");
 
-            cmbUserId.DisplayMember = "Description";
-            cmbUserId.ValueMember = "IdLeague";
+            cmbLeagueId.DisplayMember = "Description";
+            cmbLeagueId.ValueMember = "IdLeague";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
              
-            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", cmbUserId.SelectedIndex, dateTimePicker1.Value, dateTimePicker2.Value);
+            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeagueId.Text, dateTimePicker1.Value, dateTimePicker2.Value);
 
         }
     }

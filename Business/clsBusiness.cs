@@ -90,7 +90,7 @@ namespace Business
 
         }
 
-        public DataTable getGameStats(string storedProcedureName, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        public DataTable getGameStats(string storedProcedureName, int logIdUser, string League, DateTime prmStartDate, DateTime prmEndDate)
         {
             Dbconnection dbCon = new Dbconnection();
 
@@ -102,7 +102,7 @@ namespace Business
             //return dbCon.insertData(storedProcedureName, spParameters);
 
 
-            return dbCon.getGameStats(storedProcedureName, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+            return dbCon.getGameStats(storedProcedureName, logIdUser, League, prmStartDate.ToString(), prmEndDate.ToString());
 
 
         }

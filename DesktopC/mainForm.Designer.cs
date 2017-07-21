@@ -30,7 +30,7 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.cmbUserId = new System.Windows.Forms.ComboBox();
+            this.cmbLeagueId = new System.Windows.Forms.ComboBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -55,18 +55,18 @@
             this.dateTimePicker2.TabIndex = 1;
             this.dateTimePicker2.Value = new System.DateTime(2017, 7, 20, 0, 0, 0, 0);
             // 
-            // cmbUserId
+            // cmbLeagueId
             // 
-            this.cmbUserId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUserId.FormattingEnabled = true;
-            this.cmbUserId.Items.AddRange(new object[] {
+            this.cmbLeagueId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLeagueId.FormattingEnabled = true;
+            this.cmbLeagueId.Items.AddRange(new object[] {
             "Luis\t",
             "Carlos\t",
             "Juan"});
-            this.cmbUserId.Location = new System.Drawing.Point(367, 64);
-            this.cmbUserId.Name = "cmbUserId";
-            this.cmbUserId.Size = new System.Drawing.Size(502, 33);
-            this.cmbUserId.TabIndex = 2;
+            this.cmbLeagueId.Location = new System.Drawing.Point(367, 64);
+            this.cmbLeagueId.Name = "cmbLeagueId";
+            this.cmbLeagueId.Size = new System.Drawing.Size(502, 33);
+            this.cmbLeagueId.TabIndex = 2;
             // 
             // btnInsert
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.cmbUserId);
+            this.Controls.Add(this.cmbLeagueId);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "mainForm";
@@ -120,7 +120,7 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox cmbUserId;
+        private System.Windows.Forms.ComboBox cmbLeagueId;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;

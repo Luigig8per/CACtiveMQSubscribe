@@ -412,10 +412,10 @@ namespace DataLayer
         }
 
 
-        public DataTable getGameStats(string spName, int logIdUser, string prmStartDate, string prmEndDate)
+        public DataTable getGameStats(string spName, int logIdUser, string League,  string prmStartDate, string prmEndDate)
         {
             DataTable res = new DataTable();
-            using (SqlConnection con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
+            using (con)
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Report_Game_Statistic";
@@ -432,7 +432,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@prmBook", "");
                 cmd.Parameters.AddWithValue("@prmOffice", "");
                 cmd.Parameters.AddWithValue("@prmPlayer", "");
-                cmd.Parameters.AddWithValue("@prmLeague", "");
+                cmd.Parameters.AddWithValue("@prmLeague", League);
                 cmd.Parameters.AddWithValue("@prmGroupby", 0);
                 cmd.Parameters.AddWithValue("@prmOrderby", 1);
 
