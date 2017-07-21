@@ -325,6 +325,143 @@ namespace DataLayer
             return res;
         }
 
+        public DataTable extractDataSP(string spName, int logIdUser, string prmStartDate, string prmEndDate)
+        {
+            DataTable res = new DataTable();
+            using (SqlConnection con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Report_Game_Statistic";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+
+                cmd.Parameters.AddWithValue("@LogIdUser", 74);
+                //cmd.Parameters.AddWithValue("@prmStartDate", "7/20/2017");
+                //cmd.Parameters.AddWithValue("@prmEndDate", "7/20/2017");
+
+                cmd.Parameters.AddWithValue("@prmStartDate", prmStartDate);
+                cmd.Parameters.AddWithValue("@prmEndDate", prmEndDate);
+
+                cmd.Parameters.AddWithValue("@prmBook", "");
+                cmd.Parameters.AddWithValue("@prmOffice", "");
+                cmd.Parameters.AddWithValue("@prmPlayer", "");
+                cmd.Parameters.AddWithValue("@prmLeague", "");
+                cmd.Parameters.AddWithValue("@prmGroupby", 0);
+                cmd.Parameters.AddWithValue("@prmOrderby", 1);
+
+                try
+                {
+                    con.Open();
+
+                    SqlDataReader sdr;
+                    DataTable dt = new DataTable();
+
+                    sdr = cmd.ExecuteReader();
+                    dt.Load(sdr);
+                    con.Close();
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+            return res;
+        }
+
+        public DataTable extractDataSP(string spName)
+        {
+            DataTable res = new DataTable();
+            using (SqlConnection con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = spName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+
+                try
+                {
+                    con.Open();
+
+                    SqlDataReader sdr;
+                    DataTable dt = new DataTable();
+
+                    sdr = cmd.ExecuteReader();
+                    dt.Load(sdr);
+                    con.Close();
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+            return res;
+        }
+
+
+        public DataTable getGameStats(string spName, int logIdUser, string prmStartDate, string prmEndDate)
+        {
+            DataTable res = new DataTable();
+            using (SqlConnection con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Report_Game_Statistic";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+
+                cmd.Parameters.AddWithValue("@LogIdUser", 74);
+                //cmd.Parameters.AddWithValue("@prmStartDate", "7/20/2017");
+                //cmd.Parameters.AddWithValue("@prmEndDate", "7/20/2017");
+
+                cmd.Parameters.AddWithValue("@prmStartDate", prmStartDate);
+                cmd.Parameters.AddWithValue("@prmEndDate", prmEndDate);
+
+                cmd.Parameters.AddWithValue("@prmBook", "");
+                cmd.Parameters.AddWithValue("@prmOffice", "");
+                cmd.Parameters.AddWithValue("@prmPlayer", "");
+                cmd.Parameters.AddWithValue("@prmLeague", "");
+                cmd.Parameters.AddWithValue("@prmGroupby", 0);
+                cmd.Parameters.AddWithValue("@prmOrderby", 1);
+
+                try
+                {
+                    con.Open();
+
+                    SqlDataReader sdr;
+                    DataTable dt = new DataTable();
+
+                    sdr = cmd.ExecuteReader();
+                    dt.Load(sdr);
+                    con.Close();
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+            return res;
+        }
+
 
     }
 

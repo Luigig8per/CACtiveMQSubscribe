@@ -56,8 +56,23 @@ namespace Business
             return dateOnly;
         }
 
-     
 
+        public DataTable ExeStoredProcedure(string storedProcedureName)
+        {
+            Dbconnection dbCon = new Dbconnection();
+
+            //return  dbCon.ExeStoredProcedure(storedProcedureName, logIdUser, prmStartDate,  prmEndDate);
+
+            //List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
+
+
+            //return dbCon.insertData(storedProcedureName, spParameters);
+
+
+            return dbCon.extractDataSP(storedProcedureName);
+
+
+        }
         public DataTable ExeStoredProcedure(string storedProcedureName, int logIdUser,DateTime prmStartDate, DateTime prmEndDate)
         {
             Dbconnection dbCon = new Dbconnection();
@@ -71,6 +86,23 @@ namespace Business
 
 
             return dbCon.insertData(storedProcedureName, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+
+        }
+
+        public DataTable getGameStats(string storedProcedureName, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        {
+            Dbconnection dbCon = new Dbconnection();
+
+            //return  dbCon.ExeStoredProcedure(storedProcedureName, logIdUser, prmStartDate,  prmEndDate);
+
+            //List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
+
+
+            //return dbCon.insertData(storedProcedureName, spParameters);
+
+
+            return dbCon.getGameStats(storedProcedureName, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
 
         }

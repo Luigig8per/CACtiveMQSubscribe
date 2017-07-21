@@ -63,15 +63,15 @@
             "Luis\t",
             "Carlos\t",
             "Juan"});
-            this.cmbUserId.Location = new System.Drawing.Point(531, 69);
+            this.cmbUserId.Location = new System.Drawing.Point(367, 64);
             this.cmbUserId.Name = "cmbUserId";
-            this.cmbUserId.Size = new System.Drawing.Size(181, 33);
+            this.cmbUserId.Size = new System.Drawing.Size(502, 33);
             this.cmbUserId.TabIndex = 2;
             // 
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(766, 66);
+            this.btnInsert.Location = new System.Drawing.Point(768, 12);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(101, 40);
             this.btnInsert.TabIndex = 3;
@@ -82,11 +82,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(603, 43);
+            this.label1.Location = new System.Drawing.Point(376, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "User";
+            this.label1.Text = "League";
             // 
             // dataGridView1
             // 

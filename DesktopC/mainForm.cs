@@ -15,9 +15,9 @@ namespace DesktopC
     public partial class mainForm : Form
     {
 
-      
+        tunel clBusiness = new tunel();
 
-        
+
         public mainForm()
         {
             InitializeComponent();
@@ -25,16 +25,16 @@ namespace DesktopC
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cmbUserId.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeagues]");
 
+            cmbUserId.DisplayMember = "Description";
+            cmbUserId.ValueMember = "IdLeague";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tunel claseNegocio = new tunel();
-           
-
-           
-            dataGridView1.DataSource = claseNegocio.ExeStoredProcedure("Report_Game_Statistic", cmbUserId.SelectedIndex, dateTimePicker1.Value, dateTimePicker2.Value);
+             
+            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", cmbUserId.SelectedIndex, dateTimePicker1.Value, dateTimePicker2.Value);
 
         }
     }
