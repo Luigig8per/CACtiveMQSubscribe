@@ -7,3 +7,13 @@ C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACt
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\Entities\bin\Debug\EntityFramework.SqlServer.xml
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\Entities\obj\Debug\Entities.dll
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\Entities\obj\Debug\Entities.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\Entities.dll.config
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\Entities.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\Entities.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\EntityFramework.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\EntityFramework.xml
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.pdb

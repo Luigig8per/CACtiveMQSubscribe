@@ -64,10 +64,14 @@ namespace Business
 
             //return  dbCon.ExeStoredProcedure(storedProcedureName, logIdUser, prmStartDate,  prmEndDate);
 
-            List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
+            //List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
 
 
-            return dbCon.insertData(storedProcedureName, spParameters);
+            //return dbCon.insertData(storedProcedureName, spParameters);
+
+
+            return dbCon.insertData(storedProcedureName, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
 
         }
 

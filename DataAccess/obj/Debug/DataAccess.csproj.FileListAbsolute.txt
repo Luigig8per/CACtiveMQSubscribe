@@ -10,3 +10,10 @@ C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACt
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DataAccess\obj\Debug\DataAccess.dll
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DataAccess\obj\Debug\DataAccess.pdb
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\bin\Debug\DataAccess.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\bin\Debug\DataAccess.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\obj\Debug\DataAccess.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DataAccess\obj\Debug\DataAccess.pdb
