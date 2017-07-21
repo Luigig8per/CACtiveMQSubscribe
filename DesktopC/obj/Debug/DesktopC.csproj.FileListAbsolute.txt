@@ -1,0 +1,15 @@
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\DesktopC.exe.config
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\DesktopC.exe
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\DesktopC.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\Business.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\Entities.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\DataAccess.dll
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\Business.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\Entities.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\bin\Debug\DataAccess.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.csprojResolveAssemblyReference.cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.Properties.Resources.resources
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.csproj.GenerateResource.Cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.exe
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.pdb
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\CACtiveMQSubscribe\DesktopC\obj\Debug\DesktopC.mainForm.resources

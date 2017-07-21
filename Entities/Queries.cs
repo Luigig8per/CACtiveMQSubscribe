@@ -6,11 +6,5 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class Queries
-    {
-        public string query1;
-        public string query2;
-
-
-    }
+   
 }
