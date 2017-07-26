@@ -19,10 +19,18 @@ namespace DesktopC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbLeagueId.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeagues]");
+           
 
-            cmbLeagueId.DisplayMember = "Description";
-            cmbLeagueId.ValueMember = "IdLeague";
+            cmbSport.DataSource = clBusiness.ExeStoredProcedure("[dbo].[Sport_GetList]");
+
+            cmbSport.DisplayMember = "SportName";
+            cmbSport.ValueMember = "IdSport";
+
+            cmbLeague.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeagues]");
+
+            cmbLeague.DisplayMember = "Description";
+            cmbLeague.ValueMember = "IdLeague";
+
         }
 
         private void extractToExcel(string fileName)
@@ -84,8 +92,11 @@ namespace DesktopC
 
         private void button1_Click(object sender, EventArgs e)
         {
-             
-            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeagueId.Text, dateTimePicker1.Value, dateTimePicker2.Value);
+
+            //dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeagueId.Text, dateTimePicker1.Value, dateTimePicker2.Value);
+
+
+            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeague.Text, dateTimePicker1.Value, dateTimePicker2.Value);
 
         }
 
@@ -103,7 +114,7 @@ namespace DesktopC
             saveFileDialog1.Filter = "excel files (*.xls)|*.xls|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.FileName = cmbLeagueId.Text + " " + dateTimePicker1.Text + " - " + dateTimePicker2.Text + ".xls";
+            saveFileDialog1.FileName = cmbLeague.Text + " " + dateTimePicker1.Text + " - " + dateTimePicker2.Text + ".xls";
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -114,6 +125,23 @@ namespace DesktopC
                 //MessageBox.Show("Archivo guardado con éxito!.");
 
             }
+        }
+
+        private void cmbSport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
+            cmbLeague.DataSource = clBusiness.ExeStoredProcedure("[dbo].[GetLeaguesBySport]", cmbSport.SelectedValue.ToString());
+           
+
+            cmbLeague.DisplayMember = "Description";
+            cmbLeague.ValueMember = "IdLeague";
+        }
+
+        private void cmbLeague_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

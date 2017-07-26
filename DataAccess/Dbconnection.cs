@@ -411,6 +411,44 @@ namespace DataLayer
             return res;
         }
 
+        public DataTable extractDataSP(string spName, string idSport)
+        {
+            DataTable res = new DataTable();
+            using (SqlConnection con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = spName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+
+                cmd.Parameters.AddWithValue("@prmIdSport", idSport);
+
+                try
+                {
+                    con.Open();
+
+                    SqlDataReader sdr;
+                    DataTable dt = new DataTable();
+
+                    sdr = cmd.ExecuteReader();
+                    dt.Load(sdr);
+                    con.Close();
+                    return dt;
+
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+            return res;
+        }
+
 
         public DataTable getGameStats(string spName, int logIdUser, string League,  string prmStartDate, string prmEndDate)
         {

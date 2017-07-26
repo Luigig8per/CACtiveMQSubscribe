@@ -73,6 +73,23 @@ namespace Business
 
 
         }
+
+        public DataTable ExeStoredProcedure(string storedProcedureName, string idSport)
+        {
+            Dbconnection dbCon = new Dbconnection();
+
+            //return  dbCon.ExeStoredProcedure(storedProcedureName, logIdUser, prmStartDate,  prmEndDate);
+
+            //List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
+
+
+            //return dbCon.insertData(storedProcedureName, spParameters);
+
+
+            return dbCon.extractDataSP(storedProcedureName, idSport);
+
+
+        }
         public DataTable ExeStoredProcedure(string storedProcedureName, int logIdUser,DateTime prmStartDate, DateTime prmEndDate)
         {
             Dbconnection dbCon = new Dbconnection();
