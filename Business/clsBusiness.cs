@@ -107,6 +107,23 @@ namespace Business
 
         }
 
+        public DataTable getGameStats(string storedProcedureName, int logIdUser, string League, string prmStartDate, string prmEndDate)
+        {
+            Dbconnection dbCon = new Dbconnection();
+
+            //return  dbCon.ExeStoredProcedure(storedProcedureName, logIdUser, prmStartDate,  prmEndDate);
+
+            //List<string> spParameters = new List<string>(new string[] { logIdUser.ToString(), prmStartDate.ToString(), prmEndDate.ToString(), });
+
+
+            //return dbCon.insertData(storedProcedureName, spParameters);
+
+
+            return dbCon.getGameStats(storedProcedureName, logIdUser, League, prmStartDate.ToString(), prmEndDate.ToString());
+
+
+        }
+
         public DataTable ExeSPWithResults(string storedProcedureName, List<string> sqlParameters)
         {
             Dbconnection dbCon = new Dbconnection();

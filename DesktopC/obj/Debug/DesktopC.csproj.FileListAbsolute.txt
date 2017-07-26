@@ -32,3 +32,5 @@ C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\Repo
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DesktopC\bin\Debug\DesktopC.application
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DesktopC\obj\Debug\DesktopC.exe.manifest
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DesktopC\obj\Debug\DesktopC.application
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DesktopC\obj\Debug\DesktopC.csproj.ResolveComReference.cache
+C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\DesktopC\bin\Debug\AjaxControlToolkit.dll

@@ -42,14 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Business.dll" size="7168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AjaxControlToolkit.dll" size="5479424">
+      <assemblyIdentity name="AjaxControlToolkit" version="17.1.1.0" publicKeyToken="28F01B0E84B6D53E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YRF6ITk1ccv3hLTWSWY8KtryRMRmcJmOa4gMn4jnZ+w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Business.dll" size="7680">
       <assemblyIdentity name="Business" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Plx+aMHiyRRDlismlKWOXQH0jrPK/tIC9JMXdIz7BRk=</dsig:DigestValue>
+        <dsig:DigestValue>ZOzGiV7Cr0sI/D2CMo8qjRgquCWEmlge62YFxLMYTPc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopC.exe" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopC.exe" size="17920">
       <assemblyIdentity name="DesktopC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MN5HXPbznTp8wdro6AuA9ox3gH7DkdSlxR/E+Wdg+Qw=</dsig:DigestValue>
+        <dsig:DigestValue>Tz4ZHGS2IMRqgfkMSNVW10EW5CCbGvLADmRAE4csyDA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
