@@ -1,8 +1,3 @@
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\DesktopC.exe.config
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\DesktopC.exe.manifest
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\DesktopC.application
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\DesktopC.exe
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\DesktopC.pdb
 C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\AjaxControlToolkit.dll
 C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\Business.dll
 C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\Entities.dll
@@ -16,8 +11,13 @@ C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopCReportsGameS
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.mainForm.resources
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.Properties.Resources.resources
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopCReportsGameStats.csproj.GenerateResource.Cache
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.exe.manifest
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.application
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.exe
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.pdb
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopCReportsGameStats.csprojResolveAssemblyReference.cache
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe.config
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe.manifest
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.application
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.pdb
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.exe.manifest
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.application
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.exe
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.pdb

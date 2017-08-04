@@ -5,6 +5,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
 using OfficeOpenXml;
 using System.Data;
+using System.Reflection;
 
 namespace DesktopC
 {
@@ -405,7 +406,7 @@ namespace DesktopC
 
             dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeague.Text, dateTimePicker1.Value, dateTimePicker2.Value);
 
-
+            MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
 
         }
 
@@ -439,7 +440,7 @@ namespace DesktopC
             try
             {
                 saveFile();
-                MessageBox.Show("Archivo generado exitosamente");
+              
             }
             catch (Exception ex)
             {
@@ -457,7 +458,7 @@ namespace DesktopC
             saveFileDialog1.Filter = "excel files (*.xls)|*.xls|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.FileName = cmbLeague.Text + " " + dateTimePicker1.Text + " - " + dateTimePicker2.Text + ".xlsx";
+            saveFileDialog1.FileName = (@"HOUSE REPORT " + dateTimePicker1.Text + " - " + dateTimePicker2.Text + ".xlsx");
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -466,7 +467,7 @@ namespace DesktopC
                 
 
                 //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
-                fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path, dataGridView1);
+                fillExcelV2(@"C:\G8Housereport\HOUSE REPORT BASE.xlsx", path, dataGridView1);
                 //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
                 //MessageBox.Show("Archivo guardado con éxito!.");
 
