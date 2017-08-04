@@ -100,8 +100,8 @@ namespace DesktopC
             Excel.Workbook excelWorkBook = excelApp.Workbooks.Open(templateFile);
 
             //Add a new worksheet to workbook with the Datatable name
-            Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[5];
-            excelWorkSheet.Name = string.Format("{0:yyyy-MM-dd HH-mm-ss}", dateTimePicker1.Value);
+            Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[1];
+            excelWorkSheet.Name = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
 
             DataTable dTMLB = new DataTable();
             DataTable dtSoc = new DataTable();
@@ -135,7 +135,7 @@ namespace DesktopC
 
             for (int j = 0; j < 19; j++)
             {
-                for (int k = 4; k < 7; k++)
+                for (int k = 5; k < 7; k++)
                 {
                     //fill Soccer
                     if (j < dtSoccer.Rows.Count)
@@ -259,8 +259,31 @@ namespace DesktopC
             //dataGridView1.DataSource = exoticsSoc;
 
             //MessageBox.Show("Next, the EXOTICS");
-            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, "SOC");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
            
+
+            return exoticsSoc;
+        }
+
+        public DataTable extractTotalExoticsAndParlays(string sportName)
+        {
+            //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+            DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = exoticsSoc;
+
+            //MessageBox.Show("Next, the EXOTICS");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+
+            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = exoticsSoc;
+
+            //MessageBox.Show("Next, the EXOTICS");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+
+
 
             return exoticsSoc;
         }
@@ -429,7 +452,10 @@ namespace DesktopC
             {
 
                 string path = saveFileDialog1.FileName;
-                extractToExcel(saveFileDialog1.FileName);
+                
+
+                //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
+                fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path, dataGridView1);
                 //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
                 //MessageBox.Show("Archivo guardado con éxito!.");
 
