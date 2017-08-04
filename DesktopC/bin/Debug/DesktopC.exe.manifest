@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dyR827M0mQy9YpIrQtibfGJ4q5VChaybX4M5wFYtz0k=</dsig:DigestValue>
+        <dsig:DigestValue>zhnGwk37BJLnbtRNWnfdmi4dHsrUB2LH1iUI9+ZKg6s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,19 +73,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2sjgBFvaoF6WFKLra7gQz2yx2QeUxJ4h1SZbJD6IIHA=</dsig:DigestValue>
+        <dsig:DigestValue>SNl+KsTKu8HQV2xMP8qMeQgkJdbqB8SDkI4cfX1BdQc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopC.exe" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopC.exe" size="26112">
       <assemblyIdentity name="DesktopC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9+PPdPWaaHgysCT68qLfOsr+Hj/Gw20xR7rHKvLnmIM=</dsig:DigestValue>
+        <dsig:DigestValue>ajpd+9UtaHE1aZMLZmaNpjObRMkff8ZqqAQPbtKZYJ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

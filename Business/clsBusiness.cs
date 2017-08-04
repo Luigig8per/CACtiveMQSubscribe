@@ -99,6 +99,14 @@ namespace Business
             return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
         }
 
+        public DataTable extractTotal1QCanadianFootball (string storedProcedureName, string sport, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+        }
+
         public DataTable sumOfDatatable(DataTable leagueDt, string leagueName)
         {
             DataAccess.MLB theMLB = new DataAccess.MLB();

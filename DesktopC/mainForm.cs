@@ -108,12 +108,22 @@ namespace DesktopC
             DataTable dtMU = new DataTable();
             DataTable dtCanadianFootball = new DataTable();
             DataTable dtArenaFootball = new DataTable();
+            DataTable dtExoticsMLB = new DataTable();
+            DataTable dtExoticsNBA = new DataTable();
+            DataTable dtExoticsCanadianFootball = new DataTable();
+            DataTable dt1STQCanadiaFootball  = new DataTable();
+
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
             dtSoc = extractTotalExotics("SOC");
             dtMU = extractTotalCategorySport("MU", "Straight Bet");
-         
-            dtArenaFootball= clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
+           
+           dtExoticsMLB = extractTotalExotics("MLB");
+            dtExoticsNBA = extractTotalExotics("NBA");
+            dtExoticsCanadianFootball = extractTotalExotics("CANADIAN FOOTBALL");
+            dt1STQCanadiaFootball = extractCategorySport("CANADIAN FOOTBALL", "CANADIAN FOOTBALL - QUARTERS");
+
+            dtArenaFootball = clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
             //dtCanadianFootball= extractTotalCategorySport("NFL", "Straight Bet");
             dtCanadianFootball = clBusiness.extractCategorySport("Report_Game_Statistic", "NFL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
@@ -167,8 +177,38 @@ namespace DesktopC
                 }
             }
 
-            MessageBox.Show("Resultados de arena:" + dtArenaFootball.Rows.Count);
+
+
+            //fILL MLB Exotics 
+            excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
+            excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
+
             //Fill MU total
+            excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
+            excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
+
+
+            //Fill NBA 
+
+            excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
+            excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
+
+            //Fill CANADIAN FOOTBALL EXOTICS
+            //excelWorkSheet.Cells[32, 3] = dtExoticsCanadianFootball.Rows[0][1];
+            //excelWorkSheet.Cells[32, 4] = dtExoticsCanadianFootball.Rows[0][2];
+
+            excelWorkSheet.Cells[23, 12] = dtExoticsCanadianFootball.Rows[0][1];
+            excelWorkSheet.Cells[23, 13] = dtExoticsCanadianFootball.Rows[0][2];
+
+
+            //Fill Canadian 1STQ 
+
+            //NFL FOOTBALL
+
+            excelWorkSheet.Cells[21, 12] = dtExoticsCanadianFootball.Rows[0][1];
+            excelWorkSheet.Cells[23, 13] = dtExoticsCanadianFootball.Rows[0][2];
+
+
             excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
             excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
 
@@ -207,7 +247,7 @@ namespace DesktopC
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
-            DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", "SOC", "Parlay" , 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay" , 74, dateTimePicker1.Value, dateTimePicker2.Value);
             //dataGridView1.DataSource = exoticsSoc;
 
             //MessageBox.Show("Next, the EXOTICS");
@@ -215,6 +255,12 @@ namespace DesktopC
            
 
             return exoticsSoc;
+        }
+
+        public DataTable extractCategorySport(string sportName, string category)
+        {
+            DataTable dtRes = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            return dtRes;
         }
 
         public DataTable extractTotalCategorySport(string sportName, string category)
@@ -349,7 +395,7 @@ namespace DesktopC
             return dgSoccer;
         }
 
-        public float extractFieldResult(string sport, string category, string category2, DataGrid ds)
+        public float extractSpecificResultLeague(string sport, string category, string category2, DataGrid ds)
         {
             return 0;
         }

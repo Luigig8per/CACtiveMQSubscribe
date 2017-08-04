@@ -44,6 +44,13 @@ namespace DataAccess
 
             dgTemp7 = extractMlSpTotalFields(storedProcedureName, logIdUser, "MLB - LIVE WAGERING ", prmStartDate, prmEndDate, 3);
 
+            //Next the exotics
+
+            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+            dgTemp8 = extractTotalAmountLeague(dgTemp8, "MLB Exotics");
+
+
             dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
             dgTemp8 = extractTotalAmountLeague(dgTemp8, "MLB Exotics");
