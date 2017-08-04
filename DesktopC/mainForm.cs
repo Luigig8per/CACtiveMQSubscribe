@@ -112,13 +112,16 @@ namespace DesktopC
             DataTable dtExoticsNBA = new DataTable();
             DataTable dtExoticsCanadianFootball = new DataTable();
             DataTable dt1STQCanadiaFootball  = new DataTable();
-
+            DataTable dtSoccer = new DataTable();
+            DataTable dtNBA= new DataTable();
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
-            dtSoc = extractTotalExotics("SOC");
+            dtSoc = extractTotalExotics("SOCC");
             dtMU = extractTotalCategorySport("MU", "Straight Bet");
-           
-           dtExoticsMLB = extractTotalExotics("MLB");
+            dtSoccer = extractCategorySport("SOC", "Straight Bet");
+            dtNBA = extractCategorySport("NBA", "Straight Bet");
+
+            dtExoticsMLB = extractTotalExotics("MLB");
             dtExoticsNBA = extractTotalExotics("NBA");
             dtExoticsCanadianFootball = extractTotalExotics("CANADIAN FOOTBALL");
             dt1STQCanadiaFootball = extractCategorySport("CANADIAN FOOTBALL", "CANADIAN FOOTBALL - QUARTERS");
@@ -127,15 +130,20 @@ namespace DesktopC
             //dtCanadianFootball= extractTotalCategorySport("NFL", "Straight Bet");
             dtCanadianFootball = clBusiness.extractCategorySport("Report_Game_Statistic", "NFL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
+
+
+
             for (int j = 0; j < 19; j++)
             {
-                for (int k = 5; k < 7; k++)
+                for (int k = 4; k < 7; k++)
                 {
                     //fill Soccer
-                    if (j < 3)
+                    if (j < dtSoccer.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
-                     
+                        //excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
+                        //excelWorkSheet.Cells[j + 3, k + 2] = dTMLB.Rows[j + 15][k + 1];
+                        excelWorkSheet.Cells[j + 3, k + 2] = dtSoccer.Rows[j][k -4];
+
                     }
 
 
@@ -147,10 +155,10 @@ namespace DesktopC
                     }
 
                     //Fill WNBA
-                    if (j<8)
+                    if (j<dtNBA.Rows.Count)
                     { 
-                          excelWorkSheet.Cells[j + 19, k + 2] = dgv.Rows[j].Cells[k + 1].Value.ToString();
-                        
+                          excelWorkSheet.Cells[j + 19, k + 2] = dtNBA.Rows[j][k - 4];
+
 
                     }
 
@@ -163,7 +171,7 @@ namespace DesktopC
                     }
 
                     //fill CANADIAN FOOTBALL
-                    if (j<dtCanadianFootball.Rows.Count-1)
+                    if (j<dtCanadianFootball.Rows.Count)
                     {
                         //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
                         excelWorkSheet.Cells[j + 11, k + 7] = dtCanadianFootball.Rows[j][k -4];
@@ -466,7 +474,8 @@ namespace DesktopC
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
+            dataGridView1.DataSource = extractCategorySport("SOC", "Straight Bet");
+
         }
     }
 }
