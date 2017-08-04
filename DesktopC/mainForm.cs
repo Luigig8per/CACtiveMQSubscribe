@@ -117,13 +117,13 @@ namespace DesktopC
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
             dtSoc = extractTotalExotics("SOCC");
-            dtMU = extractTotalCategorySport("MU", "Straight Bet");
+            dtMU = extractTotalExoticsAndParlays("MU");
             dtSoccer = extractCategorySport("SOC", "Straight Bet");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
 
             dtExoticsMLB = extractTotalExotics("MLB");
             dtExoticsNBA = extractTotalExotics("NBA");
-            dtExoticsCanadianFootball = extractTotalExotics("CANADIAN FOOTBALL");
+            dtExoticsCanadianFootball = extractTotalExoticsAndParlays("CANADIAN FOOTBALL");
             dt1STQCanadiaFootball = extractCategorySport("CANADIAN FOOTBALL", "CANADIAN FOOTBALL - QUARTERS");
 
             dtArenaFootball = clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
@@ -135,7 +135,7 @@ namespace DesktopC
 
             for (int j = 0; j < 19; j++)
             {
-                for (int k = 5; k < 7; k++)
+                for (int k = 4; k < 7; k++)
                 {
                     //fill Soccer
                     if (j < dtSoccer.Rows.Count)
@@ -157,7 +157,7 @@ namespace DesktopC
                     //Fill WNBA
                     if (j<dtNBA.Rows.Count)
                     { 
-                          excelWorkSheet.Cells[j + 19, k + 2] = dtNBA.Rows[j][k - 4];
+                          excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
 
 
                     }
@@ -213,8 +213,10 @@ namespace DesktopC
 
             //NFL FOOTBALL
 
-            excelWorkSheet.Cells[21, 12] = dtExoticsCanadianFootball.Rows[0][1];
+            excelWorkSheet.Cells[23, 12] = dtExoticsCanadianFootball.Rows[0][1];
             excelWorkSheet.Cells[23, 13] = dtExoticsCanadianFootball.Rows[0][2];
+
+           
 
 
             excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
@@ -276,14 +278,14 @@ namespace DesktopC
             exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
 
 
-            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+           exoticsSocV2=  clBusiness.sumOfDatatable(exoticsSocV2, sportName);
             //dataGridView1.DataSource = exoticsSoc;
 
+            exoticsSoc.Merge(exoticsSocV2);
             //MessageBox.Show("Next, the EXOTICS");
             exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
-
-
-
 
             return exoticsSoc;
         }
@@ -434,7 +436,16 @@ namespace DesktopC
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            saveFile();
+            try
+            {
+                saveFile();
+                MessageBox.Show("Archivo generado exitosamente");
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show("Error al intentar guardar el archivo:" + ex.Message);
+            }
+           
           
         }
 
