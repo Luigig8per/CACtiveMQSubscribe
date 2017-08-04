@@ -1,0 +1,202 @@
+USE DGSDATA
+GO
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER OFF
+GO
+
+
+/*#
+SP_SPV : 2.6.3.0
+SP_OID : Lsibaja
+************************************
+Modifyed by jmonge
+add system='R' to parameters
+************************************
+#*/
+
+CREATE PROCEDURE [dbo].[Report_Game_Statistic]
+	@LogIdUser		Integer,
+	@prmStartDate	VarChar(30),
+	@prmEndDate		VarChar(30),
+	@prmBook		Varchar(30),
+	@prmOffice		Varchar(30),
+	@prmPlayer		Varchar(15),
+	@prmLeague		Varchar(50),
+	@prmGroupby		Integer,  -- 0 = Default, 1 = By Office, 2 = By Player
+	@prmOrderby		Integer	  -- 0 = Sport, 1 = WagerType, 2 = Period, 3 = Play
+
+WITH ENCRYPTION
+AS
+Declare
+	@IdLeague	Integer,
+--Log Report
+	@LogStartDate	Datetime,
+	@LogIdReport	Varchar(50)
+
+	Select @LogStartDate = GetDate()
+	Select @LogIdReport = Name from menureportitems where Tab = 17
+--Log Report
+SET NOCOUNT ON
+
+	If @prmLeague = ''
+		Select @IdLeague = -1
+	else
+		Select @IdLeague = IdLeague From League With(NoLock) Where League.Description = @prmLeague
+
+
+	Create Table #ReportTable (Office varchar(30),Player varchar(15),WagerType Varchar(30),WagerTypeOrder Integer,IdSport Varchar(30),Period Varchar(30),NumberOfPeriod Integer,Play Integer,strPlay Varchar(30),SportOrder Integer,Amount Money,WinLost Money,NumTeams Integer,Idgame Integer, GameDate DateTime)
+
+	Insert Into #ReportTable (Office,Player,WagerType,WagerTypeOrder,IdSport,Period,NumberOfPeriod,Play,strPlay,SportOrder,Amount,WinLost,Idgame,GameDate) 
+	Select  Office.OfficeName,
+			Player.Player,
+			Case WagerType.WagerType When 0 Then 'Straight Bet' When 1 Then 'Parlay' When 2 Then 'Teaser' Else 'Reverse' End as StrWagerType,
+			Case When Wagertype.WagerType In (4,8) Then 4 Else Wagertype.WagerType End,
+			Sport.IdSport, Period.PeriodDescription, Period.NumberOfPeriod, GradedWagerDetail.Play, 
+	    Case 	When ((Sport.IdSport='MLB') and (Play in (0,1))) Then 'RL' 
+				When ((Sport.IdSport<>'TNT') And (Sport.IdSport<>'PROP') and (Sport.IdSport<>'MLB') and (Play in (0,1))) Then 'PS'
+				When ((Sport.IdSport<>'TNT') And (Sport.IdSport<>'PROP') and (Play in (2,3))) Then 'Total'
+				When ((Sport.IdSport='TNT') or (Sport.IdSport='PROP') or (Play in (4,5,6))) Then 'ML'
+				Else '' End, Sport.SportOrder,
+	    (GradedWagerHeader.RiskAmount/Case When WagerType.WagerType In (4,8) Then 2 Else WagerType.NumTeams End)/IsNull(GradedWagerHeader.MoneyChange,1) as Amount,
+	    (PlayerAccounting.Amount/Case When WagerType.WagerType In (4,8) Then 2 Else WagerType.NumTeams End)/IsNull(PlayerAccounting.MoneyChange,1) as WinLost,
+	   	GradedWagerDetail.IdGame,
+	   	GradedWagerDetail.GameDateTime
+
+	FROM Player With(NoLock)
+		Join GradedWagerHeader With(NoLock)
+			Join GradedWagerDetail With(NoLock) 
+				Join Sport With(NoLock) On GradedWagerDetail.IdSport = Sport.IdSport
+				Join Period With(NoLock) On GradedWagerDetail.Period = Period.NumberOfPeriod and GradedWagerDetail.IdSport = Period.IdSport
+			On GradedWagerHeader.IdWager = GradedWagerDetail.IdWager
+			Join WagerType With(NoLock) On GradedWagerHeader.IdWagerType = WagerType.IdWagerType and WagerType.WagerType in (0,1,2,4,8)
+			Join PlayerAccounting With(NoLock) On PlayerAccounting.Idtransaction = GradedWagerHeader.IdWager and PlayerAccounting.TransactionType In ('W','I','O')
+		On Player.IdPlayer = GradedWagerHeader.IdPlayer and GradedWagerHeader.result in (0,1) 
+		Left Join Office  With(NoLock) On Player.IdOffice = Office.IdOffice
+		
+	WHERE GradedWagerHeader.SettledDate >= Cast(@prmStartdate as datetime) 
+	      AND GradedWagerHeader.SettledDate < (cast(@prmEnddate as datetime) +1)
+		  AND Player.IdBook in (Select UsersBook.IdBook From UsersBook With(NOLOCK) Where UsersBook.IdUser = @LogIdUser)
+		  AND ((@prmBook ='') or (Player.IdBook in (Select IdBook From Book With(NoLock) Where [Description] = @prmBook)))
+		  AND ((@prmOffice ='') or (Office.OfficeName = @prmOffice))
+		  AND ((@prmplayer ='') or (Player.Player = @prmplayer))
+		
+If @prmOrderby = 0 -- 0 = Sport
+Begin
+	IF @prmGroupby = 1 -- 1 = Office aggrupation
+	BEGIN
+		Select Office as GroupBy,Office, WagerTypeOrder, IdSport as Group1, WagerType as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		FROM #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Office, IdSport, SportOrder, WagerType, WagerTypeOrder, Period, NumberOfPeriod, strPlay
+		Order by Office,SportOrder,WagerTypeOrder,NumberOfPeriod,strPlay
+	END	
+	ELSE
+	IF @prmGroupby = 2 -- 2 = Player aggrupation
+	BEGIN
+		Select Player as GroupBy,Player, WagerTypeOrder, IdSport as Group1, WagerType as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Player, IdSport, SportOrder, WagerType, WagerTypeOrder, Period, NumberOfPeriod, strPlay
+		Order by Player,SportOrder,WagerTypeOrder,NumberOfPeriod,strPlay	
+	END
+	ELSE --Default aggrupation
+	BEGIN
+		Select '' as GroupBy,WagerTypeOrder, IdSport as Group1, WagerType as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by IdSport, SportOrder, WagerType, WagerTypeOrder, Period, NumberOfPeriod, strPlay
+		Order by SportOrder,WagerTypeOrder,NumberOfPeriod,strPlay	
+	END
+End
+Else
+If @prmOrderby = 1 -- 1 = WagerType
+Begin
+	IF @prmGroupby = 1 -- 1 = Office aggrupation
+	BEGIN
+		Select Office as GroupBy,Office, WagerTypeOrder, WagerType as Group1, IdSport as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Office,WagerTypeOrder,WagerType,SportOrder,IdSport,Period,NumberOfPeriod,strPlay
+		Order by Office,WagerTypeOrder,SportOrder,NumberOfPeriod,strPlay
+	END	
+	ELSE
+	IF @prmGroupby = 2 -- 2 = Player aggrupation
+	BEGIN
+		Select Player as GroupBy,Player, WagerTypeOrder, WagerType as Group1, IdSport as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Player,WagerTypeOrder,WagerType,SportOrder,IdSport,Period,NumberOfPeriod,strPlay
+		Order by Player,WagerTypeOrder,SportOrder,NumberOfPeriod,strPlay
+	END
+	ELSE --Default aggrupation
+	BEGIN
+		Select '' as GroupBy,WagerTypeOrder, WagerType as Group1, IdSport as Group2, Period as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by WagerTypeOrder,WagerType,SportOrder,IdSport,Period,NumberOfPeriod,strPlay
+		Order by WagerTypeOrder,SportOrder,NumberOfPeriod,strPlay
+	END
+End
+Else
+If @prmOrderby = 2 -- 2 = Period
+Begin
+	IF @prmGroupby = 1 -- 1 = Office aggrupation
+	BEGIN
+		Select Office as GroupBy,Office, WagerTypeOrder, Period as Group1, IdSport as Group2, WagerType as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Office,Period,NumberOfPeriod,SportOrder,IdSport,WagerTypeOrder,WagerType,strPlay
+		Order by Office,NumberOfPeriod,SportOrder,WagerTypeOrder,strPlay
+	END	
+	ELSE
+	IF @prmGroupby = 2 -- 2 = Player aggrupation
+	BEGIN
+		Select Player as GroupBy,Player, WagerTypeOrder, Period as Group1, IdSport as Group2, WagerType as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Player,Period,NumberOfPeriod,SportOrder,IdSport,WagerTypeOrder,WagerType,strPlay
+		Order by Player,NumberOfPeriod,SportOrder,WagerTypeOrder,strPlay
+	END
+	ELSE --Default aggrupation
+	BEGIN
+		Select  '' as GroupBy,WagerTypeOrder, Period as Group1, IdSport as Group2, WagerType as Group3, strPlay as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Period,NumberOfPeriod,SportOrder,IdSport,WagerTypeOrder,WagerType,strPlay
+		Order by NumberOfPeriod,SportOrder,WagerTypeOrder,strPlay
+	END
+End
+Else -- 3 = Play
+Begin
+	IF @prmGroupby = 1 -- 1 = Office aggrupation
+	BEGIN
+		Select Office as GroupBy,Office, WagerTypeOrder, strPlay as Group1, IdSport as Group2, WagerType as Group3, Period as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Office,strPlay,SportOrder,IdSport,WagerTypeOrder,WagerType,Period,NumberOfPeriod
+		Order by Office,strPlay,SportOrder,WagerTypeOrder,NumberOfPeriod
+	END	
+	ELSE
+	IF @prmGroupby = 2 -- 2 = Player aggrupation
+	BEGIN
+		Select Player as GroupBy,Player, WagerTypeOrder, strPlay as Group1, IdSport as Group2, WagerType as Group3, Period as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by Player,strPlay,SportOrder,IdSport,WagerTypeOrder,WagerType,Period,NumberOfPeriod
+		Order by Player,strPlay,SportOrder,WagerTypeOrder,NumberOfPeriod
+	END
+	ELSE --Default aggrupation
+	BEGIN
+		Select '' as GroupBy,WagerTypeOrder, strPlay as Group1, IdSport as Group2, WagerType as Group3, Period as Group4, Sum(Amount) Amount, Sum(WinLost) WinLost
+		From #ReportTable
+		WHERE @IdLeague = -1 OR (@IdLeague = dbo.Func_GetGameIdLeague(#ReportTable.Idgame))
+		Group by strPlay,SportOrder,IdSport,WagerTypeOrder,WagerType,Period,NumberOfPeriod
+		Order by strPlay,SportOrder,WagerTypeOrder,NumberOfPeriod
+	END
+
+End
+
+	Insert Into MenuReportLog(ReportName,IdUser,StartDate,EndDate) 
+	Values (@LogIdReport,@LogIdUser,@LogStartDate,GetDate())
+
+GO

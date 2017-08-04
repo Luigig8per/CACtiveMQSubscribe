@@ -55,3 +55,5 @@ C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.Properties.
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.csproj.GenerateResource.Cache
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.exe.manifest
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.application
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\EPPlus.dll
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\EPPlus.xml

@@ -453,7 +453,7 @@ namespace DataLayer
         public DataTable getGameStats(string spName, int logIdUser, string League,  string prmStartDate, string prmEndDate)
         {
             DataTable res = new DataTable();
-            using (con)
+            using (con = new SqlConnection("Data Source=10.10.10.30;Initial Catalog=DGSDATA;User ID=luisma;Password=luis123"))
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Report_Game_Statistic";

@@ -74,6 +74,38 @@ namespace Business
 
         }
 
+        public DataTable extractFields(string storedProcedureName, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            return theMLB.extractFields(storedProcedureName, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+          
+
+        }
+
+        public DataTable extractExotics(string storedProcedureName, string sport, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+            return theMLB.extractCategorySport(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+        }
+
+        public DataTable extractCategorySport(string storedProcedureName, string sport, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+        }
+
+        public DataTable sumOfDatatable(DataTable leagueDt, string leagueName)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            return theMLB.extractTotalAmountLeague(leagueDt, leagueName);
+        }
+
+
         public DataTable ExeStoredProcedure(string storedProcedureName, string idSport)
         {
             Dbconnection dbCon = new Dbconnection();
@@ -123,6 +155,7 @@ namespace Business
 
 
         }
+
 
         public DataTable getGameStats(string storedProcedureName, int logIdUser, string League, string prmStartDate, string prmEndDate)
         {
