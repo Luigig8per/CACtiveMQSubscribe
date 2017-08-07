@@ -46,14 +46,12 @@ namespace DataAccess
 
             //Next the exotics
 
-            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),2);
 
             dgTemp8 = extractTotalAmountLeague(dgTemp8, "MLB Exotics");
 
 
-            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
-
-            dgTemp8 = extractTotalAmountLeague(dgTemp8, "MLB Exotics");
+           
 
             //dgTemp8 = extract(storedProcedureName, logIdUser, "THIS IS EXOTICS", prmStartDate, prmEndDate, 1);
 
@@ -95,7 +93,7 @@ namespace DataAccess
 
 
 
-
+       
 
         public DataTable extractFieldsV2(string storedProcedureName, int logIdUser, string prmStartDate, string prmEndDate)
 
@@ -122,6 +120,8 @@ namespace DataAccess
 
 
         public DataTable extractMlSpTotalFields(string storedProcedureName, int logIdUser, string league, string prmStartDate, string prmEndDate, int qLines)
+
+            //Actually this method extract the first qLines from any League. Need to change name.
 
         {
             int qRowsReport = qLines;
@@ -165,11 +165,11 @@ namespace DataAccess
             return dgRes;
         }
 
-        public DataTable extractCategorySport(string storedProcedureName, string sport, string category, int logIdUser, string prmStartDate, string prmEndDate)
+        public DataTable extractCategorySport(string storedProcedureName, string sport, string category, int logIdUser, string prmStartDate, string prmEndDate, int descriptionType)
 
         {
-          //qLines means if some lines not exists will be filled with 0's
-
+            //qLines means if some lines not exists will be filled with 0's
+            string description="";
             DataTable dgRes = new DataTable
             {
                 Columns = {"Description",
@@ -191,7 +191,18 @@ namespace DataAccess
 
                 if (dgTemp.Rows[i][2].ToString() == category  && dgTemp.Rows[i][3].ToString().Contains(sport))
                 {
-                    dgRes.Rows.Add(dgTemp.Rows[i][2] + " " + dgTemp.Rows[i][3] , dgTemp.Rows[i][6], dgTemp.Rows[i][7]);
+                    switch(descriptionType)
+                    {
+                        case 1:
+                            description = dgTemp.Rows[i][3] + " " + dgTemp.Rows[i][5];
+                            break;
+                        case 2:
+                            description = dgTemp.Rows[i][4] + " " + dgTemp.Rows[i][5];
+                            break;
+
+
+                    }
+                    dgRes.Rows.Add(description , dgTemp.Rows[i][6], dgTemp.Rows[i][7]);
                   
                 }
 

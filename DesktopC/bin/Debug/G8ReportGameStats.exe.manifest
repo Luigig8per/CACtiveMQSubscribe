@@ -55,26 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Business.dll" size="8192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Business.dll" size="8704">
       <assemblyIdentity name="Business" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zhnGwk37BJLnbtRNWnfdmi4dHsrUB2LH1iUI9+ZKg6s=</dsig:DigestValue>
+        <dsig:DigestValue>LVdd31mISq4dIoCFtOODPqgYPEYLpDaDGC6SptGmGfs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="14336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="14848">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SNl+KsTKu8HQV2xMP8qMeQgkJdbqB8SDkI4cfX1BdQc=</dsig:DigestValue>
+        <dsig:DigestValue>KdROxvNQ/3V3CjuE5tFA7Rdbjch+eeGvVa3cagS4imE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8ReportGameStats.exe" size="250368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8ReportGameStats.exe" size="251392">
       <assemblyIdentity name="G8ReportGameStats" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o/lw2F1mTBoznARy5+1IUouF6kbHPikIM88LyPwoppM=</dsig:DigestValue>
+        <dsig:DigestValue>oDi6HCPz6s88kGoRXq5F4yo3/XVlWE+M3JjveS8Bpp4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
