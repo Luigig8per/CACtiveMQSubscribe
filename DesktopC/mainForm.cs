@@ -117,14 +117,15 @@ namespace DesktopC
             DataTable dtNBA= new DataTable();
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
-            dtSoc = extractTotalExotics("SOCC");
-            dtMU = extractTotalExoticsAndParlays("MU");
+           
+            dtMU = extractTotalExoticsAndStraightBet("MU");
             dtSoccer = extractCategorySport("SOC", "Straight Bet");
+            dtSoc = extractTotalExotics("SOC");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
 
             dtExoticsMLB = extractTotalExotics("MLB");
             dtExoticsNBA = extractTotalExotics("NBA");
-            dtExoticsCanadianFootball = extractTotalExoticsAndParlays("CANADIAN FOOTBALL");
+            dtExoticsCanadianFootball = extractTotalExoticsAndTeasers("NFL");
             dt1STQCanadiaFootball = extractCategorySport("CANADIAN FOOTBALL", "CANADIAN FOOTBALL - QUARTERS");
 
             dtArenaFootball = clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
@@ -136,7 +137,7 @@ namespace DesktopC
 
             for (int j = 0; j < 19; j++)
             {
-                for (int k = 4; k < 7; k++)
+                for (int k = 5; k < 7; k++)
                 {
                     //fill Soccer
                     if (j < dtSoccer.Rows.Count)
@@ -254,6 +255,20 @@ namespace DesktopC
         }
 
 
+        public DataTable extractTotalStraightBet(string sportName)
+        {
+            //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+            DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = exoticsSoc;
+
+            //MessageBox.Show("Next, the EXOTICS");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+
+            return exoticsSoc;
+        }
+
         public DataTable extractTotalExotics(string sportName)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
@@ -268,23 +283,51 @@ namespace DesktopC
             return exoticsSoc;
         }
 
-        public DataTable extractTotalExoticsAndParlays(string sportName)
+        public DataTable extractTotalExoticsAndTeasers(string sportName)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
             DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value);
             //dataGridView1.DataSource = exoticsSoc;
-
+            //dataGridView1.DataSource = exoticsSoc;
             //MessageBox.Show("Next, the EXOTICS");
-            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+            //exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
 
 
-            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Teaser", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
-           exoticsSocV2=  clBusiness.sumOfDatatable(exoticsSocV2, sportName);
+           //exoticsSocV2=  clBusiness.sumOfDatatable(exoticsSocV2, sportName);
             //dataGridView1.DataSource = exoticsSoc;
 
             exoticsSoc.Merge(exoticsSocV2);
+
+            //dataGridView1.DataSource = exoticsSoc;
+            //MessageBox.Show("Next, the EXOTICS");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+            return exoticsSoc;
+        }
+
+
+        public DataTable extractTotalExoticsAndStraightBet(string sportName)
+        {
+            //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+            DataTable exoticsSoc = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = exoticsSoc;
+            dataGridView1.DataSource = exoticsSoc;
+            //MessageBox.Show("Next, the EXOTICS");
+            //exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+
+            DataTable exoticsSocV2 = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+            //exoticsSocV2=  clBusiness.sumOfDatatable(exoticsSocV2, sportName);
+            //dataGridView1.DataSource = exoticsSoc;
+
+            exoticsSoc.Merge(exoticsSocV2);
+
+            dataGridView1.DataSource = exoticsSoc;
             //MessageBox.Show("Next, the EXOTICS");
             exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
 
@@ -406,7 +449,7 @@ namespace DesktopC
 
             dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeague.Text, dateTimePicker1.Value, dateTimePicker2.Value);
 
-            MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+            //MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
 
         }
 
@@ -513,6 +556,17 @@ namespace DesktopC
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = extractCategorySport("SOC", "Straight Bet");
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource= extractCategorySport("SOC", "Straight Bet");
+            //dataGridView1.DataSource = exoticsSoc;
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
