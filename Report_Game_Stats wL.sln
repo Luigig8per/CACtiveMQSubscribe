@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3277649D-9486-4226-9AC4-5BD2208008C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopCReportsGameStats", "DesktopC\DesktopCReportsGameStats.csproj", "{AB6FFB44-7733-4E08-B34E-00181568F34E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopG8HouseReport", "DesktopC\DesktopG8HouseReport.csproj", "{AB6FFB44-7733-4E08-B34E-00181568F34E}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite8", "..\..\..\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\", "{EDACD0F1-E6B2-4DAC-B7FD-99EB85B729D5}"
 	ProjectSection(WebsiteProperties) = preProject

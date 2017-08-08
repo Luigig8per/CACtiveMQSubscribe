@@ -12,12 +12,12 @@ C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.mainForm.re
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopC.Properties.Resources.resources
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopCReportsGameStats.csproj.GenerateResource.Cache
 C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\DesktopCReportsGameStats.csprojResolveAssemblyReference.cache
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe.config
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe.manifest
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.application
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.exe
-C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8ReportGameStats.pdb
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.exe.manifest
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.application
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.exe
-C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8ReportGameStats.pdb
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8 House Report.exe.config
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8 House Report.exe.manifest
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8 House Report.application
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8 House Report.exe
+C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\G8 House Report.pdb
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8 House Report.exe.manifest
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8 House Report.application
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8 House Report.exe
+C:\documents2017\desktop\ReportGameStats\DesktopC\obj\Debug\G8 House Report.pdb
