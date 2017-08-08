@@ -46,7 +46,7 @@ namespace DataAccess
 
             //Next the exotics
 
-            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),2);
+            dgTemp8 = extractCategorySport(storedProcedureName, "MLB", "Exotics", "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),2);
 
             dgTemp8 = extractTotalAmountLeague(dgTemp8, "MLB Exotics");
 
@@ -165,7 +165,7 @@ namespace DataAccess
             return dgRes;
         }
 
-        public DataTable extractCategorySport(string storedProcedureName, string sport, string category, int logIdUser, string prmStartDate, string prmEndDate, int descriptionType)
+        public DataTable extractCategorySport(string storedProcedureName, string sport, string category, string league, int logIdUser, string prmStartDate, string prmEndDate, int descriptionType)
 
         {
             //qLines means if some lines not exists will be filled with 0's
@@ -181,7 +181,7 @@ namespace DataAccess
 
             DataTable dgTemp = new DataTable();
 
-            dgTemp = dbCon.getGameStats(storedProcedureName, logIdUser, "", prmStartDate, prmEndDate);
+            dgTemp = dbCon.getGameStats(storedProcedureName, logIdUser, league, prmStartDate, prmEndDate);
 
           
 

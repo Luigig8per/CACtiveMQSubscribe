@@ -94,7 +94,7 @@ namespace Business
             DataAccess.MLB theMLB = new DataAccess.MLB();
             //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
-            return theMLB.extractCategorySport(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),1);
+            return theMLB.extractCategorySport(storedProcedureName, sport, "Exotics","", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),1);
         }
 
 
@@ -104,7 +104,7 @@ namespace Business
             DataAccess.MLB theMLB = new DataAccess.MLB();
             //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
-            return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),1);
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),1);
         }
 
         public DataTable extractCategorySport(string storedProcedureName, string sport, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate, int descriptionType)
@@ -112,7 +112,15 @@ namespace Business
             DataAccess.MLB theMLB = new DataAccess.MLB();
             //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
-            return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString(), descriptionType);
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(), descriptionType);
+        }
+
+        public DataTable extractCategoryLeague(string storedProcedureName, string sport, string league, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate, int descriptionType)
+        {
+            DataAccess.MLB theMLB = new DataAccess.MLB();
+            //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
+
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(), descriptionType);
         }
 
         public DataTable extractTotal1QCanadianFootball (string storedProcedureName, string sport, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)
@@ -120,7 +128,7 @@ namespace Business
             DataAccess.MLB theMLB = new DataAccess.MLB();
             //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
-            return theMLB.extractCategorySport(storedProcedureName, sport, category, logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),2);
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(),2);
         }
 
         public DataTable sumOfDatatable(DataTable leagueDt, string leagueName)
