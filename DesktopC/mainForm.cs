@@ -153,9 +153,9 @@ namespace DesktopC
             //clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
 
             dtNFLPreseasonQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            dtExoticsNFLPreseason = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON", 2);
+            dtExoticsNFLPreseason = extractTotalExoticsNFLPreseason();
 
-           
+
             //dtNFLPreseason= extractCategorySport()
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
@@ -424,6 +424,37 @@ namespace DesktopC
             //dtQuarters = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - QUARTERS"
         }
 
+        public DataTable extractTotalExoticsNFLPreseason()
+        {
+
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON", 2);
+
+
+            DataTable dt1stHCandian = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON 1ST HALVES", 2);
+
+            DataTable dt2ndHalves = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON 2ND HALVES", 2);
+
+            //DataTable dtQuarters = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - QUARTERS", 2);
+
+            dtCanadianGame.Merge(dtCanadianGame);
+            dtCanadianGame.Merge(dt1stHCandian);
+            dtCanadianGame.Merge(dt2ndHalves);
+          
+
+
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "CANADIAN FOOTBALL");
+            return dtCanadianGame;
+
+
+
+          
+
+            //dtGame = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + "", dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            //dt1stHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 1ST HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            //dt2ndHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 2ND HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            //dtQuarters = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - QUARTERS"
+        }
+
         public DataTable extractTotalExoticsAndTeasers(string sportName)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
@@ -474,6 +505,31 @@ namespace DesktopC
         }
 
         public DataTable extractTotalExoticsAndTeasersCandianFootball(string sportName, string league, int descriptionType)
+        {
+            //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
+
+
+
+            DataTable exoticsSoc = clBusiness.extractCategoryLeague("Report_Game_Statistic", sportName, league, "Parlay", 74, dateTimePicker1.Value, dateTimePicker2.Value, descriptionType);
+
+
+
+            DataTable exoticsSocV2 = clBusiness.extractCategoryLeague("Report_Game_Statistic", sportName, league, "Teaser", 74, dateTimePicker1.Value, dateTimePicker2.Value, descriptionType);
+
+            //exoticsSocV2=  clBusiness.sumOfDatatable(exoticsSocV2, sportName);
+            //dataGridView1.DataSource = exoticsSoc;
+
+            exoticsSoc.Merge(exoticsSocV2);
+
+            //dataGridView1.DataSource = exoticsSoc;
+            //MessageBox.Show("Next, the EXOTICS");
+            exoticsSoc = clBusiness.sumOfDatatable(exoticsSoc, sportName);
+
+            return exoticsSoc;
+        }
+
+
+        public DataTable extractTotalExoticsAndTeasersNFLPreseason(string sportName, string league, int descriptionType)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
@@ -690,7 +746,7 @@ namespace DesktopC
             saveFileDialog1.Filter = "excel files (*.xls)|*.xls|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.FileName = (@"HOUSE REPORT " + dateTimePicker1.Text + " - " + dateTimePicker2.Text + ".xlsx");
+            saveFileDialog1.FileName = (@"G8 Auto House Report " + dateTimePicker1.Text + ".xlsx");
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -786,6 +842,11 @@ namespace DesktopC
            //dataGridView1.DataSource= clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
 
             dataGridView1.DataSource =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "ARENA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+        }
+
+        private void button2_Click_4(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource= extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON", 2);
         }
     }
 }
