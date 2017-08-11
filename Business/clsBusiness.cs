@@ -120,7 +120,7 @@ namespace Business
             DataAccess.MLB theMLB = new DataAccess.MLB();
             //return theMLB.extractExotics(storedProcedureName, sport, "Exotics", logIdUser, prmStartDate.ToString(), prmEndDate.ToString());
 
-            return theMLB.extractCategorySport(storedProcedureName, sport, category, "", logIdUser, prmStartDate.ToString(), prmEndDate.ToString(), descriptionType);
+            return theMLB.extractCategorySport(storedProcedureName, sport, category, league, logIdUser, prmStartDate.ToString(), prmEndDate.ToString(), descriptionType);
         }
 
         public DataTable extractTotal1QCanadianFootball (string storedProcedureName, string sport, string category, int logIdUser, DateTime prmStartDate, DateTime prmEndDate)

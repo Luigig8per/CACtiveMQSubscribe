@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/OYIJUVf5ORm/YFtVYf0xzpNZHOMSWpbFR1TJdO7eSU=</dsig:DigestValue>
+        <dsig:DigestValue>Ei2gjXQhBb7YxyWe9ou0Qer8c36ish1sOKbeqir52h4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="251904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="252928">
       <assemblyIdentity name="G8 House Report" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>D+JcdjDNUwwQfUzCsfo2cWIPckl6VX2puVI3nKnucsk=</dsig:DigestValue>
+        <dsig:DigestValue>JYGI1aSDraLkW6/VzeCVQ9ls/MlZSbMruSeP5196C7Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
