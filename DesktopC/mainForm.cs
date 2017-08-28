@@ -93,6 +93,24 @@ namespace DesktopC
 
         }
 
+        public DataTable fillCollegeFB()
+        {
+            DataTable DTCollegeFB = new DataTable();
+            DataTable DTCollegeFH = new DataTable();
+            DataTable DTCollegeSH = new DataTable();
+
+            DTCollegeFB = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DTCollegeFH= clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL 1ST HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DTCollegeSH = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL 2ND HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+
+
+            DTCollegeFB.Merge(DTCollegeFH);
+            DTCollegeFB.Merge(DTCollegeSH);
+
+            return DTCollegeFB;
+
+        }
+
         public void fillExcelV2(string templateFile, string outputFile, DataGridView dgv)
         {
             Excel.Application excelApp = new Excel.Application();
@@ -122,8 +140,8 @@ namespace DesktopC
             DataTable dtNFLPreseasonQuarters = new DataTable();
             DataTable dtExoticsNFLPreseason = new DataTable();
 
-
-
+            DataTable dtCollege = new DataTable();
+            DataTable dtExoticsCollege = new DataTable();
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
            
@@ -155,7 +173,9 @@ namespace DesktopC
             dtNFLPreseasonQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dtExoticsNFLPreseason = extractTotalExoticsNFLPreseason();
 
-
+            //dtCollege  = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            dtCollege = fillCollegeFB();
+            dtExoticsCollege = extractTotalExoticsLeague("CFB", "NCAA FOOTBALL");
             //dtNFLPreseason= extractCategorySport()
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
@@ -180,11 +200,27 @@ namespace DesktopC
 
                     }
 
+                    //Fill College Football
+
+                 
+
+                    if (j<dtCollege.Rows.Count)
+                    {
+                      
+                        excelWorkSheet.Cells[j + 33, k + 2] = dtCollege.Rows[j][k - 4];
+                      
+                    }
+
+                    if (j<dtExoticsCollege.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 45, k + 2] = dtExoticsCollege.Rows[j][k - 4];
+                    }
+
                     //Fill ARENA FOOTBALL
 
                     if (j<dtArenaFootball.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 3, k + 7] = dtArenaFootball.Rows[j][k -4];
+                        excelWorkSheet.Cells[j + 3, k + 22] = dtArenaFootball.Rows[j][k -4];
                      
                     }
 
@@ -395,16 +431,34 @@ namespace DesktopC
             return exoticsSoc;
         }
 
+        public DataTable extractTotalExoticsLeague(String sportName, String leagueName)
+        {
+
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers(sportName, leagueName, 2);
+            DataTable dt1stHCandian = extractTotalExoticsAndTeasers(sportName, leagueName + " 1ST HALVES", 2);
+            DataTable dt2ndHalves = extractTotalExoticsAndTeasers(sportName, leagueName + " 2ND HALVES", 2);
+           
+
+            dtCanadianGame.Merge(dtCanadianGame);
+            dtCanadianGame.Merge(dt1stHCandian);
+            dtCanadianGame.Merge(dt2ndHalves);
+         
+
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "NCAA FOOTBALL");
+
+         
+
+            return dtCanadianGame;
+
+            
+
+        }
         public DataTable extractTotalExoticsCanadianFootball()
         {
 
             DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL", 2);
-
-
             DataTable dt1stHCandian = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - 1ST HALVES", 2);
-
             DataTable dt2ndHalves = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - 2ND HALVES", 2);
-
             DataTable dtQuarters = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - QUARTERS", 2);
 
             dtCanadianGame.Merge(dtCanadianGame);
@@ -416,12 +470,6 @@ namespace DesktopC
             dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "CANADIAN FOOTBALL");
             return dtCanadianGame;
 
-
-
-            //dtGame = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + "", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dt1stHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 1ST HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dt2ndHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 2ND HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dtQuarters = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - QUARTERS"
         }
 
         public DataTable extractTotalExoticsNFLPreseason()
@@ -692,9 +740,11 @@ namespace DesktopC
             //dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeagueId.Text, dateTimePicker1.Value, dateTimePicker2.Value);
 
 
-            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeague.Text, dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
 
             //MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+
+            dataGridView1.DataSource = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
 
         }
 
@@ -784,7 +834,7 @@ namespace DesktopC
 
         private void cmbLeague_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+            dataGridView1.DataSource = clBusiness.getGameStats("Report_Game_Statistic", 74, cmbLeague.Text, dateTimePicker1.Value, dateTimePicker2.Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

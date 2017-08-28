@@ -107,7 +107,7 @@ namespace DataAccess
                 TableName = "MarksTable" //optional
             };
 
-            DataTable dgTemp, dgTemp2, dgTemp3, dgTemp4, dgTemp5, dgTemp6, dgTemp7, dgTemp8, dgTemp9, dgTemp10, dgTemp11 = new DataTable();
+            DataTable dgTemp,  dgTemp11 = new DataTable();
 
 
             dgTemp = extractMlSpTotalFields(storedProcedureName, logIdUser, "MLB - GAME PROPS", prmStartDate, prmEndDate, 3);
@@ -169,7 +169,7 @@ namespace DataAccess
 
         {
             //qLines means if some lines not exists will be filled with 0's
-            string description="";
+            string description = ""; string categoryField; string sportField;
             DataTable dgRes = new DataTable
             {
                 Columns = {"Description",
@@ -188,8 +188,10 @@ namespace DataAccess
             for (int i = 0; i <= dgTemp.Rows.Count - 1; i++)
             {
                 //Used contains on next expression on MLB because field uses spaces.
+                categoryField = dgTemp.Rows[i][2].ToString();
+                sportField = dgTemp.Rows[i][3].ToString();
 
-                if (dgTemp.Rows[i][2].ToString() == category  && dgTemp.Rows[i][3].ToString().Contains(sport))
+                if (categoryField == category  && sportField.Contains(sport))
                 {
                     switch(descriptionType)
                     {
