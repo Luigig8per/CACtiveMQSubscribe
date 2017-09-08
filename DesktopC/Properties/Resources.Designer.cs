@@ -63,6 +63,16 @@ namespace DesktopC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Banner_College_Football_G8_1_ {
+            get {
+                object obj = ResourceManager.GetObject("Banner College Football G8(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_golden8_0 {
             get {
                 object obj = ResourceManager.GetObject("logo-golden8_0", resourceCulture);
