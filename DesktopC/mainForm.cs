@@ -111,16 +111,26 @@ namespace DesktopC
 
         }
 
-        public void fillExcelV2(string templateFile, string outputFile, DataGridView dgv)
+        void activeWorkSheet(Excel.Worksheet worksheet, int row, int col)
         {
-            Excel.Application excelApp = new Excel.Application();
+            Excel.Range range = worksheet.UsedRange;
 
-            //Create an Excel workbook instance and open it from the predefined location
-            Excel.Workbook excelWorkBook = excelApp.Workbooks.Open(templateFile);
+           
 
-            //Add a new worksheet to workbook with the Datatable name
-            Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[1];
-            excelWorkSheet.Name = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
+            Excel.Range activeCell = worksheet.Cells[row, col];
+            activeCell.Select();
+
+
+
+
+        }
+
+        public void fillExcelFields(Excel.Workbook excelWorkBook, int sheetNumber)
+        {
+            Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[sheetNumber];
+
+            excelWorkSheet.Select(Type.Missing);
+            excelWorkSheet.Activate();
 
             DataTable dTMLB = new DataTable();
             DataTable dtSoc = new DataTable();
@@ -130,9 +140,9 @@ namespace DesktopC
             DataTable dtExoticsMLB = new DataTable();
             DataTable dtExoticsNBA = new DataTable();
             DataTable dtExoticsCanadianFootball = new DataTable();
-            DataTable dt1STQCanadiaFootball  = new DataTable();
+            DataTable dt1STQCanadiaFootball = new DataTable();
             DataTable dtSoccer = new DataTable();
-            DataTable dtNBA= new DataTable();
+            DataTable dtNBA = new DataTable();
 
             DataTable dtNFLPreseason = new DataTable();
             DataTable dtNFLPreseason1stHalves = new DataTable();
@@ -140,11 +150,17 @@ namespace DesktopC
             DataTable dtNFLPreseasonQuarters = new DataTable();
             DataTable dtExoticsNFLPreseason = new DataTable();
 
+            DataTable dtNFL = new DataTable();
+            DataTable dtNFL1stHalves = new DataTable();
+            DataTable dtNFL2ndHalves = new DataTable();
+            DataTable dtNFLQuarters = new DataTable();
+            DataTable dtExoticsNFL = new DataTable();
+
             DataTable dtCollege = new DataTable();
             DataTable dtExoticsCollege = new DataTable();
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
-           
+
             dtMU = extractTotalExoticsAndStraightBet("MU");
             dtSoccer = extractCategorySport("SOC", "Straight Bet");
             dtSoc = extractTotalExotics("SOC");
@@ -162,7 +178,7 @@ namespace DesktopC
 
 
             dtCanadianFootball = extractFieldsFromLeague("CANADIAN FOOTBALL", "NFL", "Straight Bet");
-         
+
             //dtNFLPreseason = extractFieldsFromLeague("NFL - PRESEASON ");
             //dtNFLPreseason = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "NFL - PRESEASON", dateTimePicker1.Value, dateTimePicker2.Value, 3);
             dtNFLPreseason = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
@@ -172,6 +188,15 @@ namespace DesktopC
 
             dtNFLPreseasonQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dtExoticsNFLPreseason = extractTotalExoticsNFLPreseason();
+
+
+            dtNFL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            dtNFL1stHalves = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - 1ST HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            dtNFL2ndHalves = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - 2ND HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            //clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+
+            dtNFLQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            dtExoticsNFL = extractTotalExoticsNFL();
 
             //dtCollege  = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dtCollege = fillCollegeFB();
@@ -186,17 +211,21 @@ namespace DesktopC
             excelWorkSheet.Cells[1, 11] = dateToDoc;
             excelWorkSheet.Cells[9, 11] = dateToDoc;
             excelWorkSheet.Cells[16, 6] = dateToDoc;
+            excelWorkSheet.Cells[31, 6] = dateToDoc;
             excelWorkSheet.Cells[26, 11] = dateToDoc;
+            excelWorkSheet.Cells[44, 11] = dateToDoc;
+
+            
 
             for (int j = 0; j < 19; j++)
             {
                 for (int k = 4; k < 7; k++)
                 {
-                               
+                    activeWorkSheet(excelWorkSheet, 0 + 1, k - 3);
                     //Fill WNBA
-                    if (j<dtNBA.Rows.Count)
-                    { 
-                          excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
+                    if (j < dtNBA.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
 
                     }
 
@@ -204,58 +233,86 @@ namespace DesktopC
 
                  
 
-                    if (j<dtCollege.Rows.Count)
+                    if (j < dtCollege.Rows.Count)
                     {
-                      
+
                         excelWorkSheet.Cells[j + 33, k + 2] = dtCollege.Rows[j][k - 4];
-                      
+
                     }
 
-                    if (j<dtExoticsCollege.Rows.Count)
+
+
+                    if (j < dtExoticsCollege.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 45, k + 2] = dtExoticsCollege.Rows[j][k - 4];
                     }
 
                     //Fill ARENA FOOTBALL
 
-                    if (j<dtArenaFootball.Rows.Count)
+                    if (j < dtArenaFootball.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 3, k + 22] = dtArenaFootball.Rows[j][k -4];
-                     
+                        excelWorkSheet.Cells[j + 3, k + 22] = dtArenaFootball.Rows[j][k - 4];
+
                     }
 
                     //fill CANADIAN FOOTBALL
-                    if (j<dtCanadianFootball.Rows.Count)
+                    if (j < dtCanadianFootball.Rows.Count)
                     {
                         //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
-                        excelWorkSheet.Cells[j + 11, k + 7] = dtCanadianFootball.Rows[j][k -4];
+                        excelWorkSheet.Cells[j + 11, k + 7] = dtCanadianFootball.Rows[j][k - 4];
                     }
 
                     //Fill NFL PreSeason
 
-                    if (j<dtNFLPreseason.Rows.Count)
+                    if (j < dtNFLPreseason.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 28, k + 7] = dtNFLPreseason.Rows[j][k - 4];
                     }
 
-                    if (j<dtNFLPreseason1stHalves.Rows.Count)
+                    if (j < dtNFLPreseason1stHalves.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 31, k + 7] = dtNFLPreseason1stHalves.Rows[j][k - 4];
                     }
 
-                    if (j<dtNFLPreseason2ndHalves.Rows.Count)
+                    if (j < dtNFLPreseason2ndHalves.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 34, k + 7] = dtNFLPreseason2ndHalves.Rows[j][k - 4];
                     }
 
-                    if (j<dtNFLPreseasonQuarters.Rows.Count)
+                    if (j < dtNFLPreseasonQuarters.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 37, k + 7] = dtNFLPreseasonQuarters.Rows[j][k - 4];
                     }
 
                     if (j < dtExoticsNFLPreseason.Rows.Count)
-                        excelWorkSheet.Cells[40, k + 7] = dtExoticsNFLPreseason.Rows[j][k - 4];
+                        excelWorkSheet.Cells[ 40, k + 7] = dtExoticsNFLPreseason.Rows[j][k - 4];
 
+
+
+                    //Fill NFL
+
+                    if (j < dtNFL.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 46, k + 7] = dtNFL.Rows[j][k - 4];
+                    }
+
+                    if (j < dtNFL.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 49, k + 7] = dtNFL1stHalves.Rows[j][k - 4];
+                    }
+
+                    if (j < dtNFL2ndHalves.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 52, k + 7] = dtNFL2ndHalves.Rows[j][k - 4];
+                    }
+
+                    if (j < dtNFLQuarters.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 55, k + 7] = dtNFLQuarters.Rows[j][k - 4];
+                    }
+
+                    if (j < dtExoticsNFL.Rows.Count)
+                        excelWorkSheet.Cells[58, k + 7] = dtExoticsNFL.Rows[j][k - 4];
 
                     //SOCCER
 
@@ -268,7 +325,7 @@ namespace DesktopC
                     }
 
 
-                    if (k>4) //with this the original description from table is not overrided
+                    if (k > 4) //with this the original description from table is not overrided
 
                     {
 
@@ -310,9 +367,6 @@ namespace DesktopC
             excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
             excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
 
-            //Fill CANADIAN FOOTBALL EXOTICS
-            //excelWorkSheet.Cells[32, 3] = dtExoticsCanadianFootball.Rows[0][1];
-            //excelWorkSheet.Cells[32, 4] = dtExoticsCanadianFootball.Rows[0][2];
 
             excelWorkSheet.Cells[23, 12] = dtExoticsCanadianFootball.Rows[0][1];
             excelWorkSheet.Cells[23, 13] = dtExoticsCanadianFootball.Rows[0][2];
@@ -325,35 +379,55 @@ namespace DesktopC
             excelWorkSheet.Cells[23, 12] = dtExoticsCanadianFootball.Rows[0][1];
             excelWorkSheet.Cells[23, 13] = dtExoticsCanadianFootball.Rows[0][2];
 
-           
+
 
 
             excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
             excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
 
-            //dgv.Rows[32].Cells[2].Style.BackColor = System.Drawing.Color.Tomato;
-            //dgv.Rows[32].Cells[3].Style.BackColor = System.Drawing.Color.Tomato;
+          
+
+        }
+
+        public void fillExcelV2(string templateFile, string outputFile, DataGridView dgv)
+        {
+            Excel.Application excelApp = new Excel.Application();
+
+            //Create an Excel workbook instance and open it from the predefined location
+            Excel.Workbook excelWorkBook = excelApp.Workbooks.Open(templateFile);
+
+            this.WindowState = FormWindowState.Minimized;
 
 
 
+            fillExcelFields(excelWorkBook, 1);
 
 
             try
             { 
             excelWorkBook.SaveAs(outputFile);
+                excelWorkBook.Close();
+                this.WindowState = FormWindowState.Normal;
+
+                DialogResult dialogResult = MessageBox.Show("Excel file saved as  " + outputFile + ", would you like to close this app?", "Excel done", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
             }
             catch(Exception ex)
             {
+               
+                this.WindowState = FormWindowState.Normal;
                 MessageBox.Show("Error trying to save the file: " + ex.Message);
             }
             finally
             {
-                excelWorkBook.Close();
-                excelApp.Quit();
-                if (File.Exists(outputFile))
-                {
-                    System.Diagnostics.Process.Start(outputFile);
-                }
+               
             }
             
 
@@ -374,7 +448,10 @@ namespace DesktopC
             dtGame = clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dt1stHalves = clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName + " - 1ST HALVES", category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
 
-         
+            //Test
+           
+
+
             dt2ndHalves = clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName + " - 2ND HALVES", category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dtQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName + " - QUARTERS", category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             
@@ -472,10 +549,29 @@ namespace DesktopC
 
         }
 
+        public DataTable extractTotalExoticsSportAndLeague(string sport, string league)
+        {
+
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers(sport, league, 2);
+            DataTable dt1stHCandian = extractTotalExoticsAndTeasers(sport, league + " - 1ST HALVES", 2);
+            DataTable dt2ndHalves = extractTotalExoticsAndTeasers(sport, league + " - 2ND HALVES", 2);
+            DataTable dtQuarters = extractTotalExoticsAndTeasers(sport, league + " - QUARTERS", 2);
+
+            dtCanadianGame.Merge(dtCanadianGame);
+            dtCanadianGame.Merge(dt1stHCandian);
+            dtCanadianGame.Merge(dt2ndHalves);
+            dtCanadianGame.Merge(dtQuarters);
+
+
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, league);
+            return dtCanadianGame;
+
+        }
+
         public DataTable extractTotalExoticsNFLPreseason()
         {
 
-            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON", 2);
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "NFL PRESEASON", 2);
 
 
             DataTable dt1stHCandian = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON 1ST HALVES", 2);
@@ -490,17 +586,34 @@ namespace DesktopC
           
 
 
-            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "CANADIAN FOOTBALL");
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "NFL PRESEASON");
             return dtCanadianGame;
 
 
+        }
+
+        public DataTable extractTotalExoticsNFL()
+        {
+
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "NFL", 2);
+
+
+            DataTable dt1stHCandian = extractTotalExoticsAndTeasers("NFL", "NFL - 1ST HALVES", 2);
+
+            DataTable dt2ndHalves = extractTotalExoticsAndTeasers("NFL", "NFL - 2ND HALVES", 2);
+
+            //DataTable dtQuarters = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - QUARTERS", 2);
+
+            dtCanadianGame.Merge(dtCanadianGame);
+            dtCanadianGame.Merge(dt1stHCandian);
+            dtCanadianGame.Merge(dt2ndHalves);
 
           
 
-            //dtGame = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + "", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dt1stHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 1ST HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dt2ndHalves = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - 2ND HALVES", dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            //dtQuarters = clBusiness.extractFieldsFromLeague("Report_Game_Statistic", 74, "" + leagueName + " - QUARTERS"
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "NFL Exotics");
+            return dtCanadianGame;
+
+
         }
 
         public DataTable extractTotalExoticsAndTeasers(string sportName)
@@ -775,6 +888,7 @@ namespace DesktopC
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            button1.Text = "Please wait";
             try
             {
                 saveFile();
@@ -784,32 +898,25 @@ namespace DesktopC
             {
                MessageBox.Show("Error al intentar guardar el archivo:" + ex.Message);
             }
-           
-          
+
+            button1.Text = "GENERATE FULL EXCEL REPORT";
         }
 
         private void saveFile()
         {
-            
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            string dateToDoc = string.Format("{0:yyyy-MM-dd HH.mm.ss}", DateTime.Now);
 
-            saveFileDialog1.Filter = "excel files (*.xls)|*.xls|All files (*.*)|*.*";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.FileName = (@"G8 Auto House Report " + dateTimePicker1.Text + ".xlsx");
+            string path = (@"S:\LINES\SYSTEM\MLB Auto Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
 
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-
-                string path = saveFileDialog1.FileName;
-               
+      
                 try
                 {
-                    fillExcelV2(@"S:\G8Housereport\BASE.xlsx", path, dataGridView1);
-                }
-                catch
+                fillExcelV2(@"S:\G8Housereport\BASE.xlsx", path, dataGridView1);
+                //fillExcelV2(@"S:\MLBHouseReport\G8 MLB House Report\MLBBASE.xlsx", path, dataGridView1);
+            }
+                catch (Exception ex)
                 {
-                    
+                MessageBox.Show(ex.Message);
                     fillExcelV2(@"C:\G8Housereport\BASE.xlsx", path, dataGridView1);
                 }
                 //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
@@ -817,7 +924,7 @@ namespace DesktopC
                 //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
                 //MessageBox.Show("Archivo guardado con éxito!.");
 
-            }
+            
         }
 
         private void cmbSport_SelectedIndexChanged(object sender, EventArgs e)
@@ -897,6 +1004,15 @@ namespace DesktopC
         private void button2_Click_4(object sender, EventArgs e)
         {
             dataGridView1.DataSource= extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON", 2);
+        }
+
+        private void button2_Click_5(object sender, EventArgs e)
+        {
+            //dataGridView1.DataSource = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            //dataGridView1.DataSource = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON 1ST HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            //dataGridView1.DataSource = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - PRESEASON 2ND HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+
+            dataGridView1.DataSource = extractFieldsFromLeague("CANADIAN FOOTBALL", "NFL", "Straight Bet");
         }
     }
 }
