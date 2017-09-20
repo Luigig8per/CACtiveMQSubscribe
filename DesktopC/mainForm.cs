@@ -521,7 +521,7 @@ namespace DesktopC
             dtCanadianGame.Merge(dt2ndHalves);
          
 
-            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "NCAA FOOTBALL");
+            dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, leagueName + " EXOTICS");
 
          
 
@@ -906,18 +906,27 @@ namespace DesktopC
         {
             string dateToDoc = string.Format("{0:yyyy-MM-dd HH.mm.ss}", DateTime.Now);
 
-            string path = (@"S:\LINES\SYSTEM\MLB Auto Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
+            string path = (@"S:\LINES\SYSTEM\G8 House Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
 
-      
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "excel files (*.xls)|*.xls|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FileName = (path);
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+
                 try
-                {
-                fillExcelV2(@"S:\G8Housereport\BASE.xlsx", path, dataGridView1);
+            {
+                fillExcelV2(@"S:\G8Housereport\BASE.xlsx", saveFileDialog1.FileName, dataGridView1);
                 //fillExcelV2(@"S:\MLBHouseReport\G8 MLB House Report\MLBBASE.xlsx", path, dataGridView1);
             }
                 catch (Exception ex)
                 {
                 MessageBox.Show(ex.Message);
-                    fillExcelV2(@"C:\G8Housereport\BASE.xlsx", path, dataGridView1);
+                    fillExcelV2(@"C:\G8Housereport\BASE.xlsx", saveFileDialog1.FileName, dataGridView1);
                 }
                 //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
 
