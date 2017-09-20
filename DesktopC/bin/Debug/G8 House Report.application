@@ -14,7 +14,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>TA04TiS2kgNvClpI/FCGHVn+EDc1GB1zkjUXz1pU4tY=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>7vSdY+MiKOtTUmJXh1o0HRKcGaUtdii4uaKy2Sn06oo=</dsig:DigestValue>
+>>>>>>> parent of adef408... Revert "Normal commit"
       </hash>
     </dependentAssembly>
   </dependency>

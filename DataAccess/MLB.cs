@@ -238,7 +238,7 @@ namespace DataAccess
                 sumWinLose += float.Parse(leagueDt.Rows[i][2].ToString());
             }
 
-            dgRes.Rows.Add(leagueName + " ", sumVolume, sumWinLose);
+            dgRes.Rows.Add(leagueName + "total ", sumVolume, sumWinLose);
 
             return dgRes;
 

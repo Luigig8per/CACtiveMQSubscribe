@@ -62,7 +62,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>olIrzy6rN5fBrsF3D3yeAGsi6G9n05PLQ4uFmKovgg0=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>hIDBNp8L+zsdKrCYOMc+UfeBju+G7/ZevWYlMNJOU9Y=</dsig:DigestValue>
+>>>>>>> parent of adef408... Revert "Normal commit"
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +78,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YqdFm7UwxcFjVwwRV2k9jKgjAtmObPF1C17MMMszc+I=</dsig:DigestValue>
+        <dsig:DigestValue>sCdQcy671k4FnXDoKqzyc4nis8c2QR6pYAaEaw5oi5I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +107,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="602112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="601600">
       <assemblyIdentity name="G8 House Report" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>T5y9805mBh0SAnInv0P/WGoLmNlNvQDosEPnZpC/M8s=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>BwpZBOj+6lVnXOAEQgzBj+v5oSvU4O4sbPm4aglI0YI=</dsig:DigestValue>
+>>>>>>> parent of adef408... Revert "Normal commit"
       </hash>
     </dependentAssembly>
   </dependency>
