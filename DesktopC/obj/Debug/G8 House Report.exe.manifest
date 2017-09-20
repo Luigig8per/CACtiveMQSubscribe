@@ -63,7 +63,11 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>olIrzy6rN5fBrsF3D3yeAGsi6G9n05PLQ4uFmKovgg0=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>hIDBNp8L+zsdKrCYOMc+UfeBju+G7/ZevWYlMNJOU9Y=</dsig:DigestValue>
+>>>>>>> parent of adef408... Revert "Normal commit"
 =======
         <dsig:DigestValue>hIDBNp8L+zsdKrCYOMc+UfeBju+G7/ZevWYlMNJOU9Y=</dsig:DigestValue>
 >>>>>>> parent of adef408... Revert "Normal commit"
@@ -115,7 +119,11 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>T5y9805mBh0SAnInv0P/WGoLmNlNvQDosEPnZpC/M8s=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>BwpZBOj+6lVnXOAEQgzBj+v5oSvU4O4sbPm4aglI0YI=</dsig:DigestValue>
+>>>>>>> parent of adef408... Revert "Normal commit"
 =======
         <dsig:DigestValue>BwpZBOj+6lVnXOAEQgzBj+v5oSvU4O4sbPm4aglI0YI=</dsig:DigestValue>
 >>>>>>> parent of adef408... Revert "Normal commit"
