@@ -73,15 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <dsig:DigestValue>r2/HSaF0aHBmYQMyyFMVIm0HQuMeVVMtMrGE2LAI0P8=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>VLrSytqhzNcP6cFp0ELXmm3EWRIDrkrQhP4ZAPA+JRk=</dsig:DigestValue>
->>>>>>> parent of adef408... Revert "Normal commit"
-=======
-        <dsig:DigestValue>VLrSytqhzNcP6cFp0ELXmm3EWRIDrkrQhP4ZAPA+JRk=</dsig:DigestValue>
->>>>>>> parent of adef408... Revert "Normal commit"
+        <dsig:DigestValue>IDlkJLHMFzdJD2a8rSCWLgmGi37uqqVy+9k9z6iqPoE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -93,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sCdQcy671k4FnXDoKqzyc4nis8c2QR6pYAaEaw5oi5I=</dsig:DigestValue>
+        <dsig:DigestValue>uX/b3ra/g7OxlFn7m6W64F/i6cgkFSIcpBCdH4/BNGE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -296,7 +296,7 @@ namespace DesktopC
                         excelWorkSheet.Cells[j + 46, k + 7] = dtNFL.Rows[j][k - 4];
                     }
 
-                    if (j < dtNFL.Rows.Count)
+                    if (j < dtNFL1stHalves.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 49, k + 7] = dtNFL1stHalves.Rows[j][k - 4];
                     }
@@ -896,7 +896,7 @@ namespace DesktopC
             }
             catch (Exception ex)
             {
-               MessageBox.Show("Error al intentar guardar el archivo:" + ex.Message);
+                MessageBox.Show("Error al intentar guardar el archivo:" + ex.Message);
             }
 
             button1.Text = "GENERATE FULL EXCEL REPORT";
@@ -908,23 +908,23 @@ namespace DesktopC
 
             string path = (@"S:\LINES\SYSTEM\MLB Auto Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
 
-      
-                try
-                {
+
+            try
+            {
                 fillExcelV2(@"S:\G8Housereport\BASE.xlsx", path, dataGridView1);
                 //fillExcelV2(@"S:\MLBHouseReport\G8 MLB House Report\MLBBASE.xlsx", path, dataGridView1);
             }
-                catch (Exception ex)
-                {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
-                    fillExcelV2(@"C:\G8Housereport\BASE.xlsx", path, dataGridView1);
-                }
-                //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
+                fillExcelV2(@"C:\G8Housereport\BASE.xlsx", path, dataGridView1);
+            }
+            //fillExcelV2(@"C:\documents2017\desktop\ReportGameStats\DesktopC\bin\Debug\HOUSE REPORT BASE.xlsx", path + string.Format("{0:yyyy-MM-dd}", DateTime.Now) + ".xlsx", dataGridView1);
 
-                //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
-                //MessageBox.Show("Archivo guardado con éxito!.");
+            //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
+            //MessageBox.Show("Archivo guardado con éxito!.");
 
-            
+
         }
 
         private void cmbSport_SelectedIndexChanged(object sender, EventArgs e)
