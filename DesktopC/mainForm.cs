@@ -159,6 +159,8 @@ namespace DesktopC
             DataTable dtCollege = new DataTable();
             DataTable dtExoticsCollege = new DataTable();
 
+            DataTable dtNHLPReseason = new DataTable();
+
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
             dtMU = extractTotalExoticsAndStraightBet("MU");
@@ -202,6 +204,8 @@ namespace DesktopC
             dtCollege = fillCollegeFB();
             dtExoticsCollege = extractTotalExoticsLeague("CFB", "NCAA FOOTBALL");
             //dtNFLPreseason= extractCategorySport()
+
+            dtNHLPReseason = extractCategorySport("NHL HOCKEY", "NHL - PRESEASON");
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
             excelWorkSheet.Cells[1, 1] = dateToDoc;
@@ -323,6 +327,14 @@ namespace DesktopC
                         excelWorkSheet.Cells[j + 3, k + 2] = dtSoccer.Rows[j][k - 4];
 
                     }
+
+                    //fill NHL PRESEASON
+                    if (j < dtNHLPReseason.Rows.Count)
+                    {
+                        //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
+                        excelWorkSheet.Cells[j + 82, k + 7] = dtNHLPReseason.Rows[j][k - 4];
+                    }
+
 
 
                     if (k > 4) //with this the original description from table is not overrided

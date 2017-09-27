@@ -44,3 +44,26 @@ C:\documents2017\Projects\ReportGameStats\DesktopC\obj\Debug\DesktopC.Properties
 C:\documents2017\Projects\ReportGameStats\DesktopC\obj\Debug\DesktopG8HouseReport.csproj.GenerateResource.Cache
 C:\documents2017\Projects\ReportGameStats\DesktopC\obj\Debug\G8 House Report.exe.manifest
 C:\documents2017\Projects\ReportGameStats\DesktopC\obj\Debug\G8 House Report.application
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.exe.config
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopG8HouseReport.csproj.ResolveComReference.cache
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.exe
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.exe.manifest
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.application
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.exe
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\AjaxControlToolkit.dll
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\Business.dll
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\Entities.dll
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\EPPlus.dll
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\DataAccess.dll
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\Business.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\Entities.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\EPPlus.xml
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\bin\Debug\DataAccess.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopG8HouseReport.csprojResolveAssemblyReference.cache
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopC.mainForm.resources
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopC.Properties.Resources.resources
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopG8HouseReport.csproj.GenerateResource.Cache
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.exe.manifest
+C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.application
