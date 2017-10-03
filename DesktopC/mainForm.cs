@@ -307,6 +307,8 @@ namespace DesktopC
                     }
 
 
+
+
                     //Fill NFL
 
                     if (j < dtNFL.Rows.Count)
@@ -338,6 +340,9 @@ namespace DesktopC
                     {
                         excelWorkSheet.Cells[j+ 61, k + 7] = dtNFLLiveWagering.Rows[j][k - 4];
                     }
+
+                    if (j < dtExoticsNFL.Rows.Count)
+                        excelWorkSheet.Cells[j+64, k + 7] = dtExoticsNFL.Rows[j][k - 4];
                     //SOCCER
 
                     if (j < dtSoccer.Rows.Count)
