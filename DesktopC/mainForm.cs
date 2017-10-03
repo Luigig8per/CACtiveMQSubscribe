@@ -203,9 +203,18 @@ namespace DesktopC
             //dtCollege  = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             dtCollege = fillCollegeFB();
             dtExoticsCollege = extractTotalExoticsLeague("CFB", "NCAA FOOTBALL");
-            //dtNFLPreseason= extractCategorySport()
+            //dtNHLPReseason = extractCategorySport("NHL", "NHL - PRESEASON");
+            dataGridView1.DataSource = dtNHLPReseason;
+            dtNHLPReseason =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            //dtNHLPReseason =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL HOCKEY", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            //dtNHLPReseason = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL HOCKEY", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2); 
+            dataGridView1.DataSource = dtNHLPReseason;
 
-            dtNHLPReseason = extractCategorySport("NHL HOCKEY", "NHL - PRESEASON");
+
+            DataTable dtNHLPreExotics = extractTotalExoticsAndTeasers("NHL", "NHL - PRESEASON", 2);
+
+
+          
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
             excelWorkSheet.Cells[1, 1] = dateToDoc;
@@ -333,6 +342,11 @@ namespace DesktopC
                     {
                         //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
                         excelWorkSheet.Cells[j + 82, k + 7] = dtNHLPReseason.Rows[j][k - 4];
+                    }
+
+                    if(j<dtNHLPreExotics.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 94, k + 7] = dtNHLPreExotics.Rows[j][k - 4];
                     }
 
 
@@ -583,7 +597,7 @@ namespace DesktopC
         public DataTable extractTotalExoticsNFLPreseason()
         {
 
-            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NFL", "NFL PRESEASON", 2);
+            DataTable dtCanadianGame = extractTotalExoticsAndTeasers("NHL", "NHL - PRESEASON", 2);
 
 
             DataTable dt1stHCandian = extractTotalExoticsAndTeasers("NFL", "NFL - PRESEASON 1ST HALVES", 2);
@@ -918,7 +932,7 @@ namespace DesktopC
         {
             string dateToDoc = string.Format("{0:yyyy-MM-dd HH.mm.ss}", DateTime.Now);
 
-            string path = (@"S:\LINES\SYSTEM\MLB Auto Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
+            string path = (@"S:\LINES\SYSTEM\G8 House Auto Report " + string.Format("{0:MM-dd}", dateTimePicker1.Value) + " ~ " + string.Format("{0:MM-dd}", dateTimePicker2.Value) + "  (" + dateToDoc + ").xlsx");
 
 
             try

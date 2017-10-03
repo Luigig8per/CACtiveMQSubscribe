@@ -31,3 +31,10 @@ C:\documents2017\Projects\ReportGameStats\DataAccess\obj\Debug\DataAccess.pdb
 C:\documents2017\Projects\ReportGameStats\DataAccess\bin\Debug\DataAccess.dll
 C:\documents2017\Projects\ReportGameStats\DataAccess\bin\Debug\DataAccess.pdb
 C:\documents2017\Projects\ReportGameStats\DataAccess\obj\Debug\DataAccess.dll
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\bin\Debug\DataAccess.dll
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\bin\Debug\DataAccess.pdb
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\obj\Debug\DataAccess.dll
+C:\documents2017\Projects\ReportGameStats 2017\DataAccess\obj\Debug\DataAccess.pdb

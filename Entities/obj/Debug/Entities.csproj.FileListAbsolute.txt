@@ -17,3 +17,13 @@ C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\Repo
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.dll
 C:\documents\Proyectos\dotNet\Report_Game_Statistic\_Report_Game_Statistic_\ReportGameStats\Entities\obj\Debug\Entities.pdb
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\Entities.dll.config
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\Entities.dll
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\Entities.pdb
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\EntityFramework.dll
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\EntityFramework.xml
+C:\documents2017\Projects\ReportGameStats 2017\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\documents2017\Projects\ReportGameStats 2017\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\documents2017\Projects\ReportGameStats 2017\Entities\obj\Debug\Entities.dll
+C:\documents2017\Projects\ReportGameStats 2017\Entities\obj\Debug\Entities.pdb
