@@ -201,6 +201,9 @@ namespace DataAccess
                         case 2:
                             description = dgTemp.Rows[i][4] + " " + dgTemp.Rows[i][5];
                             break;
+                        case 3:
+                            description = league + " " + dgTemp.Rows[i][5];
+                            break;
 
 
                     }

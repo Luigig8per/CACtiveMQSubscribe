@@ -148,6 +148,7 @@ namespace DesktopC
             DataTable dtNFLPreseason1stHalves = new DataTable();
             DataTable dtNFLPreseason2ndHalves = new DataTable();
             DataTable dtNFLPreseasonQuarters = new DataTable();
+           
             DataTable dtExoticsNFLPreseason = new DataTable();
 
             DataTable dtNFL = new DataTable();
@@ -199,6 +200,8 @@ namespace DesktopC
             //clBusiness.extractCategoryLeague("Report_Game_Statistic", sport, leagueName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
 
             dtNFLQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNFLGameProps = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNFLLiveWagering = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "NFL - LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             dtExoticsNFL = extractTotalExoticsNFL();
 
             //dtCollege  = clBusiness.extractCategoryLeague("Report_Game_Statistic", "CFB", "NCAA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
@@ -299,15 +302,16 @@ namespace DesktopC
                     }
 
                     if (j < dtExoticsNFLPreseason.Rows.Count)
+                    {
                         excelWorkSheet.Cells[ 40, k + 7] = dtExoticsNFLPreseason.Rows[j][k - 4];
-
+                    }
 
 
                     //Fill NFL
 
                     if (j < dtNFL.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 46, k + 7] = dtNFL.Rows[j][k - 4];
+                        excelWorkSheet.Cells[j + 46 , k + 7] = dtNFL.Rows[j][k - 4];
                     }
 
                     if (j < dtNFL1stHalves.Rows.Count)
@@ -322,12 +326,18 @@ namespace DesktopC
 
                     if (j < dtNFLQuarters.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 55, k + 7] = dtNFLQuarters.Rows[j][k - 4];
+                        excelWorkSheet.Cells[j + 55 , k + 7] = dtNFLQuarters.Rows[j][k - 4];
                     }
 
-                    if (j < dtExoticsNFL.Rows.Count)
-                        excelWorkSheet.Cells[58, k + 7] = dtExoticsNFL.Rows[j][k - 4];
+                    if (j < dtNFLGameProps.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 58 , k + 7] = dtNFLGameProps.Rows[j][k - 4];
+                    }
 
+                    if (j < dtNFLLiveWagering.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j+ 61, k + 7] = dtNFLLiveWagering.Rows[j][k - 4];
+                    }
                     //SOCCER
 
                     if (j < dtSoccer.Rows.Count)
@@ -342,12 +352,12 @@ namespace DesktopC
                     if (j < dtNHLPReseason.Rows.Count)
                     {
                         //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
-                        excelWorkSheet.Cells[j + 82, k + 7] = dtNHLPReseason.Rows[j][k - 4];
+                        excelWorkSheet.Cells[j + 82 +6, k + 7] = dtNHLPReseason.Rows[j][k - 4];
                     }
 
                     if(j<dtNHLPreExotics.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 94, k + 7] = dtNHLPreExotics.Rows[j][k - 4];
+                        excelWorkSheet.Cells[j + 94+6, k + 7] = dtNHLPreExotics.Rows[j][k - 4];
                     }
 
                     //Fill NBA Preseason
