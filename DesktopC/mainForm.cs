@@ -964,7 +964,6 @@ namespace DesktopC
             //File.WriteAllText(@saveFileDialog1.FileName + ".xls", rtOutput.Text);
             //MessageBox.Show("Archivo guardado con éxito!.");
 
-
         }
 
         private void cmbSport_SelectedIndexChanged(object sender, EventArgs e)
