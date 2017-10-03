@@ -160,6 +160,7 @@ namespace DesktopC
             DataTable dtExoticsCollege = new DataTable();
 
             DataTable dtNHLPReseason = new DataTable();
+            DataTable dtNBAPReseason = new DataTable();
 
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
 
@@ -208,9 +209,9 @@ namespace DesktopC
             dtNHLPReseason =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             //dtNHLPReseason =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL HOCKEY", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
             //dtNHLPReseason = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL HOCKEY", "NHL - PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2); 
-            dataGridView1.DataSource = dtNHLPReseason;
-
-
+            //dataGridView1.DataSource = dtNHLPReseason;
+            dtNBAPReseason = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA PRESEASON", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNBAPReseasonExotics = extractTotalExoticsAndTeasers("NBA", "NBA PRESEASON", 2);
             DataTable dtNHLPreExotics = extractTotalExoticsAndTeasers("NHL", "NHL - PRESEASON", 2);
 
 
@@ -347,6 +348,19 @@ namespace DesktopC
                     if(j<dtNHLPreExotics.Rows.Count)
                     {
                         excelWorkSheet.Cells[j + 94, k + 7] = dtNHLPreExotics.Rows[j][k - 4];
+                    }
+
+                    //Fill NBA Preseason
+
+                    if (j < dtNBAPReseason.Rows.Count)
+                    {
+                        //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
+                        excelWorkSheet.Cells[j + 51, k + 2] = dtNBAPReseason.Rows[j][k - 4];
+                    }
+
+                    if (j < dtNBAPReseasonExotics.Rows.Count)
+                    {
+                        excelWorkSheet.Cells[j + 63, k + 2] = dtNBAPReseasonExotics.Rows[j][k - 4];
                     }
 
 
