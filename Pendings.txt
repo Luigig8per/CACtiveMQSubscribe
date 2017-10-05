@@ -2,3 +2,7 @@ According 2 Pablo, Soccer 1st h and 2nd h description is not showed.
 NHLPreseason needs to be tested on days of plays// dONE
 WNBA is still not loaded correctly, as it was loaded from whole NBA
 To fill all leagues just with leagueName, including his exotics. Can take as example NHL Season
+To check why NBA is not giving exact results. For the moment we are just loading whol results from NBA
+To add conditional results in all fields. 
+To check some spors like NBA
+To add automatized process for add sports

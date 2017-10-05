@@ -229,14 +229,15 @@ namespace DesktopC
 
 
           //NHL 
-            DataTable dtNHL= clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NATIONAL HOCKEY LEAGUE", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHLRT = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL REGULATION TIME (NO OVERTIME)", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHLLW = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHL1PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - FIRST PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHL2PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - SECOND PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHL3PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - THIRD PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHL1G = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL 1 GOAL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
-            DataTable dtNHLAPL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL ALTERNATIVE PUCK LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHL= clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NATIONAL HOCKEY LEAGUE", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHLRT = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL REGULATION TIME (NO OVERTIME)", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHLLW = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHL1PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - FIRST PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHL2PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - SECOND PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHL3PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - THIRD PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHL1G = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL 1 GOAL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHLAPL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL ALTERNATIVE PUCK LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHLGP = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNHLExotics = extractTotalExoticsNHL();
 
 
@@ -401,22 +402,26 @@ namespace DesktopC
                     this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, 109+12, 7);
                     this.fillLeague(dtNHLLW, j, k, excelWorkSheet, 109+15, 7);
                     this.fillLeague(dtNHLRT, j, k, excelWorkSheet, 109+18, 7);
-                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, 109+21, 7);
+
+                   
+
+                    this.fillLeague(dtNHLGP, j, k, excelWorkSheet, 109 + 21, 7);
+                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, 109 + 24, 7);
 
 
 
                     //Fill NBA Preseason
 
-                    if (j < dtNBAPReseason.Rows.Count)
-                    {
-                        //excelWorkSheet.Cells[j + 13, k + 6] = dgv.Rows[j].Cells[k + 1].Value.ToString();
-                        excelWorkSheet.Cells[j + 51, k + 2] = dtNBAPReseason.Rows[j][k - 4];
-                    }
+                    //   if (j < dtNBAPReseason.Rows.Count)
+                    //   {
 
-                    if (j < dtNBAPReseasonExotics.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[j + 63, k + 2] = dtNBAPReseasonExotics.Rows[j][k - 4];
-                    }
+                    //    excelWorkSheet.Cells[j + 51, k + 2] = dtNBAPReseason.Rows[j][k - 4];
+                    //  }
+
+                    //    if (j < dtNBAPReseasonExotics.Rows.Count)
+                    //     {
+                    //        excelWorkSheet.Cells[j + 63, k + 2] = dtNBAPReseasonExotics.Rows[j][k - 4];
+                    //    }
 
 
 
