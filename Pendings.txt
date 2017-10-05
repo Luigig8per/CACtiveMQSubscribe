@@ -1,2 +1,4 @@
 According 2 Pablo, Soccer 1st h and 2nd h description is not showed.
-NHLPreseason needs to be tested on days of plays
+NHLPreseason needs to be tested on days of plays// dONE
+WNBA is still not loaded correctly, as it was loaded from whole NBA
+To fill all leagues just with leagueName, including his exotics. Can take as example NHL Season

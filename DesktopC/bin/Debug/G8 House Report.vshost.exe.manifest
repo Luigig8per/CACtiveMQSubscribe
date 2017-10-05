@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="602624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="604160">
       <assemblyIdentity name="G8 House Report" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>koFK6D0plIGBK+tZ9NCWjtnlAoJ2xEvHWYa2ul8QH1A=</dsig:DigestValue>
+        <dsig:DigestValue>/vE9Jo6JQKLEDTAIIQV5P6CkrTQoQTDx2A3q8VDGsks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

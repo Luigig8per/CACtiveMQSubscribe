@@ -125,6 +125,15 @@ namespace DesktopC
 
         }
 
+        private void fillLeague(DataTable dtLeague, int j, int k, Excel.Worksheet excelWorkSheet, int numA, int numB)
+        {
+            //numA and numB are the x,y positions on the sheet
+            if (j < dtLeague.Rows.Count)
+            {
+                excelWorkSheet.Cells[j + numA, k + numB] = dtLeague.Rows[j][k - 4];
+            }
+        }
+
         public void fillExcelFields(Excel.Workbook excelWorkBook, int sheetNumber)
         {
             Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[sheetNumber];
@@ -143,7 +152,8 @@ namespace DesktopC
             DataTable dt1STQCanadiaFootball = new DataTable();
             DataTable dtSoccer = new DataTable();
             DataTable dtNBA = new DataTable();
-
+            DataTable dtWNBA = new DataTable();
+            DataTable dtNBAExotics  = new DataTable();
             DataTable dtNFLPreseason = new DataTable();
             DataTable dtNFLPreseason1stHalves = new DataTable();
             DataTable dtNFLPreseason2ndHalves = new DataTable();
@@ -169,7 +179,7 @@ namespace DesktopC
             dtSoccer = extractCategorySport("SOC", "Straight Bet");
             dtSoc = extractTotalExotics("SOC");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
-
+            dtWNBA = extractCategorySport("WNBA", "Straight Bet");
             dtExoticsMLB = extractTotalExotics("MLB");
             dtExoticsNBA = extractTotalExoticsAndTeasers("NBA");
 
@@ -218,7 +228,17 @@ namespace DesktopC
             DataTable dtNHLPreExotics = extractTotalExoticsAndTeasers("NHL", "NHL - PRESEASON", 2);
 
 
-          
+          //NHL 
+            DataTable dtNHL= clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NATIONAL HOCKEY LEAGUE", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHLRT = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL REGULATION TIME (NO OVERTIME)", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHLLW = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHL1PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - FIRST PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHL2PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - SECOND PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHL3PL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL PERIODS - THIRD PERIOD LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHL1G = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL 1 GOAL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHLAPL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL ALTERNATIVE PUCK LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+            DataTable dtNHLExotics = extractTotalExoticsNHL();
+
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
             excelWorkSheet.Cells[1, 1] = dateToDoc;
@@ -240,15 +260,20 @@ namespace DesktopC
                 {
                     activeWorkSheet(excelWorkSheet, 0 + 1, k - 3);
                     //Fill WNBA
-                    if (j < dtNBA.Rows.Count)
+                   if (j < dtNBA.Rows.Count)
                     {
-                        excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
+                       excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
 
                     }
 
+                    //Fill wNBA 
+
+                       excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
+                       excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
+
                     //Fill College Football
 
-                 
+
 
                     if (j < dtCollege.Rows.Count)
                     {
@@ -345,6 +370,7 @@ namespace DesktopC
                         excelWorkSheet.Cells[j+64, k + 7] = dtExoticsNFL.Rows[j][k - 4];
                     //SOCCER
 
+                    fillLeague(dtSoccer,j,k,excelWorkSheet, 3,2);
                     if (j < dtSoccer.Rows.Count)
                     {
                         //excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
@@ -364,6 +390,20 @@ namespace DesktopC
                     {
                         excelWorkSheet.Cells[j + 94+6, k + 7] = dtNHLPreExotics.Rows[j][k - 4];
                     }
+
+                    //fill NHL 
+
+                    this.fillLeague(dtNHL, j, k, excelWorkSheet, 106, 7);
+                    this.fillLeague(dtNHL1G, j, k, excelWorkSheet, 109, 7);
+                    this.fillLeague(dtNHL1PL, j, k, excelWorkSheet, 109+3, 7);
+                    this.fillLeague(dtNHL2PL, j, k, excelWorkSheet, 109+6, 7);
+                    this.fillLeague(dtNHL3PL, j, k, excelWorkSheet, 109+9, 7);
+                    this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, 109+12, 7);
+                    this.fillLeague(dtNHLLW, j, k, excelWorkSheet, 109+15, 7);
+                    this.fillLeague(dtNHLRT, j, k, excelWorkSheet, 109+18, 7);
+                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, 109+21, 7);
+
+
 
                     //Fill NBA Preseason
 
@@ -417,10 +457,7 @@ namespace DesktopC
             excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
 
 
-            //Fill NBA 
-
-            excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
-            excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
+           
 
 
             excelWorkSheet.Cells[23, 12] = dtExoticsCanadianFootball.Rows[0][1];
@@ -671,6 +708,8 @@ namespace DesktopC
 
         }
 
+   
+
         public DataTable extractTotalExoticsAndTeasers(string sportName)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
@@ -696,6 +735,37 @@ namespace DesktopC
             return exoticsSoc;
         }
 
+        public DataTable extractTotalExoticsNHL()
+        {
+
+            DataTable dtNHL = extractTotalExoticsAndTeasers("NHL", "NATIONAL HOCKEY LEAGUE", 2);
+
+
+            DataTable dtNHLRT = extractTotalExoticsAndTeasers("NHL", "NHL REGULATION TIME (NO OVERTIME)", 2);
+
+            DataTable dtNHLLW = extractTotalExoticsAndTeasers("NHL", "NHL LIVE WAGERING", 2);
+            DataTable dtNHL1PL = extractTotalExoticsAndTeasers("NHL", "NHL REGULATION TIME (NO OVERTIME)", 2);
+            DataTable dtNHL2PL = extractTotalExoticsAndTeasers("NHL", "NHL PERIODS - FIRST PERIOD LINES", 2);
+            DataTable dtNHL3PL = extractTotalExoticsAndTeasers("NHL", "NHL PERIODS - SECOND PERIOD LINES", 2);
+            DataTable dtNHL1G = extractTotalExoticsAndTeasers("NHL", "NHL 1 GOAL", 2);
+            DataTable dtNHLAPL = extractTotalExoticsAndTeasers("NHL", "NHL ALTERNATIVE PUCK LINES", 2);
+
+            //DataTable dtQuarters = extractTotalExoticsAndTeasers("NFL", "CANADIAN FOOTBALL - QUARTERS", 2);
+
+            dtNHL.Merge(dtNHLRT);
+            dtNHL.Merge(dtNHLLW);
+            dtNHL.Merge(dtNHL1PL);
+            dtNHL.Merge(dtNHL2PL);
+            dtNHL.Merge(dtNHL3PL);
+            dtNHL.Merge(dtNHL1G);
+            dtNHL.Merge(dtNHLAPL);
+
+
+
+           DataTable dtNHLExotics = clBusiness.sumOfDatatable(dtNHL, "NHL Exotics");
+            return dtNHLExotics;
+
+        }
         public DataTable extractTotalExoticsAndTeasers(string sportName, string league, int descriptionType)
         {
             //DataTable exoticsSoc = clBusiness.extractExotics("Report_Game_Statistic", "SOC", 74, dateTimePicker1.Value, dateTimePicker2.Value);
