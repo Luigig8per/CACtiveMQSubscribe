@@ -125,6 +125,8 @@ namespace DesktopC
 
         }
 
+        
+
         private void fillLeague(DataTable dtLeague, int j, int k, Excel.Worksheet excelWorkSheet, int numA, int numB)
         {
             //numA and numB are the x,y positions on the sheet
@@ -134,19 +136,40 @@ namespace DesktopC
             }
         }
 
+
+        public void fillMLBFields(int initialPosX, int initialPosy, Excel.Worksheet excelWorkSheet, int j, int k, DataTable dtExoticsMLB, DataTable dtMLB, DataTable dtMLB1H, DataTable dtMLB2H, DataTable dtMLBAR, DataTable dtMLB2RL, DataTable dtMLBGP, DataTable dtMLBLG, DataTable dtMLBGS, DataTable dtMLBJB)
+        {
+         
+
+            //fILL MLB Exotics 
+            excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
+            excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
+
+
+            this.fillLeague(dtMLB, j, k, excelWorkSheet, initialPosX, initialPosy);
+            this.fillLeague(dtMLB1H, j, k, excelWorkSheet, initialPosX + 3, initialPosy);
+            this.fillLeague(dtMLB2H, j, k, excelWorkSheet, initialPosX + 6, initialPosy);
+            this.fillLeague(dtMLBAR, j, k, excelWorkSheet, initialPosX + 7, initialPosy);
+            this.fillLeague(dtMLB2RL, j, k, excelWorkSheet, initialPosX + 8, initialPosy);
+            this.fillLeague(dtMLBGP, j, k, excelWorkSheet, initialPosX + 11, initialPosy);
+            this.fillLeague(dtMLBLG, j, k, excelWorkSheet, initialPosX + 14, initialPosy);
+            this.fillLeague(dtMLBGS, j, k, excelWorkSheet, initialPosX + 17, initialPosy);
+            this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + 20, initialPosy);
+            this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 23, initialPosy);
+        }
         public void fillExcelFields(Excel.Workbook excelWorkBook, int sheetNumber)
         {
             Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[sheetNumber];
 
             excelWorkSheet.Select(Type.Missing);
             excelWorkSheet.Activate();
-
+            int initialPosX, initialPosY;
             DataTable dTMLB = new DataTable();
             DataTable dtSoc = new DataTable();
             DataTable dtMU = new DataTable();
             DataTable dtCanadianFootball = new DataTable();
             DataTable dtArenaFootball = new DataTable();
-            DataTable dtExoticsMLB = new DataTable();
+          
             DataTable dtExoticsNBA = new DataTable();
             DataTable dtExoticsCanadianFootball = new DataTable();
             DataTable dt1STQCanadiaFootball = new DataTable();
@@ -158,7 +181,7 @@ namespace DesktopC
             DataTable dtNFLPreseason1stHalves = new DataTable();
             DataTable dtNFLPreseason2ndHalves = new DataTable();
             DataTable dtNFLPreseasonQuarters = new DataTable();
-           
+    //       DataTable dtMLBExotics = extractTotalExoticsNHL();
             DataTable dtExoticsNFLPreseason = new DataTable();
 
             DataTable dtNFL = new DataTable();
@@ -180,7 +203,7 @@ namespace DesktopC
             dtSoc = extractTotalExotics("SOC");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
             dtWNBA = extractCategorySport("WNBA", "Straight Bet");
-            dtExoticsMLB = extractTotalExotics("MLB");
+          
             dtExoticsNBA = extractTotalExoticsAndTeasers("NBA");
 
 
@@ -240,6 +263,21 @@ namespace DesktopC
             DataTable dtNHLGP = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNHLExotics = extractTotalExoticsNHL();
 
+            //mlb
+
+            DataTable dtExoticsMLB = new DataTable();
+
+            DataTable dtMLB = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MAJOR LEAGUE BASEBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLB1H = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - 1ST HALVES (5 FULL INNINGS)", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLB2H = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - 2HF (4 FULL INNINGS+EXTRA INNS)", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBAR = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - ALTERNATIVE RUN LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLB2RL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - 2½ RUN LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBGP = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBLG = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBGS = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB GRAND SALAMI", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBJB = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "JAPANESE BASEBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+
+            dtExoticsMLB = extractTotalExotics("MLB");
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
             excelWorkSheet.Cells[1, 1] = dateToDoc;
@@ -260,17 +298,30 @@ namespace DesktopC
                 for (int k = 4; k < 7; k++)
                 {
                     activeWorkSheet(excelWorkSheet, 0 + 1, k - 3);
-                    //Fill WNBA
-                   if (j < dtNBA.Rows.Count)
+
+                    //SOCCER
+
+                    fillLeague(dtSoccer, j, k, excelWorkSheet, 3, 2);
+                    if (j < dtSoccer.Rows.Count)
                     {
-                       excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
+                        //excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
+                        //excelWorkSheet.Cells[j + 3, k + 2] = dTMLB.Rows[j + 15][k + 1];
+                        excelWorkSheet.Cells[j + 3, k + 2] = dtSoccer.Rows[j][k - 4];
 
                     }
 
-                    //Fill wNBA 
+                    //Fill WNBA
+                    //Fill wNBA -- DELETED WHILE IS NOT IN SEASON - ACTIVATE THIS LINES WHEN IN SEASON
+                    //if (j < dtNBA.Rows.Count)
+                    // {
+                    //    excelWorkSheet.Cells[j + 18, k + 2] = dtNBA.Rows[j][k - 4];
 
-                       excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
-                       excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
+                    // }
+
+                    //Fill wNBA -- DELETED WHILE IS NOT IN SEASON - ACTIVATE THIS 2 LINES WHEN IN SEASON
+
+                    //excelWorkSheet.Cells[27, 7] = dtExoticsNBA.Rows[0][1];
+                    //excelWorkSheet.Cells[27, 8] = dtExoticsNBA.Rows[0][2];
 
                     //Fill College Football
 
@@ -305,32 +356,32 @@ namespace DesktopC
                         excelWorkSheet.Cells[j + 11, k + 7] = dtCanadianFootball.Rows[j][k - 4];
                     }
 
-                    //Fill NFL PreSeason
+                    //Fill NFL PreSeason   -- DELETED WHILE IS NOT IN SEASON - ACTIVATE THIS NEXT LINES WHEN IN SEASON
 
-                    if (j < dtNFLPreseason.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[j + 28, k + 7] = dtNFLPreseason.Rows[j][k - 4];
-                    }
+                    //if (j < dtNFLPreseason.Rows.Count)
+                    //{
+                    //    excelWorkSheet.Cells[j + 28, k + 7] = dtNFLPreseason.Rows[j][k - 4];
+                    //}
 
-                    if (j < dtNFLPreseason1stHalves.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[j + 31, k + 7] = dtNFLPreseason1stHalves.Rows[j][k - 4];
-                    }
+                    //if (j < dtNFLPreseason1stHalves.Rows.Count)
+                    //{
+                    //    excelWorkSheet.Cells[j + 31, k + 7] = dtNFLPreseason1stHalves.Rows[j][k - 4];
+                    //}
 
-                    if (j < dtNFLPreseason2ndHalves.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[j + 34, k + 7] = dtNFLPreseason2ndHalves.Rows[j][k - 4];
-                    }
+                    //if (j < dtNFLPreseason2ndHalves.Rows.Count)
+                    //{
+                    //    excelWorkSheet.Cells[j + 34, k + 7] = dtNFLPreseason2ndHalves.Rows[j][k - 4];
+                    //}
 
-                    if (j < dtNFLPreseasonQuarters.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[j + 37, k + 7] = dtNFLPreseasonQuarters.Rows[j][k - 4];
-                    }
+                    //if (j < dtNFLPreseasonQuarters.Rows.Count)
+                    //{
+                    //    excelWorkSheet.Cells[j + 37, k + 7] = dtNFLPreseasonQuarters.Rows[j][k - 4];
+                    //}
 
-                    if (j < dtExoticsNFLPreseason.Rows.Count)
-                    {
-                        excelWorkSheet.Cells[ 40, k + 7] = dtExoticsNFLPreseason.Rows[j][k - 4];
-                    }
+                    //if (j < dtExoticsNFLPreseason.Rows.Count)
+                    //{
+                    //    excelWorkSheet.Cells[ 40, k + 7] = dtExoticsNFLPreseason.Rows[j][k - 4];
+                    //}
 
 
 
@@ -369,16 +420,7 @@ namespace DesktopC
 
                     if (j < dtExoticsNFL.Rows.Count)
                         excelWorkSheet.Cells[j+64, k + 7] = dtExoticsNFL.Rows[j][k - 4];
-                    //SOCCER
-
-                    fillLeague(dtSoccer,j,k,excelWorkSheet, 3,2);
-                    if (j < dtSoccer.Rows.Count)
-                    {
-                        //excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
-                        //excelWorkSheet.Cells[j + 3, k + 2] = dTMLB.Rows[j + 15][k + 1];
-                        excelWorkSheet.Cells[j + 3, k + 2] = dtSoccer.Rows[j][k - 4];
-
-                    }
+                  
 
                     //fill NHL PRESEASON
                     if (j < dtNHLPReseason.Rows.Count)
@@ -393,21 +435,23 @@ namespace DesktopC
                     }
 
                     //fill NHL 
+                    initialPosX = 70;
 
-                    this.fillLeague(dtNHL, j, k, excelWorkSheet, 106, 7);
-                    this.fillLeague(dtNHL1G, j, k, excelWorkSheet, 109, 7);
-                    this.fillLeague(dtNHL1PL, j, k, excelWorkSheet, 109+3, 7);
-                    this.fillLeague(dtNHL2PL, j, k, excelWorkSheet, 109+6, 7);
-                    this.fillLeague(dtNHL3PL, j, k, excelWorkSheet, 109+9, 7);
-                    this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, 109+12, 7);
-                    this.fillLeague(dtNHLLW, j, k, excelWorkSheet, 109+15, 7);
-                    this.fillLeague(dtNHLRT, j, k, excelWorkSheet, 109+18, 7);
+                    this.fillLeague(dtNHL, j, k, excelWorkSheet, initialPosX, 7);
+                    this.fillLeague(dtNHL1G, j, k, excelWorkSheet, initialPosX+3, 7);
+                    this.fillLeague(dtNHL1PL, j, k, excelWorkSheet, initialPosX+6, 7);
+                    this.fillLeague(dtNHL2PL, j, k, excelWorkSheet, initialPosX + 9, 7);
+                    this.fillLeague(dtNHL3PL, j, k, excelWorkSheet, initialPosX + 12, 7);
+                    this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, initialPosX + 15, 7);
+                    this.fillLeague(dtNHLLW, j, k, excelWorkSheet, initialPosX + 18, 7);
+                    this.fillLeague(dtNHLRT, j, k, excelWorkSheet, initialPosX + 21, 7);
 
                    
 
-                    this.fillLeague(dtNHLGP, j, k, excelWorkSheet, 109 + 21, 7);
-                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, 109 + 24, 7);
+                    this.fillLeague(dtNHLGP, j, k, excelWorkSheet, initialPosX + 24, 7);
+                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, initialPosX + 27, 7);
 
+                  //  fillMLBFields(40,2, excelWorkSheet, j, k, dtExoticsMLB,  dtMLB,  dtMLB1H, dtMLB2H, dtMLBAR,  dtMLB2RL, dtMLBGP,  dtMLBLG,  dtMLBGS,  dtMLBJB);
 
 
                     //Fill NBA Preseason
@@ -443,6 +487,8 @@ namespace DesktopC
 
                     }
 
+                    
+
 
 
 
@@ -453,10 +499,7 @@ namespace DesktopC
             //Next should be deleted after not show text on query result
             excelWorkSheet.Cells[40, 11] = "EXOTICS";
 
-            //fILL MLB Exotics 
-            excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
-            excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
-
+          
             //Fill MU total
             excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
             excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
