@@ -141,9 +141,7 @@ namespace DesktopC
         {
          
 
-            //fILL MLB Exotics 
-            excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
-            excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
+           
 
 
             this.fillLeague(dtMLB, j, k, excelWorkSheet, initialPosX, initialPosy);
@@ -156,6 +154,10 @@ namespace DesktopC
             this.fillLeague(dtMLBGS, j, k, excelWorkSheet, initialPosX + 17, initialPosy);
             this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + 20, initialPosy);
             this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 23, initialPosy);
+
+            //fILL MLB Exotics 
+           // excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
+            //excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
         }
         public void fillExcelFields(Excel.Workbook excelWorkBook, int sheetNumber)
         {
@@ -283,8 +285,8 @@ namespace DesktopC
 
             string dateToDoc = string.Format("{0:yyyy-MM-dd}", dateTimePicker1.Value);
             excelWorkSheet.Cells[1, 1] = dateToDoc;
-            excelWorkSheet.Cells[24, 1] = dateToDoc;
-            excelWorkSheet.Cells[29, 1] = dateToDoc;
+            //excelWorkSheet.Cells[24, 1] = dateToDoc;
+            //excelWorkSheet.Cells[29, 1] = dateToDoc;
             excelWorkSheet.Cells[1, 6] = dateToDoc;
             excelWorkSheet.Cells[1, 11] = dateToDoc;
             excelWorkSheet.Cells[9, 11] = dateToDoc;
@@ -456,8 +458,8 @@ namespace DesktopC
                     //  fillMLBFields(40,2, excelWorkSheet, j, k, dtExoticsMLB,  dtMLB,  dtMLB1H, dtMLB2H, dtMLBAR,  dtMLB2RL, dtMLBGP,  dtMLBLG,  dtMLBGS,  dtMLBJB);
 
 
-                    excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
-                    excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
+                    //excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
+                    //excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
 
                     initialPosX = 2;
                     initialPosY = -3;
@@ -473,7 +475,12 @@ namespace DesktopC
                     this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + 20, initialPosY);
                     this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 23, initialPosY);
 
+                    //Fill MU total
+                    excelWorkSheet.Cells[37, 2] = dtMU.Rows[0][1];
+                    excelWorkSheet.Cells[37, 3] = dtMU.Rows[0][2];
 
+
+              
 
                     //Fill NBA Preseason
 
@@ -494,8 +501,8 @@ namespace DesktopC
 
                     {
 
-                        //Fill MLB
-                        //excelWorkSheet.Cells[j + 3, k - 3] = dTMLB.Rows[j][k - 4].ToString();
+                        //Fill MLB OLD VERSION
+                   //     excelWorkSheet.Cells[j + 3, k - 3] = dTMLB.Rows[j][k - 4].ToString();
                         //fill Soccer
 
 
@@ -521,9 +528,7 @@ namespace DesktopC
             excelWorkSheet.Cells[40, 11] = "EXOTICS";
 
           
-            //Fill MU total
-            excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
-            excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
+           
 
 
            
@@ -543,8 +548,7 @@ namespace DesktopC
 
 
 
-            excelWorkSheet.Cells[26, 2] = dtMU.Rows[0][1];
-            excelWorkSheet.Cells[26, 3] = dtMU.Rows[0][2];
+          
 
           
 

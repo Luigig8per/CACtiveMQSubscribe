@@ -6,3 +6,4 @@ To check why NBA is not giving exact results. For the moment we are just loading
 To add conditional results in all fields. 
 To check some spors like NBA
 To add automatized process for add sports
+To check names in sports like soccer, some doesnt have values
