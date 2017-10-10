@@ -461,7 +461,7 @@ namespace DesktopC
                     //excelWorkSheet.Cells[18, 2] = dtExoticsMLB.Rows[0][1];
                     //excelWorkSheet.Cells[18, 3] = dtExoticsMLB.Rows[0][2];
 
-                    initialPosX = 2;
+                    initialPosX = 3;
                     initialPosY = -3;
 
                     this.fillLeague(dtMLB, j, k, excelWorkSheet, initialPosX, initialPosY);
