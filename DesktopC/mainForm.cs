@@ -265,6 +265,7 @@ namespace DesktopC
             DataTable dtNHL1G = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL 1 GOAL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNHLAPL = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL ALTERNATIVE PUCK LINES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNHLGP = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNHLGS = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NHL", "NHL GRAND SALAMI", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNHLExotics = extractTotalExoticsNHL();
 
             //mlb
@@ -280,6 +281,7 @@ namespace DesktopC
             DataTable dtMLBLG = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB - LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtMLBGS = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB GRAND SALAMI", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtMLBJB = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "JAPANESE BASEBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtMLBSP = clBusiness.extractCategoryLeague("Report_Game_Statistic", "ML", "MLB SERIES PRICES ", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
 
             dtExoticsMLB = extractTotalExotics("MLB");
 
@@ -449,11 +451,14 @@ namespace DesktopC
                     this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, initialPosX + 15, 7);
                     this.fillLeague(dtNHLLW, j, k, excelWorkSheet, initialPosX + 18, 7);
                     this.fillLeague(dtNHLRT, j, k, excelWorkSheet, initialPosX + 21, 7);
+                    
 
-                   
+
+
 
                     this.fillLeague(dtNHLGP, j, k, excelWorkSheet, initialPosX + 24, 7);
-                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, initialPosX + 27, 7);
+                    this.fillLeague(dtNHLGS, j, k, excelWorkSheet, initialPosX + 27, 7);
+                    this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, initialPosX + 30, 7);
 
                     //  fillMLBFields(40,2, excelWorkSheet, j, k, dtExoticsMLB,  dtMLB,  dtMLB1H, dtMLB2H, dtMLBAR,  dtMLB2RL, dtMLBGP,  dtMLBLG,  dtMLBGS,  dtMLBJB);
 
@@ -473,7 +478,8 @@ namespace DesktopC
                     this.fillLeague(dtMLBLG, j, k, excelWorkSheet, initialPosX + 14, initialPosY);
                     this.fillLeague(dtMLBGS, j, k, excelWorkSheet, initialPosX + 17, initialPosY);
                     this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + 20, initialPosY);
-                    this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 23, initialPosY);
+                    this.fillLeague(dtMLBSP, j, k, excelWorkSheet, initialPosX + 23, initialPosY);
+                    this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 26, initialPosY);
 
                     //Fill MU total
                     excelWorkSheet.Cells[37, 2] = dtMU.Rows[0][1];
