@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\ConsoleLayer.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\App.config" />
+  <event action="Analyze" type="Success" name="Form1.resx" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\Form1.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\packages.config" />
+  <event action="Analyze" type="Success" name="ConsoleLayer" path="C:\documents2017\Projects\ReportGameStats 2017\CACtiveMQSubscribe\ConsoleLayer.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\documents2017\Projects\ReportGameStats 2017\DataAccess\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="DataAccess" path="C:\documents2017\Projects\ReportGameStats 2017\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\Entities.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\App.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\packages.config" />
+  <event action="Analyze" type="Success" name="Entities" path="C:\documents2017\Projects\ReportGameStats 2017\Entities\Entities.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Business\Business.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\documents2017\Projects\ReportGameStats 2017\Business\App.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\documents2017\Projects\ReportGameStats 2017\Business\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\documents2017\Projects\ReportGameStats 2017\Business\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Business" path="C:\documents2017\Projects\ReportGameStats 2017\Business\Business.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\DesktopG8HouseReport.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\App.config" />
+  <event action="Analyze" type="Success" name="mainForm.resx" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\mainForm.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="DesktopG8HouseReport" path="C:\documents2017\Projects\ReportGameStats 2017\DesktopC\DesktopG8HouseReport.csproj" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Login.aspx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Login.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Manage.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Manage.aspx" />
+  <event action="Analyze" type="Success" name="Manage.aspx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Manage.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\OpenAuthProviders.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\OpenAuthProviders.ascx" />
+  <event action="Analyze" type="Success" name="OpenAuthProviders.ascx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\OpenAuthProviders.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Register.aspx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Register.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\RegisterExternalLogin.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\RegisterExternalLogin.aspx" />
+  <event action="Analyze" type="Success" name="RegisterExternalLogin.aspx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\RegisterExternalLogin.aspx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Account\Web.config" />
+  <event action="Analyze" type="Success" name="Binary References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="VBCSCompiler.exe.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bin\roslyn\VBCSCompiler.exe.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" name="Bundle.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Bundle.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\packages.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.master" />
+  <event action="Analyze" type="Success" name="Site.master" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.Mobile.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.Mobile.master" />
+  <event action="Analyze" type="Success" name="Site.Mobile.master" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Site.Mobile.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\TestForm.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\TestForm.aspx" />
+  <event action="Analyze" type="Success" name="TestForm.aspx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\TestForm.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\ViewSwitcher.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\ViewSwitcher.ascx" />
+  <event action="Analyze" type="Success" name="ViewSwitcher.ascx" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\ViewSwitcher.ascx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="C:\...\WebSite8\" path="C:\Users\luisma\Documents\Visual Studio 2015\WebSites\WebSite8" />
+  <event action="Analyze" type="Success" name="Report_Game_Stats wL" path="C:\documents2017\Projects\ReportGameStats 2017\Report_Game_Stats wL.sln" />
+</log>

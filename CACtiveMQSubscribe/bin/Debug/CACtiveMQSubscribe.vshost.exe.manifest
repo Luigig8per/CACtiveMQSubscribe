@@ -73,19 +73,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fuQNcTBF3V/4r5gOTGr1qhT/KqEurhHHDf2xCWBa+/Y=</dsig:DigestValue>
+        <dsig:DigestValue>u1t5iclzeHmIr9mFkV7lUSZ3JbQvjM8cfLdNG89ycZs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="11264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="14848">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ypmDZ7lpZ+wqwSTUm3IYsIvTHu4pXqT3OPLYB3xnrA4=</dsig:DigestValue>
+        <dsig:DigestValue>iU8fZCRTeSsGUtvjrjS6lMNcPMB81Ch4RDff5EcEkx4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
