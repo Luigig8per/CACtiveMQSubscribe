@@ -494,7 +494,7 @@ namespace DesktopC
                     rowsCount += this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
 
 
-                    excelWorkSheet.Cells[initialPosX +rowsCount +1, 7].formula = "=SUM(G" + initialPosX + ":G" + rowsCount + ")";
+                   // excelWorkSheet.Cells[initialPosX +rowsCount +1, 7].formula = "=SUM(G" + initialPosX + ":G" + rowsCount + ")";
                     //  fillMLBFields(40,2, excelWorkSheet, j, k, dtExoticsMLB,  dtMLB,  dtMLB1H, dtMLB2H, dtMLBAR,  dtMLB2RL, dtMLBGP,  dtMLBLG,  dtMLBGS,  dtMLBJB);
 
 
