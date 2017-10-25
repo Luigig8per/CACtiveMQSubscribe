@@ -174,6 +174,13 @@ namespace DesktopC
         {
 
         }
+
+
+
+        //public KeyValuePair<int, int> Location()
+        //{
+
+        //}
         public void fillExcelFields(Excel.Workbook excelWorkBook, int sheetNumber)
         {
             Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets[sheetNumber];
@@ -182,6 +189,9 @@ namespace DesktopC
             excelWorkSheet.Activate();
             int initialPosX, initialPosY;
             int rowsCount;
+
+            int FinalPosNBA=0;
+
 
             DataTable dTMLB = new DataTable();
             DataTable dtSoc = new DataTable();
@@ -312,9 +322,6 @@ namespace DesktopC
             dtExoticsMLB = extractTotalExotics("MLB");
 
           
-
-
-
             for (int j = 0; j < 19; j++)
             {
                 for (int k = 4; k < 7; k++)
@@ -342,8 +349,7 @@ namespace DesktopC
 
                     initialPosX = 18;
 
-                  
-
+                 
                     rowsCount = this.fillLeague(dtNBAGame, j, k, excelWorkSheet, initialPosX, 2);
 
                     rowsCount += this.fillLeague(dtNBA1stHalves, j, k, excelWorkSheet, initialPosX + rowsCount, 2);
@@ -357,7 +363,8 @@ namespace DesktopC
 
                     rowsCount += this.fillLeague(dtNBAProps, j, k, excelWorkSheet, initialPosX + rowsCount, 2);
                     rowsCount += this.fillLeague(dtExoticsNBA, j, k, excelWorkSheet, initialPosX + rowsCount, 2);
-
+                    //excelWorkSheet.Cells[j + initialPosX + rowsCount, k + 2] = "NBA Exotics";
+                    FinalPosNBA = initialPosX + rowsCount -1;
 
 
                     //Fill College Football
@@ -484,11 +491,6 @@ namespace DesktopC
                     rowsCount += this.fillLeague(dtNHLAPL, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
                     rowsCount += this.fillLeague(dtNHLLW, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
                     rowsCount += this.fillLeague(dtNHLRT, j, k, excelWorkSheet, initialPosX +rowsCount, 7);
-
-
-
-
-
                     rowsCount += this.fillLeague(dtNHLGP, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
                     rowsCount += this.fillLeague(dtNHLGS, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
                     rowsCount += this.fillLeague(dtNHLExotics, j, k, excelWorkSheet, initialPosX + rowsCount, 7);
@@ -506,22 +508,19 @@ namespace DesktopC
                     initialPosX = 3;
                     initialPosY = -3;
 
-                    this.fillLeague(dtMLB, j, k, excelWorkSheet, initialPosX, initialPosY);
-                    this.fillLeague(dtMLB1H, j, k, excelWorkSheet, initialPosX + 3, initialPosY);
-                    this.fillLeague(dtMLB2H, j, k, excelWorkSheet, initialPosX + 6, initialPosY);
-                    this.fillLeague(dtMLBAR, j, k, excelWorkSheet, initialPosX + 7, initialPosY);
-                    this.fillLeague(dtMLB2RL, j, k, excelWorkSheet, initialPosX + 8, initialPosY);
-                    this.fillLeague(dtMLBGP, j, k, excelWorkSheet, initialPosX + 11, initialPosY);
-                    this.fillLeague(dtMLBLG, j, k, excelWorkSheet, initialPosX + 14, initialPosY);
-                    this.fillLeague(dtMLBGS, j, k, excelWorkSheet, initialPosX + 17, initialPosY);
-                    this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + 20, initialPosY);
-                    this.fillLeague(dtMLBSP, j, k, excelWorkSheet, initialPosX + 23, initialPosY);
-                    this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + 26, initialPosY);
+                    rowsCount = this.fillLeague(dtMLB, j, k, excelWorkSheet, initialPosX, initialPosY);
+                    rowsCount += this.fillLeague(dtMLB1H, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLB2H, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBAR, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLB2RL, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBGP, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBLG, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBGS, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBJB, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtMLBSP, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
+                    rowsCount += this.fillLeague(dtExoticsMLB, j, k, excelWorkSheet, initialPosX + rowsCount, initialPosY);
 
-                    //Fill MU total
-                    excelWorkSheet.Cells[37, 2] = dtMU.Rows[0][1];
-                    excelWorkSheet.Cells[37, 3] = dtMU.Rows[0][2];
-
+              
 
               
 
@@ -566,6 +565,11 @@ namespace DesktopC
                 }
             }
 
+
+            //Fill MU total
+            excelWorkSheet.Cells[37, 2] = dtMU.Rows[0][1];
+            excelWorkSheet.Cells[37, 3] = dtMU.Rows[0][2];
+
             //    Fill wNBA --DELETED WHILE IS NOT IN SEASON - ACTIVATE THIS 2 LINES WHEN IN SEASON
 
             //excelWorkSheet.Cells[34, 7] = dtExoticsNBA.Rows[0][1];
@@ -590,9 +594,13 @@ namespace DesktopC
             //Next should be deleted after not show text on query result
             excelWorkSheet.Cells[40, 11] = "EXOTICS";
             excelWorkSheet.Cells[64, 11] = "EXOTICS";
-            excelWorkSheet.Cells[100, 11] = "EXOTICS";
+
+            excelWorkSheet.Cells[FinalPosNBA, 6] = "NBA EXOTICS";
+
+            //dtExoticsCanadianFootball NHL
+            // excelWorkSheet.Cells[100, 11] = "EXOTICS";
             excelWorkSheet.Cells[29, 1] = "EXOTICS";
-            excelWorkSheet.Cells[32, 6] = "NBA EXOTICS";
+          //  excelWorkSheet.Cells[32, 6] = "NBA EXOTICS";
 
 
 
