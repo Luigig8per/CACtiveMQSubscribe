@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WQ4XVv1eZrWDT6zygaBzqzjD0kXwv9DsqlUCkyNHDlM=</dsig:DigestValue>
+        <dsig:DigestValue>vU3awxNGW/XB1YhYJHH/ptekaVkE4Voz81yIWlSngSk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iU8fZCRTeSsGUtvjrjS6lMNcPMB81Ch4RDff5EcEkx4=</dsig:DigestValue>
+        <dsig:DigestValue>ZyXPyVQ/W9/1MHZlPzjP10nd+79dKSjHY9OrGdRV/78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HZnmOT3HHF//jZHWJPIrbYEYNdWCind6ZyHJVkzjJmA=</dsig:DigestValue>
+        <dsig:DigestValue>DDqOGmd3L0JiZKvln9BdLY1Ffomd0ctL+D1lfmzEnF0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="605696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="G8 House Report.exe" size="606208">
       <assemblyIdentity name="G8 House Report" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nl+y/4VUQA5hjiKMDE86PYh/bMvCvS+M4tzlGKbnGo8=</dsig:DigestValue>
+        <dsig:DigestValue>9xuMfQbSfdXSVihu7q7TUP6baLRfzicz+ShN+vaEdEg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
