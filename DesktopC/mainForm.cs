@@ -233,6 +233,7 @@ namespace DesktopC
           
             dtMU = extractTotalExoticsAndStraightBet("MU");
             dtSoccer = extractCategorySport("SOC", "Straight Bet");
+            dataGridView1.DataSource = dtSoccer;
             dtSoc = extractTotalExotics("SOC");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
             dtWNBA = extractCategorySport("WNBA", "Straight Bet");
@@ -285,7 +286,8 @@ namespace DesktopC
             DataTable dtNBAGame = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNBA1stHalves =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - 1ST HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNBA2ndtHalves = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - 2ND HALVES", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
-            DataTable dtNBAQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
+            DataTable dtNBAQuarters = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - QUARTERS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 4);
+          
             DataTable dtNBAProps = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - GAME PROPS", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNBALiveWagering = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "NBA - LIVE WAGERING", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
             DataTable dtNBAEuro = clBusiness.extractCategoryLeague("Report_Game_Statistic", "NBA", "EUROLEAGUE BASKETBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 3);
@@ -565,7 +567,7 @@ namespace DesktopC
                 }
             }
 
-          //  dataGridView1.DataSource = dtNBAProps;
+     
 
             //Fill MU total
             excelWorkSheet.Cells[37, 2] = dtMU.Rows[0][1];
@@ -881,7 +883,7 @@ namespace DesktopC
             dtCanadianGame.Merge(dt2ndH);
 
 
-            dataGridView1.DataSource = dtCanadianGame;
+        
 
             dtCanadianGame = clBusiness.sumOfDatatable(dtCanadianGame, "CBB Exotics");
             return dtCanadianGame;
@@ -1331,9 +1333,7 @@ namespace DesktopC
 
         private void button2_Click_3(object sender, EventArgs e)
         {
-           //dataGridView1.DataSource= clBusiness.getGameStats("Report_Game_Statistic", 74, "ARENA FOOTBALL", dateTimePicker1.Value, dateTimePicker2.Value);
-
-         //   dataGridView1.DataSource =  clBusiness.extractCategoryLeague("Report_Game_Statistic", "NFL", "ARENA FOOTBALL", "Straight Bet", 74, dateTimePicker1.Value, dateTimePicker2.Value, 2);
+        
         }
 
         private void button2_Click_4(object sender, EventArgs e)
