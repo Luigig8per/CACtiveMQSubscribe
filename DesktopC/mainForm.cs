@@ -232,7 +232,7 @@ namespace DesktopC
             dTMLB = clBusiness.extractFields("Report_Game_Statistic", 74, dateTimePicker1.Value, dateTimePicker2.Value);
           
             dtMU = extractTotalExoticsAndStraightBet("MU");
-            dtSoccer = extractCategorySport("SOC", "Straight Bet");
+            dtSoccer = extractCategorySport("SOC", "Straight Bet", 4);
             dataGridView1.DataSource = dtSoccer;
             dtSoc = extractTotalExotics("SOC");
             dtNBA = extractCategorySport("NBA", "Straight Bet");
@@ -337,7 +337,7 @@ namespace DesktopC
 
                     //SOCCER
 
-                    fillLeague(dtSoccer, j, k, excelWorkSheet, 3, 2);
+                    //fillLeague(dtSoccer, j, k, excelWorkSheet, 3, 2);
                     if (j < dtSoccer.Rows.Count)
                     {
                         //excelWorkSheet.Cells[j + 3, k + 2] = dgv.Rows[j + 15].Cells[k + 1].Value.ToString();
@@ -1079,6 +1079,12 @@ namespace DesktopC
         public DataTable extractCategorySport(string sportName, string category)
         {
             DataTable dtRes = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value);
+            return dtRes;
+        }
+
+        public DataTable extractCategorySport(string sportName, string category, int descriptionType)
+        {
+            DataTable dtRes = clBusiness.extractCategorySport("Report_Game_Statistic", sportName, category, 74, dateTimePicker1.Value, dateTimePicker2.Value, descriptionType);
             return dtRes;
         }
 
