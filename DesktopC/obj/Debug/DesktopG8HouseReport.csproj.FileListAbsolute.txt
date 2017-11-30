@@ -67,3 +67,7 @@ C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopC.Prope
 C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\DesktopG8HouseReport.csproj.GenerateResource.Cache
 C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.exe.manifest
 C:\documents2017\Projects\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.application
+C:\documents2017\Projects\Last versiones\ReportGameStats 2017\DesktopC\bin\Debug\G8 House Report.exe.config
+C:\documents2017\Projects\Last versiones\ReportGameStats 2017\DesktopC\obj\Debug\DesktopG8HouseReport.csproj.ResolveComReference.cache
+C:\documents2017\Projects\Last versiones\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.exe
+C:\documents2017\Projects\Last versiones\ReportGameStats 2017\DesktopC\obj\Debug\G8 House Report.pdb
